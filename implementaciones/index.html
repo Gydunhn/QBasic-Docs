@@ -1,0 +1,1893 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../instalacion/">
+      
+      
+        <link rel="next" href="../recursos/">
+      
+      
+      <link rel="icon" href="../assets/images/QBlogo2.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.11">
+    
+    
+      
+        <title>Implementaciones - Documentación de QBasic</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.4af4bdda.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#implementaciones-y-herramientas-relacionadas" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Documentación de QBasic" class="md-header__button md-logo" aria-label="Documentación de QBasic" data-md-component="logo">
+      
+  <img src="../assets/images/QBlogo2.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Documentación de QBasic
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Implementaciones
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Automatico"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Automatico" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-purple"  aria-label="Modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Modo claro" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="brown" data-md-color-accent="amber"  aria-label="Modo oscuro"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Modo oscuro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 2c-1.82 0-3.53.5-5 1.35C8 5.08 10 8.3 10 12s-2 6.92-5 8.65C6.47 21.5 8.18 22 10 22a10 10 0 0 0 10-10A10 10 0 0 0 10 2"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Documentación de QBasic" class="md-nav__button md-logo" aria-label="Documentación de QBasic" data-md-component="logo">
+      
+  <img src="../assets/images/QBlogo2.png" alt="logo">
+
+    </a>
+    Documentación de QBasic
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Inicio
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FAQ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../historia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Historia
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../instalacion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Instalación y Configuración
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Implementaciones
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Implementaciones
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#versiones-de-microsoft-basic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versiones de Microsoft BASIC
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Versiones de Microsoft BASIC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cronologia-de-basic-de-microsoft" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cronología de BASIC de Microsoft
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comparativa-entre-qbasic-y-quickbasic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comparativa entre QBasic y QuickBASIC
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementaciones-modernas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementaciones Modernas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Implementaciones Modernas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#qb64" class="md-nav__link">
+    <span class="md-ellipsis">
+      QB64
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="QB64">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#caracteristicas-principales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Características principales
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-de-codigo-qb64-extension-especifica" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo de código QB64 (extensión específica)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#freebasic" class="md-nav__link">
+    <span class="md-ellipsis">
+      FreeBASIC
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FreeBASIC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#caracteristicas-principales_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Características principales
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-de-codigo-freebasic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo de código FreeBASIC
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#smallbasic" class="md-nav__link">
+    <span class="md-ellipsis">
+      SmallBASIC
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SmallBASIC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#caracteristicas-principales_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Características principales
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thinbasic" class="md-nav__link">
+    <span class="md-ellipsis">
+      ThinBASIC
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ThinBASIC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#caracteristicas-principales_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Características principales
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#emulacion-de-qbasic-original" class="md-nav__link">
+    <span class="md-ellipsis">
+      Emulación de QBasic Original
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Emulación de QBasic Original">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dosbox" class="md-nav__link">
+    <span class="md-ellipsis">
+      DOSBox
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DOSBox">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuracion-para-un-rendimiento-optimo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuración para un rendimiento óptimo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dosemu-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      DOSEMU (Linux)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vdos-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      vDos (Windows)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recursos-para-desarrolladores" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recursos para Desarrolladores
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Recursos para Desarrolladores">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#herramientas-auxiliares" class="md-nav__link">
+    <span class="md-ellipsis">
+      Herramientas Auxiliares
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#editores-modernos-con-soporte-para-qbasic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Editores modernos con soporte para QBasic
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../recursos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Recursos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sintaxis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sintaxis
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../instrucciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Instrucciones Básicas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../estructuras-control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Estructuras de Control
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../funciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Funciones
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../programacion-modular/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Programación Modular
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Gráficos
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            Gráficos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../graficos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introducción
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2D/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gráficos 2D
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3D/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gráficos 3D
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../raycasting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Raycasting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../animaciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Animaciones
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Entrada de Usuario
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
+            <span class="md-nav__icon md-icon"></span>
+            Entrada de Usuario
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mouse/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Uso del Ratón
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archivos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Manejo de Archivos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_15" >
+        
+          
+          <label class="md-nav__link" for="__nav_15" id="__nav_15_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Sonido
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_15_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_15">
+            <span class="md-nav__icon md-icon"></span>
+            Sonido
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sonido/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Conceptos Básicos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../manipulacion-sonido/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Manipulación de Sonido
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16" >
+        
+          
+          <label class="md-nav__link" for="__nav_16" id="__nav_16_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Comunicaciones
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_16_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_16">
+            <span class="md-nav__icon md-icon"></span>
+            Comunicaciones
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modem/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Uso del Módem
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestion-memoria/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gestión de Memoria
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18" >
+        
+          
+          <label class="md-nav__link" for="__nav_18" id="__nav_18_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Estructuras de Datos
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_18_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_18">
+            <span class="md-nav__icon md-icon"></span>
+            Estructuras de Datos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pilas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pilas (Stacks)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../buenas-practicas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Buenas Prácticas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../estandares/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Estándares
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tecnicas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Técnicas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#versiones-de-microsoft-basic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versiones de Microsoft BASIC
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Versiones de Microsoft BASIC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cronologia-de-basic-de-microsoft" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cronología de BASIC de Microsoft
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comparativa-entre-qbasic-y-quickbasic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comparativa entre QBasic y QuickBASIC
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementaciones-modernas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementaciones Modernas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Implementaciones Modernas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#qb64" class="md-nav__link">
+    <span class="md-ellipsis">
+      QB64
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="QB64">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#caracteristicas-principales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Características principales
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-de-codigo-qb64-extension-especifica" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo de código QB64 (extensión específica)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#freebasic" class="md-nav__link">
+    <span class="md-ellipsis">
+      FreeBASIC
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FreeBASIC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#caracteristicas-principales_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Características principales
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-de-codigo-freebasic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo de código FreeBASIC
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#smallbasic" class="md-nav__link">
+    <span class="md-ellipsis">
+      SmallBASIC
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SmallBASIC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#caracteristicas-principales_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Características principales
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thinbasic" class="md-nav__link">
+    <span class="md-ellipsis">
+      ThinBASIC
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ThinBASIC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#caracteristicas-principales_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Características principales
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#emulacion-de-qbasic-original" class="md-nav__link">
+    <span class="md-ellipsis">
+      Emulación de QBasic Original
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Emulación de QBasic Original">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dosbox" class="md-nav__link">
+    <span class="md-ellipsis">
+      DOSBox
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DOSBox">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuracion-para-un-rendimiento-optimo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuración para un rendimiento óptimo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dosemu-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      DOSEMU (Linux)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vdos-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      vDos (Windows)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recursos-para-desarrolladores" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recursos para Desarrolladores
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Recursos para Desarrolladores">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#herramientas-auxiliares" class="md-nav__link">
+    <span class="md-ellipsis">
+      Herramientas Auxiliares
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#editores-modernos-con-soporte-para-qbasic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Editores modernos con soporte para QBasic
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="implementaciones-y-herramientas-relacionadas">Implementaciones y Herramientas Relacionadas</h1>
+<p>QBasic ha inspirado el desarrollo de varias herramientas modernas que buscan mantener vivo su legado, mejorar sus capacidades o proporcionar compatibilidad en sistemas operativos actuales.</p>
+<h2 id="versiones-de-microsoft-basic">Versiones de Microsoft BASIC</h2>
+<h3 id="cronologia-de-basic-de-microsoft">Cronología de BASIC de Microsoft</h3>
+<table>
+<thead>
+<tr>
+<th>Versión</th>
+<th>Año</th>
+<th>Características principales</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Altair BASIC</td>
+<td>1975</td>
+<td>Primera versión de Microsoft BASIC</td>
+</tr>
+<tr>
+<td>BASIC-80</td>
+<td>1978</td>
+<td>Para sistemas CP/M</td>
+</tr>
+<tr>
+<td>GW-BASIC</td>
+<td>1983</td>
+<td>Para MS-DOS, compatible con BASICA</td>
+</tr>
+<tr>
+<td>QuickBASIC 1.0</td>
+<td>1985</td>
+<td>Primer IDE, primeros pasos hacia el BASIC estructurado</td>
+</tr>
+<tr>
+<td>QuickBASIC 4.5</td>
+<td>1988</td>
+<td>Última versión comercial, característica completas</td>
+</tr>
+<tr>
+<td>QBasic 1.0</td>
+<td>1991</td>
+<td>Incluido con MS-DOS 5.0, versión sin compilador de QB4.5</td>
+</tr>
+<tr>
+<td>QBasic 1.1</td>
+<td>1993</td>
+<td>Incluido con MS-DOS 6.0 y versiones posteriores</td>
+</tr>
+<tr>
+<td>Visual Basic 1.0</td>
+<td>1991</td>
+<td>Enfoque de programación visual para Windows</td>
+</tr>
+</tbody>
+</table>
+<h3 id="comparativa-entre-qbasic-y-quickbasic">Comparativa entre QBasic y QuickBASIC</h3>
+<table>
+<thead>
+<tr>
+<th>Característica</th>
+<th>QBasic 1.1</th>
+<th>QuickBASIC 4.5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IDE</td>
+<td>Sí</td>
+<td>Sí</td>
+</tr>
+<tr>
+<td>Compilador</td>
+<td>No</td>
+<td>Sí</td>
+</tr>
+<tr>
+<td>Precio</td>
+<td>Gratuito (con MS-DOS)</td>
+<td>Producto comercial</td>
+</tr>
+<tr>
+<td>Límite de tamaño de programa</td>
+<td>160KB</td>
+<td>160KB (entorno) / Sin límite (compilación)</td>
+</tr>
+<tr>
+<td>Bibliotecas adicionales</td>
+<td>No</td>
+<td>Sí</td>
+</tr>
+<tr>
+<td>Soporte de EXE</td>
+<td>No</td>
+<td>Sí</td>
+</tr>
+<tr>
+<td>Depurador</td>
+<td>Limitado</td>
+<td>Completo</td>
+</tr>
+</tbody>
+</table>
+<h2 id="implementaciones-modernas">Implementaciones Modernas</h2>
+<h3 id="qb64">QB64</h3>
+<p><a href="https://qb64.com">QB64</a> es un moderno entorno de desarrollo y compilador compatible con QBasic pero que proporciona acceso a hardware y características modernas.</p>
+<h4 id="caracteristicas-principales">Características principales</h4>
+<ul>
+<li>Compatible con sintaxis QBasic/QuickBASIC</li>
+<li>Genera ejecutables nativos para Windows, macOS y Linux</li>
+<li>Soporta resoluciones modernas y acceso a hardware moderno</li>
+<li>Permite llamadas a bibliotecas externas (OpenGL, SDL, etc.)</li>
+<li>Comunidad activa y en desarrollo continuo</li>
+</ul>
+<h4 id="ejemplo-de-codigo-qb64-extension-especifica">Ejemplo de código QB64 (extensión específica)</h4>
+<pre><code class="language-qbasic">' Ejemplo que utiliza características modernas exclusivas de QB64
+SCREEN _NEWIMAGE(1280, 720, 32)  ' Resolución HD con 32 bits de color
+_TITLE &quot;Ventana de QB64&quot;
+LINE (0, 0)-(1280, 720), _RGB(255, 0, 0), BF
+_DISPLAY
+</code></pre>
+<h3 id="freebasic">FreeBASIC</h3>
+<p><a href="https://freebasic.net/">FreeBASIC</a> es un compilador de BASIC gratuito y de código abierto que soporta múltiples dialectos, incluyendo QBasic.</p>
+<h4 id="caracteristicas-principales_1">Características principales</h4>
+<ul>
+<li>Compatible con sintaxis QBasic</li>
+<li>Sintaxis extendida más cercana a C/C++</li>
+<li>Diseñado para alto rendimiento</li>
+<li>Soporte para programación orientada a objetos</li>
+<li>Integración con bibliotecas C/C++</li>
+</ul>
+<h4 id="ejemplo-de-codigo-freebasic">Ejemplo de código FreeBASIC</h4>
+<pre><code class="language-freebasic">' Ejemplo FreeBASIC con características extendidas
+#include &quot;fbgfx.bi&quot;
+
+SCREENRES 640, 480, 32
+WINDOWTITLE &quot;Ventana FreeBASIC&quot;
+
+DIM AS SINGLE x, y
+DIM AS INTEGER tecla
+
+DO
+    SCREENLOCK
+    CLS
+    CIRCLE (x, y), 20, RGB(255, 0, 0)
+    SCREENUNLOCK
+
+    tecla = GETKEY()
+
+    SELECT CASE tecla
+        CASE ASC(&quot;w&quot;): y = y - 5
+        CASE ASC(&quot;s&quot;): y = y + 5
+        CASE ASC(&quot;a&quot;): x = x - 5
+        CASE ASC(&quot;d&quot;): x = x + 5
+        CASE 27: EXIT DO  ' ESC para salir
+    END SELECT
+
+    SLEEP 10
+LOOP
+</code></pre>
+<h3 id="smallbasic">SmallBASIC</h3>
+<p><a href="https://smallbasic.sourceforge.net/">SmallBASIC</a> es un intérprete BASIC portátil orientado a la programación de aplicaciones matemáticas y educativas.</p>
+<h4 id="caracteristicas-principales_2">Características principales</h4>
+<ul>
+<li>Sintaxis inspirada en QBasic y otras variantes</li>
+<li>Altamente portátil (Windows, Linux, Android, etc.)</li>
+<li>Enfocado en programación matemática</li>
+<li>Soporta gráficos 2D y 3D básicos</li>
+<li>Fácil de aprender y usar</li>
+</ul>
+<h3 id="thinbasic">ThinBASIC</h3>
+<p><a href="http://www.thinbasic.com/">ThinBASIC</a> es un lenguaje de programación BASIC moderno para Windows.</p>
+<h4 id="caracteristicas-principales_3">Características principales</h4>
+<ul>
+<li>Inspirado en QBasic y otros dialectos BASIC</li>
+<li>Orientado a la creación de aplicaciones Windows</li>
+<li>Sistema de módulos para extender funcionalidad</li>
+<li>Amplio soporte para API de Windows</li>
+</ul>
+<h2 id="emulacion-de-qbasic-original">Emulación de QBasic Original</h2>
+<p>Para ejecutar el auténtico QBasic en sistemas modernos, existen varias opciones:</p>
+<h3 id="dosbox">DOSBox</h3>
+<p><a href="https://www.dosbox.com/">DOSBox</a> es el emulador más común para ejecutar QBasic en sistemas modernos.</p>
+<h4 id="configuracion-para-un-rendimiento-optimo">Configuración para un rendimiento óptimo</h4>
+<pre><code class="language-text">[dosbox]
+memsize=16
+cycles=max
+
+[cpu]
+core=dynamic
+cputype=pentium_slow
+</code></pre>
+<h3 id="dosemu-linux">DOSEMU (Linux)</h3>
+<p>Para usuarios de Linux, <a href="http://www.dosemu.org/">DOSEMU</a> proporciona una alternativa a DOSBox con mejor integración con el sistema.</p>
+<h3 id="vdos-windows">vDos (Windows)</h3>
+<p><a href="http://www.vdos.info/">vDos</a> es un entorno DOS especializado para Windows que puede ofrecer mejor rendimiento que DOSBox para aplicaciones como QBasic.</p>
+<h2 id="recursos-para-desarrolladores">Recursos para Desarrolladores</h2>
+<h3 id="herramientas-auxiliares">Herramientas Auxiliares</h3>
+<ul>
+<li><strong>Pete's QBasic Site (PQS)</strong>: Conjunto de herramientas y utilidades para QBasic</li>
+<li><strong>QBasic Accelerator</strong>: Mejora el rendimiento de programas QBasic</li>
+<li><strong>Future Library</strong>: Biblioteca de extensión para QBasic que añade funciones modernas</li>
+<li><strong>QbScreenLib</strong>: Biblioteca para manejo avanzado de pantalla en QBasic</li>
+</ul>
+<h3 id="editores-modernos-con-soporte-para-qbasic">Editores modernos con soporte para QBasic</h3>
+<ul>
+<li><strong>Visual Studio Code</strong> con extensión "QBasic"</li>
+<li><strong>Notepad++</strong> con definición de sintaxis QBasic</li>
+<li><strong>Vim/Neovim</strong> con resaltado de sintaxis para QBasic</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>

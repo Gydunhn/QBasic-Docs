@@ -1,0 +1,1641 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../3D/">
+      
+      
+        <link rel="next" href="../animaciones/">
+      
+      
+      <link rel="icon" href="../assets/images/QBlogo2.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.11">
+    
+    
+      
+        <title>Raycasting - Documentación de QBasic</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.4af4bdda.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#raycasting-en-qbasic" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Documentación de QBasic" class="md-header__button md-logo" aria-label="Documentación de QBasic" data-md-component="logo">
+      
+  <img src="../assets/images/QBlogo2.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Documentación de QBasic
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Raycasting
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Automatico"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Automatico" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-purple"  aria-label="Modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Modo claro" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="brown" data-md-color-accent="amber"  aria-label="Modo oscuro"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Modo oscuro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 2c-1.82 0-3.53.5-5 1.35C8 5.08 10 8.3 10 12s-2 6.92-5 8.65C6.47 21.5 8.18 22 10 22a10 10 0 0 0 10-10A10 10 0 0 0 10 2"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Documentación de QBasic" class="md-nav__button md-logo" aria-label="Documentación de QBasic" data-md-component="logo">
+      
+  <img src="../assets/images/QBlogo2.png" alt="logo">
+
+    </a>
+    Documentación de QBasic
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Inicio
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FAQ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../historia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Historia
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../instalacion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Instalación y Configuración
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../implementaciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Implementaciones
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../recursos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Recursos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sintaxis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sintaxis
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../instrucciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Instrucciones Básicas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../estructuras-control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Estructuras de Control
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../funciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Funciones
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../programacion-modular/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Programación Modular
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Gráficos
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            Gráficos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../graficos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introducción
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2D/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gráficos 2D
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3D/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gráficos 3D
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Raycasting
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Raycasting
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introducción
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fundamentos-del-raycasting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fundamentos del Raycasting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fundamentos del Raycasting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#el-mapa" class="md-nav__link">
+    <span class="md-ellipsis">
+      El Mapa
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#el-concepto-del-ray-rayo" class="md-nav__link">
+    <span class="md-ellipsis">
+      El Concepto del Ray (Rayo)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementacion-2d" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementación 2D
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Implementación 2D">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-de-codigo-2d-2draybas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo de código 2D (2DRAY.BAS)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementacion-3d" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementación 3D
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Implementación 3D">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-de-codigo-3d-3draybas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo de código 3D (3DRAY.BAS)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#el-efecto-ojo-de-pez" class="md-nav__link">
+    <span class="md-ellipsis">
+      El Efecto "Ojo de Pez"
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mejoras-posibles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mejoras Posibles
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusión
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../animaciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Animaciones
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Entrada de Usuario
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
+            <span class="md-nav__icon md-icon"></span>
+            Entrada de Usuario
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mouse/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Uso del Ratón
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archivos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Manejo de Archivos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_15" >
+        
+          
+          <label class="md-nav__link" for="__nav_15" id="__nav_15_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Sonido
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_15_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_15">
+            <span class="md-nav__icon md-icon"></span>
+            Sonido
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sonido/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Conceptos Básicos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../manipulacion-sonido/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Manipulación de Sonido
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16" >
+        
+          
+          <label class="md-nav__link" for="__nav_16" id="__nav_16_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Comunicaciones
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_16_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_16">
+            <span class="md-nav__icon md-icon"></span>
+            Comunicaciones
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modem/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Uso del Módem
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestion-memoria/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gestión de Memoria
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18" >
+        
+          
+          <label class="md-nav__link" for="__nav_18" id="__nav_18_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Estructuras de Datos
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_18_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_18">
+            <span class="md-nav__icon md-icon"></span>
+            Estructuras de Datos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pilas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pilas (Stacks)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../buenas-practicas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Buenas Prácticas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../estandares/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Estándares
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tecnicas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Técnicas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introducción
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fundamentos-del-raycasting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fundamentos del Raycasting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fundamentos del Raycasting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#el-mapa" class="md-nav__link">
+    <span class="md-ellipsis">
+      El Mapa
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#el-concepto-del-ray-rayo" class="md-nav__link">
+    <span class="md-ellipsis">
+      El Concepto del Ray (Rayo)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementacion-2d" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementación 2D
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Implementación 2D">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-de-codigo-2d-2draybas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo de código 2D (2DRAY.BAS)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementacion-3d" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementación 3D
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Implementación 3D">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-de-codigo-3d-3draybas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo de código 3D (3DRAY.BAS)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#el-efecto-ojo-de-pez" class="md-nav__link">
+    <span class="md-ellipsis">
+      El Efecto "Ojo de Pez"
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mejoras-posibles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mejoras Posibles
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusión
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="raycasting-en-qbasic">Raycasting en QBasic</h1>
+<p>Autor: William Moores</p>
+<h2 id="introduccion">Introducción</h2>
+<p>¿Quieres crear un juego como DOOM? Con esta guía, explicaremos los fundamentos del raycasting, que te permitirá desarrollar juegos con perspectiva 3D en QBasic.</p>
+<p>El concepto del raycasting es muy simple: imagina que tienes un puntero láser con una pequeña pantalla en la parte posterior que muestra el color y la distancia del objeto al que estás apuntando. ¡El raycasting funciona exactamente así! En QBasic, implementar esta técnica es más sencillo de lo que parece.</p>
+<h2 id="fundamentos-del-raycasting">Fundamentos del Raycasting</h2>
+<h3 id="el-mapa">El Mapa</h3>
+<p>Primero necesitamos un mapa para nuestro entorno. Podemos crearlo con un array bidimensional:</p>
+<pre><code class="language-qbasic">DIM map%(1 TO 20, 1 TO 20)
+</code></pre>
+<p>Este código crea un nivel de 20×20 bloques. Cada elemento del array representa una pared en nuestro demo (por ejemplo, <code>map%(3, 4) = 10</code> colocaría una pared en la posición (3,4) con color 10).</p>
+<h3 id="el-concepto-del-ray-rayo">El Concepto del Ray (Rayo)</h3>
+<p>La parte "ray" del raycasting funciona así:</p>
+<ol>
+<li>La "cámara" emite rayos en diferentes direcciones</li>
+<li>Cuando un rayo golpea una pared en nuestro mapa, la "cámara" registra:</li>
+<li>El color de la pared que ha golpeado</li>
+<li>La distancia a la pared</li>
+<li>El rayo deja de avanzar</li>
+</ol>
+<p>Es similar a un radar: emite ondas que rebotan en objetos sólidos, y luego calcula la distancia a esos objetos basándose en el tiempo que tardan las ondas en regresar.</p>
+<h2 id="implementacion-2d">Implementación 2D</h2>
+<p>Antes de abordar el 3D, es útil visualizar el raycasting en 2D. En una demo 2D, podemos ver:</p>
+<ul>
+<li>Una vista superior de nuestro mapa</li>
+<li>Un pequeño cono que podemos rotar y mover (nuestra "cámara")</li>
+<li>Los rayos que salen de la cámara</li>
+</ul>
+<p>Esta visualización 2D nos ayuda a entender cómo la cámara emite rayos y cómo estos interactúan con las paredes.</p>
+<h3 id="ejemplo-de-codigo-2d-2draybas">Ejemplo de código 2D (2DRAY.BAS)</h3>
+<p>A continuación se presenta un esquema conceptual de la implementación 2D:</p>
+<pre><code class="language-qbasic">' Inicializar el mapa
+DIM map%(1 TO 20, 1 TO 20)
+' Llenar el mapa con paredes
+FOR y = 1 TO 20
+  FOR x = 1 TO 20
+    IF x = 1 OR y = 1 OR x = 20 OR y = 20 THEN
+      map%(x, y) = 14 ' Paredes exteriores en color 14
+    ELSE
+      map%(x, y) = 0 ' Espacio vacío
+    END IF
+  NEXT x
+NEXT y
+' Añadir algunas paredes interiores
+map%(5, 5) = 12: map%(6, 5) = 12: map%(7, 5) = 12
+
+' Variables para la cámara
+camX = 10: camY = 10 ' Posición inicial
+camAngle = 0 ' Ángulo inicial (en radianes)
+
+' Bucle principal
+DO
+  ' Borrar pantalla
+  CLS
+
+  ' Dibujar mapa
+  FOR y = 1 TO 20
+    FOR x = 1 TO 20
+      IF map%(x, y) &gt; 0 THEN
+        PSET (x * 8, y * 8), map%(x, y)
+      END IF
+    NEXT x
+  NEXT y
+
+  ' Dibujar cámara
+  CIRCLE (camX * 8, camY * 8), 3, 15
+
+  ' Dibujar rayos
+  FOR rayAngle = camAngle - .3 TO camAngle + .3 STEP .02
+    ' Emitir rayo
+    rayX = camX
+    rayY = camY
+    rayDist = 0
+
+    DO
+      ' Avanzar rayo
+      rayX = rayX + COS(rayAngle) * .1
+      rayY = rayY + SIN(rayAngle) * .1
+      rayDist = rayDist + .1
+
+      ' Comprobar si el rayo golpea una pared
+      mapX = INT(rayX)
+      mapY = INT(rayY)
+
+      IF mapX &gt;= 1 AND mapX &lt;= 20 AND mapY &gt;= 1 AND mapY &lt;= 20 THEN
+        IF map%(mapX, mapY) &gt; 0 THEN
+          ' Rayo golpeó una pared
+          LINE (camX * 8, camY * 8)-(rayX * 8, rayY * 8), map%(mapX, mapY)
+          EXIT DO
+        END IF
+      ELSE
+        ' Rayo salió del mapa
+        EXIT DO
+      END IF
+    LOOP WHILE rayDist &lt; 20
+  NEXT rayAngle
+
+  ' Controles de movimiento
+  k$ = INKEY$
+  IF k$ = CHR$(0) + &quot;H&quot; THEN ' Flecha arriba
+    camX = camX + COS(camAngle) * .5
+    camY = camY + SIN(camAngle) * .5
+  ELSEIF k$ = CHR$(0) + &quot;P&quot; THEN ' Flecha abajo
+    camX = camX - COS(camAngle) * .5
+    camY = camY - SIN(camAngle) * .5
+  ELSEIF k$ = CHR$(0) + &quot;K&quot; THEN ' Flecha izquierda
+    camAngle = camAngle - .1
+  ELSEIF k$ = CHR$(0) + &quot;M&quot; THEN ' Flecha derecha
+    camAngle = camAngle + .1
+  END IF
+
+  ' Salir del programa
+  IF k$ = CHR$(27) THEN EXIT DO
+
+  ' Pequeña pausa
+  _LIMIT 30
+LOOP
+</code></pre>
+<h2 id="implementacion-3d">Implementación 3D</h2>
+<p>Para crear el efecto 3D, en lugar de dibujar los rayos directamente, dibujamos líneas verticales en la pantalla que corresponden a cada rayo emitido. La altura de cada línea se calcula basándose en la distancia a la pared: cuanto más cerca esté la pared, más alta será la línea.</p>
+<p>La implementación 3D utiliza la misma lógica de raycasting que la versión 2D, pero representa los resultados de manera diferente para crear la ilusión de 3D.</p>
+<h3 id="ejemplo-de-codigo-3d-3draybas">Ejemplo de código 3D (3DRAY.BAS)</h3>
+<p>A continuación se presenta un esquema conceptual de la implementación 3D:</p>
+<pre><code class="language-qbasic">' Inicializar el mapa (igual que en la versión 2D)
+DIM map%(1 TO 20, 1 TO 20)
+' ... código para inicializar el mapa ...
+
+' Variables para la cámara
+camX = 10: camY = 10
+camAngle = 0
+screenWidth = 320 ' Ancho de la pantalla
+
+' Modo gráfico
+SCREEN 13 ' 320x200, 256 colores
+
+' Bucle principal
+DO
+  ' Preparar la pantalla
+  LINE (0, 0)-(screenWidth, 100), 9, BF ' Cielo
+  LINE (0, 100)-(screenWidth, 200), 2, BF ' Suelo
+
+  ' Emitir rayos y dibujar paredes
+  rayAngleStep = .6 / screenWidth ' Campo de visión dividido por el ancho de la pantalla
+
+  FOR screenX = 0 TO screenWidth - 1
+    ' Calcular ángulo del rayo
+    rayAngle = camAngle - .3 + rayAngleStep * screenX
+
+    ' Emitir rayo
+    rayX = camX
+    rayY = camY
+    rayDist = 0
+    hitColor = 0
+
+    DO
+      ' Avanzar rayo
+      rayX = rayX + COS(rayAngle) * .05
+      rayY = rayY + SIN(rayAngle) * .05
+      rayDist = rayDist + .05
+
+      ' Comprobar si el rayo golpea una pared
+      mapX = INT(rayX)
+      mapY = INT(rayY)
+
+      IF mapX &gt;= 1 AND mapX &lt;= 20 AND mapY &gt;= 1 AND mapY &lt;= 20 THEN
+        IF map%(mapX, mapY) &gt; 0 THEN
+          ' Rayo golpeó una pared
+          hitColor = map%(mapX, mapY)
+          EXIT DO
+        END IF
+      ELSE
+        ' Rayo salió del mapa
+        EXIT DO
+      END IF
+    LOOP WHILE rayDist &lt; 20
+
+    ' Calcular altura de la línea
+    lineHeight = 200
+    IF rayDist &gt; 0 THEN
+      ' Corregir el efecto &quot;ojo de pez&quot; (opcional)
+      correctedDist = rayDist * COS(rayAngle - camAngle)
+      lineHeight = 3000 / correctedDist
+      IF lineHeight &gt; 200 THEN lineHeight = 200
+    END IF
+
+    ' Calcular posición y de inicio y fin
+    lineY1 = 100 - lineHeight / 2
+    lineY2 = lineY1 + lineHeight
+
+    ' Dibujar línea vertical (pared)
+    IF hitColor &gt; 0 THEN
+      ' Oscurecer colores basado en la distancia
+      shade = 15 - INT(rayDist)
+      IF shade &lt; 0 THEN shade = 0
+      actualColor = hitColor - 8 + shade
+      IF actualColor &lt; hitColor - 8 THEN actualColor = hitColor - 8
+      IF actualColor &gt; hitColor THEN actualColor = hitColor
+
+      LINE (screenX, lineY1)-(screenX, lineY2), actualColor
+    END IF
+  NEXT screenX
+
+  ' Controles de movimiento (igual que en la versión 2D)
+  ' ... código para mover la cámara ...
+
+  ' Pequeña pausa
+  _LIMIT 30
+LOOP
+</code></pre>
+<h2 id="el-efecto-ojo-de-pez">El Efecto "Ojo de Pez"</h2>
+<p>Un problema común con el raycasting simple es el efecto "ojo de pez", donde las paredes aparecen curvadas en lugar de rectas. Esto ocurre porque estamos midiendo la distancia directa desde la cámara a la pared, pero para una representación 3D más realista, necesitaríamos la distancia perpendicular al "plano de proyección".</p>
+<p>Se puede corregir este efecto multiplicando la distancia por el coseno del ángulo entre el rayo y la dirección de la cámara, como se muestra en el ejemplo 3D.</p>
+<h2 id="mejoras-posibles">Mejoras Posibles</h2>
+<p>Con esta base de raycasting, puedes implementar varias mejoras:</p>
+<ol>
+<li><strong>Texturas</strong>: En lugar de usar colores sólidos, puedes mapear texturas en las paredes</li>
+<li><strong>Iluminación</strong>: Implementar luces en el entorno</li>
+<li><strong>Sprites</strong>: Añadir objetos y personajes como sprites 2D</li>
+<li><strong>Suelos y Techos Texturizados</strong>: Más allá del raycasting básico</li>
+<li><strong>Colisiones</strong>: Impedir que la cámara atraviese paredes</li>
+</ol>
+<h2 id="conclusion">Conclusión</h2>
+<p>El raycasting es una técnica poderosa que te permite crear entornos 3D convincentes incluso en un lenguaje como QBasic. Con este conocimiento, puedes comenzar a desarrollar juegos similares a los clásicos de los años 90 como Wolfenstein 3D y DOOM.</p>
+<p>Como sugiere el autor original: "¡Piensa en ello, podrías añadir luces! Todo lo que tendrías que hacer es lo opuesto a una cámara. En lugar de leer el color, ¡podrías escribir el color!"</p>
+<p>Los ejemplos proporcionados son intencionalmente simples para facilitar la comprensión, pero se pueden optimizar y expandir considerablemente para crear juegos completos.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1700 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../pilas/">
+      
+      
+        <link rel="next" href="../estandares/">
+      
+      
+      <link rel="icon" href="../assets/images/QBlogo2.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.11">
+    
+    
+      
+        <title>Buenas Prácticas - Documentación de QBasic</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.4af4bdda.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#buenas-practicas-en-qbasic" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Documentación de QBasic" class="md-header__button md-logo" aria-label="Documentación de QBasic" data-md-component="logo">
+      
+  <img src="../assets/images/QBlogo2.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Documentación de QBasic
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Buenas Prácticas
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Automatico"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Automatico" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-purple"  aria-label="Modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Modo claro" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="brown" data-md-color-accent="amber"  aria-label="Modo oscuro"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Modo oscuro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 2c-1.82 0-3.53.5-5 1.35C8 5.08 10 8.3 10 12s-2 6.92-5 8.65C6.47 21.5 8.18 22 10 22a10 10 0 0 0 10-10A10 10 0 0 0 10 2"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Documentación de QBasic" class="md-nav__button md-logo" aria-label="Documentación de QBasic" data-md-component="logo">
+      
+  <img src="../assets/images/QBlogo2.png" alt="logo">
+
+    </a>
+    Documentación de QBasic
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Inicio
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FAQ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../historia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Historia
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../instalacion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Instalación y Configuración
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../implementaciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Implementaciones
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../recursos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Recursos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sintaxis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sintaxis
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../instrucciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Instrucciones Básicas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../estructuras-control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Estructuras de Control
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../funciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Funciones
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../programacion-modular/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Programación Modular
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Gráficos
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            Gráficos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../graficos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introducción
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2D/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gráficos 2D
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3D/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gráficos 3D
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../raycasting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Raycasting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../animaciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Animaciones
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Entrada de Usuario
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
+            <span class="md-nav__icon md-icon"></span>
+            Entrada de Usuario
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mouse/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Uso del Ratón
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archivos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Manejo de Archivos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_15" >
+        
+          
+          <label class="md-nav__link" for="__nav_15" id="__nav_15_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Sonido
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_15_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_15">
+            <span class="md-nav__icon md-icon"></span>
+            Sonido
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sonido/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Conceptos Básicos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../manipulacion-sonido/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Manipulación de Sonido
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16" >
+        
+          
+          <label class="md-nav__link" for="__nav_16" id="__nav_16_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Comunicaciones
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_16_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_16">
+            <span class="md-nav__icon md-icon"></span>
+            Comunicaciones
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modem/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Uso del Módem
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestion-memoria/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gestión de Memoria
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18" >
+        
+          
+          <label class="md-nav__link" for="__nav_18" id="__nav_18_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Estructuras de Datos
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_18_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_18">
+            <span class="md-nav__icon md-icon"></span>
+            Estructuras de Datos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pilas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pilas (Stacks)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Buenas Prácticas
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Buenas Prácticas
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#escribiendo-codigo-comprensible" class="md-nav__link">
+    <span class="md-ellipsis">
+      Escribiendo Código Comprensible
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Escribiendo Código Comprensible">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nomenclatura" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nomenclatura
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#constantes-con-nombre" class="md-nav__link">
+    <span class="md-ellipsis">
+      Constantes con Nombre
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comentarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comentarios
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#formato" class="md-nav__link">
+    <span class="md-ellipsis">
+      Formato
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tecnicas-de-codificacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Técnicas de Codificación
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Técnicas de Codificación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#programacion-modular" class="md-nav__link">
+    <span class="md-ellipsis">
+      Programación Modular
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#programacion-procedural" class="md-nav__link">
+    <span class="md-ellipsis">
+      Programación Procedural
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#combinando-modulos-y-procedimientos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Combinando Módulos y Procedimientos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optimizacion-de-codigo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optimización de Código
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../estandares/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Estándares
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tecnicas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Técnicas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#escribiendo-codigo-comprensible" class="md-nav__link">
+    <span class="md-ellipsis">
+      Escribiendo Código Comprensible
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Escribiendo Código Comprensible">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nomenclatura" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nomenclatura
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#constantes-con-nombre" class="md-nav__link">
+    <span class="md-ellipsis">
+      Constantes con Nombre
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comentarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comentarios
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#formato" class="md-nav__link">
+    <span class="md-ellipsis">
+      Formato
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tecnicas-de-codificacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Técnicas de Codificación
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Técnicas de Codificación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#programacion-modular" class="md-nav__link">
+    <span class="md-ellipsis">
+      Programación Modular
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#programacion-procedural" class="md-nav__link">
+    <span class="md-ellipsis">
+      Programación Procedural
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#combinando-modulos-y-procedimientos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Combinando Módulos y Procedimientos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optimizacion-de-codigo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optimización de Código
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="buenas-practicas-en-qbasic">Buenas Prácticas en QBasic</h1>
+<h2 id="escribiendo-codigo-comprensible">Escribiendo Código Comprensible</h2>
+<p>Siempre es un desafío escribir código robusto, rápido y optimizado, mientras se mantiene lo suficientemente estructurado para ser legible por ti y por otros programadores en el futuro. Aunque QBasic es considerado un lenguaje relativamente simple, los programas pueden volverse complejos rápidamente si no se aplican buenas prácticas de programación.</p>
+<h3 id="nomenclatura">Nomenclatura</h3>
+<p>Elegir nombres adecuados para los elementos de tu código puede hacerlo mucho más comprensible. Los nombres deben indicar exactamente qué es el elemento:</p>
+<ul>
+<li><strong>Para funciones o procedimientos</strong>: Comienza el nombre con un verbo, como en "ObtenerEspacioLibre" o "DibujarBorde".</li>
+<li><strong>Para variables</strong>: El nombre debe indicar lo que contiene, como en "EspacioLibreDisco" o "ContadorFilas".</li>
+<li><strong>Prefijos de tipo</strong>: Puedes añadir un prefijo de tipo como "n" o "ent" para variables enteras (por ejemplo, "nIndiceArray"), aunque esto no siempre es necesario.</li>
+</ul>
+<p>La capitalización de la primera letra de cada palabra en el nombre puede hacerlo más legible. Evita usar una sola letra para los nombres de variables, excepto para índices de bucles (como <code>i</code>, <code>j</code>, <code>k</code>).</p>
+<pre><code class="language-qbasic">' Mal ejemplo
+FOR a = 1 TO 10
+  b = b + a
+NEXT a
+
+' Buen ejemplo
+FOR indice = 1 TO NumeroElementos
+  SumaTotal = SumaTotal + indice
+NEXT indice
+</code></pre>
+<h3 id="constantes-con-nombre">Constantes con Nombre</h3>
+<p>Utiliza constantes con nombre en lugar de valores literales. Por ejemplo, en lugar de escribir:</p>
+<pre><code class="language-qbasic">FOR i = 1 TO 10
+  ' código
+NEXT i
+</code></pre>
+<p>Es mejor escribir:</p>
+<pre><code class="language-qbasic">CONST CantidadFilas = 10
+FOR i = 1 TO CantidadFilas
+  ' código
+NEXT i
+</code></pre>
+<p>Usar constantes con nombre tiene dos ventajas principales:</p>
+<ol>
+<li>Es más fácil entender qué representa el valor.</li>
+<li>Los cambios futuros en el código serán más sencillos, ya que solo necesitas modificar el valor en un lugar.</li>
+</ol>
+<h3 id="comentarios">Comentarios</h3>
+<p>Los comentarios son lo que la mayoría de los programadores dejan para el futuro, y ese es el error, ¡porque luego no lo harán! Siempre añade comentarios mientras estás programando. Describe todo en tu código siguiendo estas reglas:</p>
+<ol>
+<li><strong>Añade comentarios antes o junto a las declaraciones de variables</strong> para describir qué son y/o cómo se utilizan en el código.</li>
+</ol>
+<p><code>qbasic
+   DIM CantidadElementos AS INTEGER  ' Cantidad total de elementos en el array
+   DIM Matriz(100, 100) AS INTEGER   ' Matriz que almacena los valores de altura del terreno</code></p>
+<ol>
+<li><strong>Añade comentarios antes de cada bloque</strong> para describir su propósito.</li>
+</ol>
+<p><code>qbasic
+   ' Calcular el promedio de los elementos
+   SumaTotal = 0
+   FOR i = 1 TO NumeroElementos
+     SumaTotal = SumaTotal + Valores(i)
+   NEXT i
+   Promedio = SumaTotal / NumeroElementos</code></p>
+<ol>
+<li><strong>Comenta las partes complicadas del código</strong>. Esto es muy importante, porque generalmente utilizas algunos trucos de codificación para hacer el código mejor y más rápido, pero más tarde no entenderás cómo funciona.</li>
+</ol>
+<p><code>qbasic
+   ' Usamos XOR para intercambiar variables sin usar una variable temporal
+   a = a XOR b
+   b = a XOR b
+   a = a XOR b</code></p>
+<ol>
+<li><strong>Escribe un bloque de comentarios al principio de cada procedimiento</strong>, describe sus entradas y salidas, qué hace y/o cómo funciona. No entres en detalles de la rutina, sin embargo – deberían describirse dentro del procedimiento.</li>
+</ol>
+<p><code>qbasic
+   ' ******************************************
+   ' SUB DibujarCuadro(x1, y1, x2, y2, color)
+   ' Entradas: x1,y1 - Coordenada superior izquierda
+   '           x2,y2 - Coordenada inferior derecha
+   '           color - Color del cuadro (1-15)
+   ' Salida: Ninguna
+   ' Función: Dibuja un cuadro en la pantalla usando caracteres ASCII
+   ' ******************************************
+   SUB DibujarCuadro(x1, y1, x2, y2, color)</code></p>
+<ol>
+<li>Algunos programadores quieren tener un historial de su trabajo. Pueden querer añadir un bloque de comentarios al principio de los procedimientos y módulos con información como la fecha de la última actualización, correcciones de errores, etc.</li>
+</ol>
+<h3 id="formato">Formato</h3>
+<p>El formato adecuado del código también lo hace más comprensible. Algunas formas comunes de formateo adecuado son:</p>
+<ol>
+<li><strong>Indenta los bloques anidados</strong>. Esto es realmente necesario para distinguir bloques anidados entre sí. Por ejemplo, si tienes tres bucles FOR anidados con cuatro bloques IF dentro de ellos, sin indentar el código te confundirás fácilmente con los bloques.</li>
+</ol>
+<p>```qbasic
+   ' Mal ejemplo
+   FOR i = 1 TO 10
+   FOR j = 1 TO 10
+   IF Matriz(i, j) &gt; 0 THEN
+   PRINT "Positivo"
+   ELSE
+   PRINT "No positivo"
+   END IF
+   NEXT j
+   NEXT i</p>
+<p>' Buen ejemplo
+   FOR i = 1 TO 10
+     FOR j = 1 TO 10
+       IF Matriz(i, j) &gt; 0 THEN
+         PRINT "Positivo"
+       ELSE
+         PRINT "No positivo"
+       END IF
+     NEXT j
+   NEXT i
+   ```</p>
+<ol>
+<li><strong>Estructura tu código en párrafos</strong>. Mantén líneas relacionadas juntas y deja un espacio entre dos párrafos de código relacionado. Si no has hecho algo así en tu código, inténtalo. Entonces verás cómo tu código se vuelve mucho más comprensible con este pequeño consejo.</li>
+</ol>
+<p>```qbasic
+   ' Inicialización de variables
+   x = 0
+   y = 0
+   contador = 0</p>
+<p>' Procesamiento principal
+   INPUT "Ingrese un valor: ", valor
+   WHILE valor &gt; 0
+     suma = suma + valor
+     contador = contador + 1
+     INPUT "Ingrese otro valor (0 para terminar): ", valor
+   WEND</p>
+<p>' Mostrar resultados
+   PRINT "La suma es: "; suma
+   IF contador &gt; 0 THEN
+     PRINT "El promedio es: "; suma / contador
+   ELSE
+     PRINT "No se ingresaron valores positivos"
+   END IF
+   ```</p>
+<ol>
+<li><strong>Declara todas las variables al principio</strong> del módulo o procedimiento. Esto facilita encontrar la declaración de cada variable. No declarar las variables es un gran error que hace que tu código sea menos optimizado y menos estructurado.</li>
+</ol>
+<p>```qbasic
+   SUB ProcesarDatos
+     ' Declaración de variables
+     DIM i AS INTEGER
+     DIM suma AS SINGLE
+     DIM promedio AS SINGLE
+     DIM valor AS INTEGER
+     DIM contador AS INTEGER</p>
+<pre><code> ' Código del procedimiento...
+</code></pre>
+<p>END SUB
+   ```</p>
+<h2 id="tecnicas-de-codificacion">Técnicas de Codificación</h2>
+<p>Podemos llamarlo el arte de programar: codificar de manera que facilite los cambios futuros. ¿Cómo debemos organizar nuestro código? A continuación, se discuten algunos de los conceptos más importantes de la programación.</p>
+<h3 id="programacion-modular">Programación Modular</h3>
+<p>Siempre escribe tu código de manera modular. Esto es muy importante por varias razones:</p>
+<ol>
+<li>
+<p><strong>Reutilización</strong>: Los módulos independientes pueden utilizarse en más de un proyecto. Supongamos que has escrito un programa que necesita algunos cálculos financieros. Si colocas el código que realiza estos cálculos en un módulo independiente, puedes utilizarlo en otro programa sin hacer cambios.</p>
+</li>
+<li>
+<p><strong>Organización</strong>: Dividir tu código en partes más pequeñas hace que tu proyecto esté más organizado. Un proyecto bien organizado tiene un gran potencial para ser ampliado en cualquier momento.</p>
+</li>
+<li>
+<p><strong>Flexibilidad de enfoque</strong>: La programación modular facilita tanto la programación de arriba hacia abajo como de abajo hacia arriba:</p>
+</li>
+<li>Los programadores que prefieren trabajar de arriba hacia abajo pueden escribir las partes principales del código en el módulo principal, mientras declaran procedimientos que se codificarán en otros módulos más tarde.</li>
+<li>
+<p>Quienes prefieren trabajar de abajo hacia arriba pueden escribir módulos independientes uno por uno, y como escriben partes relacionadas juntas, es más fácil seguir el rastro de su código.</p>
+</li>
+<li>
+<p><strong>Trabajo en equipo</strong>: La programación modular también facilita la programación de un proyecto grande en equipo.</p>
+</li>
+</ol>
+<p>En QBasic, puedes implementar la programación modular de varias maneras:</p>
+<pre><code class="language-qbasic">' Archivo: PRINCIPAL.BAS
+' Módulo principal del programa
+
+' Inclusión de otros módulos usando $INCLUDE
+'$INCLUDE: 'UTILIDAD.BI'
+'$INCLUDE: 'GRAFICO.BI'
+
+' Declaraciones de variables globales
+DIM SHARED configuracion AS configuracionType
+
+' Programa principal
+SUB Main
+  InicializarPrograma
+  MostrarMenuPrincipal
+  FinalizarPrograma
+END SUB
+
+' Llamada al programa principal
+Main
+END
+</code></pre>
+<pre><code class="language-qbasic">' Archivo: UTILIDAD.BI
+' Módulo de utilidades con funciones comunes
+
+' Tipo de datos para configuración
+TYPE configuracionType
+  nombreArchivo AS STRING * 64
+  modoGrafico AS INTEGER
+  colorTexto AS INTEGER
+END TYPE
+
+' Funciones de utilidad
+SUB InicializarPrograma
+  ' Código de inicialización
+END SUB
+
+FUNCTION LeerArchivo$(nombreArchivo$)
+  ' Código para leer archivos
+END FUNCTION
+
+SUB GuardarArchivo(nombreArchivo$, datos$)
+  ' Código para guardar archivos
+END SUB
+</code></pre>
+<p>Es importante destacar que la mayoría de las ventajas de la programación modular están asociadas con que los módulos sean independientes. Por supuesto, al menos un módulo en cada proyecto no puede ser independiente, pero si todos los módulos dependen de otros, entonces hay poca ventaja en la programación modular.</p>
+<h3 id="programacion-procedural">Programación Procedural</h3>
+<p>En la sección anterior, hablamos sobre el uso de módulos. Para estar lo suficientemente estructurado, el código en cada módulo debe dividirse en procedimientos. A diferencia de los módulos en un proyecto, los procedimientos en un módulo pueden usar otros procedimientos y, de hecho, es por eso que se colocan en un mismo módulo.</p>
+<p><strong>Cada procedimiento debe tener una sola tarea</strong>. Esto facilita la codificación de procedimientos, ya que es más fácil aplicar los cambios en el código. Cambias un procedimiento y los otros que lo utilizan funcionarán de la manera que deseas. Esta es la principal ventaja de la programación procedural.</p>
+<p>En QBasic, los procedimientos se implementan mediante:</p>
+<ol>
+<li><strong>SUB</strong>: Para procedimientos que no devuelven un valor</li>
+</ol>
+<p><code>qbasic
+   SUB DibujarCuadro (x1, y1, x2, y2, color)
+     ' Dibujar un cuadro en la pantalla
+     LINE (x1, y1)-(x2, y2), color, B
+   END SUB</code></p>
+<ol>
+<li><strong>FUNCTION</strong>: Para procedimientos que devuelven un valor</li>
+</ol>
+<p><code>qbasic
+   FUNCTION CalcularArea (ancho, alto)
+     CalcularArea = ancho * alto
+   END FUNCTION</code></p>
+<p>Algunas buenas prácticas para procedimientos en QBasic:</p>
+<ol>
+<li>
+<p><strong>Nombres descriptivos</strong>: Utiliza nombres que describan claramente lo que hace el procedimiento.</p>
+</li>
+<li>
+<p><strong>Parámetros claros</strong>: Define claramente los parámetros de entrada y salida.</p>
+</li>
+<li>
+<p><strong>Tamaño adecuado</strong>: Un procedimiento no debe ser demasiado largo. Si es muy extenso, considera dividirlo en procedimientos más pequeños.</p>
+</li>
+<li>
+<p><strong>Cohesión</strong>: Cada procedimiento debe realizar una tarea única y bien definida.</p>
+</li>
+<li>
+<p><strong>Bajo acoplamiento</strong>: Minimiza las dependencias entre procedimientos.</p>
+</li>
+</ol>
+<p>Ejemplo de una estructura procedural bien organizada:</p>
+<pre><code class="language-qbasic">' Programa principal
+SUB Main
+  ' Variables locales
+  DIM opcion AS INTEGER
+
+  ' Inicialización
+  InicializarPrograma
+
+  ' Bucle principal
+  DO
+    opcion = MostrarMenu()
+    ProcesarOpcion opcion
+  LOOP UNTIL opcion = 0
+
+  ' Finalización
+  FinalizarPrograma
+END SUB
+
+' Muestra el menú principal y devuelve la opción seleccionada
+FUNCTION MostrarMenu()
+  CLS
+  PRINT &quot;MENÚ PRINCIPAL&quot;
+  PRINT &quot;==============&quot;
+  PRINT &quot;1. Ingresar datos&quot;
+  PRINT &quot;2. Procesar información&quot;
+  PRINT &quot;3. Mostrar resultados&quot;
+  PRINT &quot;0. Salir&quot;
+  PRINT
+  INPUT &quot;Seleccione una opción: &quot;, opcion
+  MostrarMenu = opcion
+END FUNCTION
+
+' Procesa la opción seleccionada
+SUB ProcesarOpcion(opcion)
+  SELECT CASE opcion
+    CASE 1: IngresarDatos
+    CASE 2: ProcesarInformacion
+    CASE 3: MostrarResultados
+    CASE 0: ' No hacer nada, salir
+    CASE ELSE: MostrarError &quot;Opción no válida&quot;
+  END SELECT
+END SUB
+</code></pre>
+<h3 id="combinando-modulos-y-procedimientos">Combinando Módulos y Procedimientos</h3>
+<p>Un proyecto QBasic bien estructurado combina tanto la programación modular como la procedural:</p>
+<ol>
+<li>
+<p><strong>Define módulos para áreas funcionales</strong>: Gráficos, entrada/salida, cálculos, interfaz de usuario, etc.</p>
+</li>
+<li>
+<p><strong>Dentro de cada módulo, define procedimientos específicos</strong>: Cada procedimiento realiza una tarea concreta dentro del ámbito del módulo.</p>
+</li>
+<li>
+<p><strong>Establece interfaces claras entre módulos</strong>: Define cómo interactúan los módulos entre sí, minimizando dependencias.</p>
+</li>
+</ol>
+<p>Esta aproximación estructurada te permitirá:</p>
+<ul>
+<li>Mantener tu código organizado y fácil de entender</li>
+<li>Reutilizar componentes en otros proyectos</li>
+<li>Facilitar modificaciones y ampliaciones futuras</li>
+<li>Trabajar en equipo de manera más eficiente en proyectos grandes</li>
+</ul>
+<h2 id="optimizacion-de-codigo">Optimización de Código</h2>
+<p>// ... existing content ...</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>

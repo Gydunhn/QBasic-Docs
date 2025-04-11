@@ -1,0 +1,3769 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../programacion-modular/">
+      
+      
+        <link rel="next" href="../2D/">
+      
+      
+      <link rel="icon" href="../assets/images/QBlogo2.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.11">
+    
+    
+      
+        <title>Introducción - Documentación de QBasic</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.4af4bdda.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#graficos" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Documentación de QBasic" class="md-header__button md-logo" aria-label="Documentación de QBasic" data-md-component="logo">
+      
+  <img src="../assets/images/QBlogo2.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Documentación de QBasic
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Introducción
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Automatico"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Automatico" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-purple"  aria-label="Modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Modo claro" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="brown" data-md-color-accent="amber"  aria-label="Modo oscuro"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Modo oscuro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 2c-1.82 0-3.53.5-5 1.35C8 5.08 10 8.3 10 12s-2 6.92-5 8.65C6.47 21.5 8.18 22 10 22a10 10 0 0 0 10-10A10 10 0 0 0 10 2"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Documentación de QBasic" class="md-nav__button md-logo" aria-label="Documentación de QBasic" data-md-component="logo">
+      
+  <img src="../assets/images/QBlogo2.png" alt="logo">
+
+    </a>
+    Documentación de QBasic
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Inicio
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FAQ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../historia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Historia
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../instalacion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Instalación y Configuración
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../implementaciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Implementaciones
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../recursos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Recursos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sintaxis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sintaxis
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../instrucciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Instrucciones Básicas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../estructuras-control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Estructuras de Control
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../funciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Funciones
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../programacion-modular/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Programación Modular
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Gráficos
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            Gráficos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Introducción
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introducción
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#modos-de-pantalla" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modos de Pantalla
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comandos-basicos-de-dibujo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comandos Básicos de Dibujo
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Comandos Básicos de Dibujo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pset" class="md-nav__link">
+    <span class="md-ellipsis">
+      PSET
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#line" class="md-nav__link">
+    <span class="md-ellipsis">
+      LINE
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#circle" class="md-nav__link">
+    <span class="md-ellipsis">
+      CIRCLE
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paint" class="md-nav__link">
+    <span class="md-ellipsis">
+      PAINT
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trabajando-con-sprites-imagenes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Trabajando con Sprites (Imágenes)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Trabajando con Sprites (Imágenes)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usando-arrays-para-almacenar-graficos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usando Arrays para Almacenar Gráficos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-y-put" class="md-nav__link">
+    <span class="md-ellipsis">
+      GET y PUT
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#guia-completa-sobre-sprites-por-ted-felix" class="md-nav__link">
+    <span class="md-ellipsis">
+      Guía Completa sobre Sprites (por Ted Felix)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Guía Completa sobre Sprites (por Ted Felix)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-son-los-sprites" class="md-nav__link">
+    <span class="md-ellipsis">
+      ¿Qué son los sprites?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creando-un-sprite" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creando un Sprite
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#moviendo-un-sprite" class="md-nav__link">
+    <span class="md-ellipsis">
+      Moviendo un Sprite
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sprites-mas-interesantes-con-mapas-de-bits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sprites más Interesantes con Mapas de Bits
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problemas-con-put-y-alternativas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problemas con PUT y Alternativas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cambio-de-pagina-page-flipping" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cambio de Página (Page Flipping)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transparencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transparencia
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recorte-clipping" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recorte (Clipping)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creacion-de-mapas-de-tiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creación de Mapas de Tiles
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creación de Mapas de Tiles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conceptos-basicos-de-tiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conceptos Básicos de Tiles
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dimensionando-arrays-para-un-sistema-de-tiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dimensionando Arrays para un Sistema de Tiles
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creando-los-tiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creando los Tiles
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cargando-el-diseno-del-mapa" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cargando el Diseño del Mapa
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dibujando-el-mapa" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dibujando el Mapa
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integrando-un-personaje-en-el-mapa-de-tiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integrando un Personaje en el Mapa de Tiles
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ampliando-el-sistema-de-tiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ampliando el Sistema de Tiles
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cargando-gifs-y-paletas-personalizadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cargando GIFs y Paletas Personalizadas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#manipulacion-de-paletas-en-qbasic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Manipulación de Paletas en QBasic
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Manipulación de Paletas en QBasic">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conceptos-basicos-de-paletas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conceptos Básicos de Paletas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#el-comando-palette" class="md-nav__link">
+    <span class="md-ellipsis">
+      El Comando PALETTE
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-de-transicion-de-colores" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo de Transición de Colores
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optimizacion-con-acceso-directo-a-puertos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optimización con Acceso Directo a Puertos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aplicaciones-de-la-manipulacion-de-paletas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aplicaciones de la Manipulación de Paletas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Aplicaciones de la Manipulación de Paletas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fundidos-a-negro-o-blanco" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fundidos a Negro o Blanco
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#efectos-de-rotacion-de-paleta" class="md-nav__link">
+    <span class="md-ellipsis">
+      Efectos de Rotación de Paleta
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nota-tecnica" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nota Técnica
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tutorial-de-paletas-vga-por-brian-bartels" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tutorial de Paletas VGA por Brian Bartels
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tutorial de Paletas VGA por Brian Bartels">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conceptos-de-paletas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conceptos de Paletas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#temas-avanzados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Temas Avanzados
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creando-gradientes-de-colores" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creando Gradientes de Colores
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fundidos-de-paleta" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fundidos de Paleta
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-completo-fundido-entre-dos-paletas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo Completo: Fundido entre Dos Paletas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-completo-editor-de-tiles-simple" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo Completo: Editor de Tiles Simple
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recursos-adicionales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recursos Adicionales
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#efectos-avanzados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Efectos Avanzados
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Efectos Avanzados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#plasma-con-ondas-sinusoidales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Plasma con Ondas Sinusoidales
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Plasma con Ondas Sinusoidales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fundamentos-matematicos-la-onda-sinusoidal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fundamentos Matemáticos: La Onda Sinusoidal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dibujando-una-onda-sinusoidal-basica" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dibujando una Onda Sinusoidal Básica
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mezclando-ondas-sinusoidales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mezclando Ondas Sinusoidales
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aplicando-ondas-sinusoidales-a-la-paleta-de-colores" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aplicando Ondas Sinusoidales a la Paleta de Colores
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tipos-de-plasmas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tipos de Plasmas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creacion-de-paletas-para-plasma" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creación de Paletas para Plasma
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plasmas-avanzados-combinacion-de-funciones-sinusoidales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Plasmas Avanzados: Combinación de Funciones Sinusoidales
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plasma-en-coordenadas-polares" class="md-nav__link">
+    <span class="md-ellipsis">
+      Plasma en Coordenadas Polares
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plasmas-semitransparentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Plasmas Semitransparentes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optimizaciones-para-mayor-velocidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optimizaciones para Mayor Velocidad
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aplicaciones-en-juegos-comerciales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aplicaciones en Juegos Comerciales
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plasma-en-modo-texto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Plasma en Modo Texto
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#efecto-de-ondulacion-ripple" class="md-nav__link">
+    <span class="md-ellipsis">
+      Efecto de Ondulación (Ripple)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Efecto de Ondulación (Ripple)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fundamentos-matematicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fundamentos Matemáticos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fundamentos Matemáticos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#caso-unidimensional-1d" class="md-nav__link">
+    <span class="md-ellipsis">
+      Caso Unidimensional (1D)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#caso-bidimensional-2d" class="md-nav__link">
+    <span class="md-ellipsis">
+      Caso Bidimensional (2D)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementacion-en-qbasic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementación en QBasic
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optimizaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optimizaciones
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aplicaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aplicaciones
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2D/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gráficos 2D
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3D/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gráficos 3D
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../raycasting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Raycasting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../animaciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Animaciones
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Entrada de Usuario
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
+            <span class="md-nav__icon md-icon"></span>
+            Entrada de Usuario
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mouse/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Uso del Ratón
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archivos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Manejo de Archivos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_15" >
+        
+          
+          <label class="md-nav__link" for="__nav_15" id="__nav_15_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Sonido
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_15_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_15">
+            <span class="md-nav__icon md-icon"></span>
+            Sonido
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sonido/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Conceptos Básicos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../manipulacion-sonido/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Manipulación de Sonido
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16" >
+        
+          
+          <label class="md-nav__link" for="__nav_16" id="__nav_16_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Comunicaciones
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_16_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_16">
+            <span class="md-nav__icon md-icon"></span>
+            Comunicaciones
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modem/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Uso del Módem
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestion-memoria/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gestión de Memoria
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18" >
+        
+          
+          <label class="md-nav__link" for="__nav_18" id="__nav_18_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Estructuras de Datos
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_18_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_18">
+            <span class="md-nav__icon md-icon"></span>
+            Estructuras de Datos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pilas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pilas (Stacks)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../buenas-practicas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Buenas Prácticas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../estandares/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Estándares
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tecnicas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Técnicas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#modos-de-pantalla" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modos de Pantalla
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comandos-basicos-de-dibujo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comandos Básicos de Dibujo
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Comandos Básicos de Dibujo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pset" class="md-nav__link">
+    <span class="md-ellipsis">
+      PSET
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#line" class="md-nav__link">
+    <span class="md-ellipsis">
+      LINE
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#circle" class="md-nav__link">
+    <span class="md-ellipsis">
+      CIRCLE
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paint" class="md-nav__link">
+    <span class="md-ellipsis">
+      PAINT
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trabajando-con-sprites-imagenes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Trabajando con Sprites (Imágenes)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Trabajando con Sprites (Imágenes)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usando-arrays-para-almacenar-graficos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usando Arrays para Almacenar Gráficos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-y-put" class="md-nav__link">
+    <span class="md-ellipsis">
+      GET y PUT
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#guia-completa-sobre-sprites-por-ted-felix" class="md-nav__link">
+    <span class="md-ellipsis">
+      Guía Completa sobre Sprites (por Ted Felix)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Guía Completa sobre Sprites (por Ted Felix)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-son-los-sprites" class="md-nav__link">
+    <span class="md-ellipsis">
+      ¿Qué son los sprites?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creando-un-sprite" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creando un Sprite
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#moviendo-un-sprite" class="md-nav__link">
+    <span class="md-ellipsis">
+      Moviendo un Sprite
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sprites-mas-interesantes-con-mapas-de-bits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sprites más Interesantes con Mapas de Bits
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problemas-con-put-y-alternativas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problemas con PUT y Alternativas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cambio-de-pagina-page-flipping" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cambio de Página (Page Flipping)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transparencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transparencia
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recorte-clipping" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recorte (Clipping)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creacion-de-mapas-de-tiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creación de Mapas de Tiles
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creación de Mapas de Tiles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conceptos-basicos-de-tiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conceptos Básicos de Tiles
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dimensionando-arrays-para-un-sistema-de-tiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dimensionando Arrays para un Sistema de Tiles
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creando-los-tiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creando los Tiles
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cargando-el-diseno-del-mapa" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cargando el Diseño del Mapa
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dibujando-el-mapa" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dibujando el Mapa
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integrando-un-personaje-en-el-mapa-de-tiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integrando un Personaje en el Mapa de Tiles
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ampliando-el-sistema-de-tiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ampliando el Sistema de Tiles
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cargando-gifs-y-paletas-personalizadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cargando GIFs y Paletas Personalizadas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#manipulacion-de-paletas-en-qbasic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Manipulación de Paletas en QBasic
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Manipulación de Paletas en QBasic">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conceptos-basicos-de-paletas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conceptos Básicos de Paletas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#el-comando-palette" class="md-nav__link">
+    <span class="md-ellipsis">
+      El Comando PALETTE
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-de-transicion-de-colores" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo de Transición de Colores
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optimizacion-con-acceso-directo-a-puertos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optimización con Acceso Directo a Puertos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aplicaciones-de-la-manipulacion-de-paletas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aplicaciones de la Manipulación de Paletas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Aplicaciones de la Manipulación de Paletas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fundidos-a-negro-o-blanco" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fundidos a Negro o Blanco
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#efectos-de-rotacion-de-paleta" class="md-nav__link">
+    <span class="md-ellipsis">
+      Efectos de Rotación de Paleta
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nota-tecnica" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nota Técnica
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tutorial-de-paletas-vga-por-brian-bartels" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tutorial de Paletas VGA por Brian Bartels
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tutorial de Paletas VGA por Brian Bartels">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conceptos-de-paletas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conceptos de Paletas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#temas-avanzados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Temas Avanzados
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creando-gradientes-de-colores" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creando Gradientes de Colores
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fundidos-de-paleta" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fundidos de Paleta
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-completo-fundido-entre-dos-paletas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo Completo: Fundido entre Dos Paletas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-completo-editor-de-tiles-simple" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo Completo: Editor de Tiles Simple
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recursos-adicionales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recursos Adicionales
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#efectos-avanzados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Efectos Avanzados
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Efectos Avanzados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#plasma-con-ondas-sinusoidales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Plasma con Ondas Sinusoidales
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Plasma con Ondas Sinusoidales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fundamentos-matematicos-la-onda-sinusoidal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fundamentos Matemáticos: La Onda Sinusoidal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dibujando-una-onda-sinusoidal-basica" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dibujando una Onda Sinusoidal Básica
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mezclando-ondas-sinusoidales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mezclando Ondas Sinusoidales
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aplicando-ondas-sinusoidales-a-la-paleta-de-colores" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aplicando Ondas Sinusoidales a la Paleta de Colores
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tipos-de-plasmas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tipos de Plasmas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creacion-de-paletas-para-plasma" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creación de Paletas para Plasma
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plasmas-avanzados-combinacion-de-funciones-sinusoidales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Plasmas Avanzados: Combinación de Funciones Sinusoidales
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plasma-en-coordenadas-polares" class="md-nav__link">
+    <span class="md-ellipsis">
+      Plasma en Coordenadas Polares
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plasmas-semitransparentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Plasmas Semitransparentes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optimizaciones-para-mayor-velocidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optimizaciones para Mayor Velocidad
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aplicaciones-en-juegos-comerciales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aplicaciones en Juegos Comerciales
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plasma-en-modo-texto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Plasma en Modo Texto
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#efecto-de-ondulacion-ripple" class="md-nav__link">
+    <span class="md-ellipsis">
+      Efecto de Ondulación (Ripple)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Efecto de Ondulación (Ripple)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fundamentos-matematicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fundamentos Matemáticos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fundamentos Matemáticos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#caso-unidimensional-1d" class="md-nav__link">
+    <span class="md-ellipsis">
+      Caso Unidimensional (1D)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#caso-bidimensional-2d" class="md-nav__link">
+    <span class="md-ellipsis">
+      Caso Bidimensional (2D)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementacion-en-qbasic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementación en QBasic
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optimizaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optimizaciones
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aplicaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aplicaciones
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="graficos">Gráficos</h1>
+<p>QBasic ofrece capacidades gráficas sorprendentemente potentes para su época. Este capítulo cubre desde los comandos básicos de dibujo hasta técnicas avanzadas para trabajar con sprites y cargar gráficos externos.</p>
+<h2 id="modos-de-pantalla">Modos de Pantalla</h2>
+<p>El comando <code>SCREEN</code> establece el modo gráfico:</p>
+<pre><code class="language-qbasic">SCREEN 0  ' Modo texto (80x25 caracteres)
+SCREEN 1  ' Baja resolución (320x200, 4 colores)
+SCREEN 2  ' Media resolución (640x200, 2 colores)
+SCREEN 7  ' Media resolución (320x200, 16 colores) - EGA
+SCREEN 8  ' Alta resolución (640x200, 16 colores)
+SCREEN 9  ' Alta resolución (640x350, 16 colores) - EGA
+SCREEN 12 ' Alta resolución (640x480, 16 colores) - VGA
+SCREEN 13 ' Modo 256 colores (320x200) - VGA
+</code></pre>
+<p>Para este capítulo, usaremos principalmente el modo 7 (EGA 16 colores) para animación debido a su velocidad y soporte para múltiples páginas, y el modo 13 (VGA 256 colores) para gráficos más detallados.</p>
+<h2 id="comandos-basicos-de-dibujo">Comandos Básicos de Dibujo</h2>
+<h3 id="pset">PSET</h3>
+<p>El comando <code>PSET</code> dibuja un punto en las coordenadas especificadas:</p>
+<pre><code class="language-qbasic">SCREEN 13
+PSET (160, 100), 12  ' Dibuja un pixel rojo en el centro de la pantalla
+</code></pre>
+<h3 id="line">LINE</h3>
+<p>El comando <code>LINE</code> dibuja líneas y rectángulos:</p>
+<pre><code class="language-qbasic">' Línea simple
+LINE (10, 10)-(100, 50), 14  ' Línea amarilla
+
+' Rectángulo
+LINE (50, 50)-(150, 100), 10, B  ' Rectángulo verde
+
+' Rectángulo relleno
+LINE (200, 50)-(250, 100), 9, BF ' Rectángulo azul relleno
+</code></pre>
+<h3 id="circle">CIRCLE</h3>
+<p>El comando <code>CIRCLE</code> dibuja círculos y elipses:</p>
+<pre><code class="language-qbasic">' Círculo simple
+CIRCLE (160, 100), 50, 4  ' Círculo rojo con radio 50
+
+' Elipse
+CIRCLE (160, 100), 50, 5, , , 0.5  ' Elipse
+
+' Arco
+CIRCLE (160, 100), 40, 12, 0, 3.14  ' Medio círculo
+</code></pre>
+<h3 id="paint">PAINT</h3>
+<p>El comando <code>PAINT</code> rellena un área cerrada con un color:</p>
+<pre><code class="language-qbasic">CIRCLE (160, 100), 50, 15
+PAINT (160, 100), 4, 15  ' Rellena el círculo
+</code></pre>
+<h2 id="trabajando-con-sprites-imagenes">Trabajando con Sprites (Imágenes)</h2>
+<h3 id="usando-arrays-para-almacenar-graficos">Usando Arrays para Almacenar Gráficos</h3>
+<p>Para trabajar con sprites en QBasic, necesitamos almacenarlos en arrays. La fórmula para calcular el tamaño del array es:</p>
+<pre><code class="language-text">Ancho * Alto / 2 + 1 = TamañoArray
+</code></pre>
+<p>Por ejemplo, para un sprite de 16x16 píxeles:</p>
+<pre><code class="language-qbasic">' 16 * 16 / 2 + 1 = 129
+DIM SHARED Sprite%(129)
+</code></pre>
+<h3 id="get-y-put">GET y PUT</h3>
+<p>Los comandos <code>GET</code> y <code>PUT</code> permiten capturar y dibujar áreas de la pantalla:</p>
+<pre><code class="language-qbasic">' Dibujar algo (un círculo por ejemplo)
+CIRCLE (20, 20), 8, 14
+PAINT (20, 20), 14, 14
+
+' Guardar en el array
+GET (12, 12)-(28, 28), Sprite%
+
+' Limpiar la pantalla 
+CLS
+
+' Dibujar el sprite en otra posición
+PUT (100, 100), Sprite%, PSET
+</code></pre>
+<p>Opciones del comando <code>PUT</code>:</p>
+<ul>
+<li><code>PSET</code>: Dibuja el sprite como está (reemplaza lo que hay)</li>
+<li><code>PRESET</code>: Invierte los colores</li>
+<li><code>AND</code>: Operación AND con lo que ya está en pantalla</li>
+<li><code>OR</code>: Operación OR con lo que ya está en pantalla</li>
+<li><code>XOR</code>: Operación XOR (útil para borrar el sprite más tarde)</li>
+</ul>
+<h2 id="guia-completa-sobre-sprites-por-ted-felix">Guía Completa sobre Sprites (por Ted Felix)</h2>
+<h3 id="que-son-los-sprites">¿Qué son los sprites?</h3>
+<p>Los sprites son pequeñas imágenes que pueden moverse por la pantalla y animarse. Al usar sprites, se pueden crear juegos con una apariencia más realista. Los sprites son bidimensionales (planos), pero si tienes habilidad para dibujar, puedes hacerlos parecer que tienen profundidad.</p>
+<p>Por ejemplo, "The Legend of Zelda" de Nintendo es un juego completamente basado en sprites, y quizás uno de los mejores. Link y los enemigos son claramente sprites bidimensionales planos. Sin embargo, no hay razón para limitarse a un aspecto 2D cuando puedes simular un aspecto 3D. "Age of Empires" es un buen ejemplo de sprites que parecen tridimensionales.</p>
+<h3 id="creando-un-sprite">Creando un Sprite</h3>
+<p>Como los sprites son pequeñas imágenes, necesitamos una imagen para crear un sprite. Hay muchas formas de hacerlo. La forma más simple es dibujar primero la imagen en la pantalla usando las instrucciones gráficas de QBasic:</p>
+<pre><code class="language-qbasic">SCREEN 13
+CLS
+CIRCLE (4, 3), 4, 4    ' Círculo con borde rojo
+PAINT (4, 3), 12, 4    ' Relleno rojo claro
+</code></pre>
+<p>Una vez que tenemos la imagen en la pantalla, podemos usar <code>GET</code> para copiarla a un array:</p>
+<pre><code class="language-qbasic">DIM Ball%(37)          ' Reservar espacio (37 enteros)
+GET (0, 0)-(8, 7), Ball%  ' Copiar de pantalla al array
+</code></pre>
+<p>¿Cómo sabemos que necesitamos 37 elementos? Existe una fórmula para calcularlo, pero para sprites pequeños podemos usar prueba y error. QBasic mostrará un error si el array es demasiado pequeño. Ver el tema de Ayuda "Screen Image Arrays and Compatibility" para la fórmula.</p>
+<p>Una vez almacenado el sprite en el array, podemos dibujarlo donde queramos con <code>PUT</code>:</p>
+<pre><code class="language-qbasic">PUT (160, 100), Ball%  ' Dibujar en el centro de la pantalla
+</code></pre>
+<h3 id="moviendo-un-sprite">Moviendo un Sprite</h3>
+<p>Para animar un sprite, seguimos el mismo principio que en cualquier juego 2D. Mantenemos un registro de la posición X e Y del sprite, y las cambiamos con el tiempo:</p>
+<pre><code class="language-qbasic">DEFINT A-Z        ' Hace que las cosas sean más rápidas
+SCREEN 13
+CLS
+
+' Dibujar un círculo para nuestro sprite
+CIRCLE (4, 3), 4, 4
+PAINT (4, 3), 12, 4
+
+DIM Ball%(37)
+GET (0, 0)-(8, 7), Ball%
+CLS
+
+' Tamaño de pantalla
+CONST XMax = 320
+CONST YMax = 200
+
+' Posición inicial
+X = 160
+Y = 100
+
+' Movimiento
+DX = 1
+DY = 1
+
+DO
+  ' Dibujar el sprite en su posición actual
+  PUT (X, Y), Ball%
+
+  ' Guardar posición anterior
+  PX = X
+  PY = Y
+
+  ' Cambiar la posición
+  X = X + DX
+  Y = Y + DY
+
+  ' Detectar colisiones con los bordes
+  IF X &gt; XMax - 10 THEN DX = -1
+  IF X &lt; 1 THEN DX = 1
+  IF Y &gt; YMax - 9 THEN DY = -1
+  IF Y &lt; 1 THEN DY = 1
+
+  ' Bucle de temporización (ajustar según velocidad del PC)
+  FOR I = 1 TO 30000: NEXT I
+
+  ' Borrar el sprite antes de redibujarlo
+  PUT (PX, PY), Ball%
+
+LOOP WHILE INKEY$ = &quot;&quot;
+</code></pre>
+<p>Lo más extraño de este ejemplo es cómo usa <code>PUT</code> tanto para dibujar como para borrar el sprite. Esto funciona porque <code>PUT</code> dibuja nuestro sprite usando "exclusive or" (XOR), lo que permite eliminar la imagen aplicándolo dos veces.</p>
+<h3 id="sprites-mas-interesantes-con-mapas-de-bits">Sprites más Interesantes con Mapas de Bits</h3>
+<p>Usar <code>CIRCLE</code> y <code>PAINT</code> es rápido, pero es difícil dibujar cosas realmente interesantes. Para eso, necesitamos un mapa de bits (bitmap). Un mapa de bits es una imagen almacenada de una manera que la computadora puede entender, generalmente como números:</p>
+<pre><code class="language-qbasic">DATA  0,15, 0
+DATA 15, 0,15
+DATA  0,15, 0
+</code></pre>
+<p>Es como colorear por números. Donde hay un 0, habrá un punto negro (píxel) en la pantalla. Donde hay un 15, habrá un píxel blanco. Este mapa de bits está organizado para ser 3 píxeles de ancho por 3 de alto.</p>
+<pre><code class="language-qbasic">SCREEN 13
+CLS
+
+FOR Y = 0 TO 2
+  FOR X = 0 TO 2
+    READ DotColor
+    PSET (X, Y), DotColor
+  NEXT X
+NEXT Y
+</code></pre>
+<p>Esto lee el mapa de bits desde las sentencias DATA y lo dibuja en pantalla. Se verá un pequeño diamante en la esquina superior izquierda.</p>
+<p>Los mapas de bits pueden ser tan grandes como necesitemos. Aquí hay un ejemplo de 15x15 píxeles que podría ser un pequeño personaje:</p>
+<pre><code class="language-qbasic">DATA 00,00,00,00,00,00,00,00,00,00,12,12,00,00,00
+DATA 00,00,00,00,00,00,00,00,00,00,15,15,00,00,00
+DATA 00,00,00,00,00,00,00,00,00,15,15,15,15,00,00
+DATA 00,00,00,00,00,00,00,00,00,15,15,00,15,00,00
+DATA 00,00,00,00,00,00,00,00,15,15,15,15,15,14,00
+' ... (resto del bitmap)
+</code></pre>
+<h3 id="problemas-con-put-y-alternativas">Problemas con PUT y Alternativas</h3>
+<p>Aunque <code>PUT</code> es muy útil, tiene varias limitaciones importantes:</p>
+<ol>
+<li>
+<p><strong>No recorta</strong>: Si intentas dibujar un sprite demasiado cerca del borde de la pantalla, QBasic detendrá el programa con un error.</p>
+</li>
+<li>
+<p><strong>Problemas con XOR</strong>: Aunque XOR es excelente para dibujar y borrar usando el mismo mapa de bits, causa problemas con fondos que no son negros, cambiando los colores del sprite.</p>
+</li>
+<li>
+<p><strong>Forma rectangular</strong>: Los sprites con <code>GET</code> y <code>PUT</code> solo pueden ser rectangulares.</p>
+</li>
+</ol>
+<p>Estas limitaciones nos llevan a crear nuestra propia versión de <code>PUT</code> que pueda manejar transparencia y recorte:</p>
+<pre><code class="language-qbasic">SUB PUT2 (Sprite() AS INTEGER, XSize AS INTEGER, YSize AS INTEGER, X AS INTEGER, Y AS INTEGER)
+  ' Dibujar el sprite desde el array a la pantalla
+  FOR YP = 0 TO YSize - 1
+    FOR XP = 0 TO XSize - 1
+      PSET (X + XP, Y + YP), Sprite%(XP, YP)
+    NEXT XP
+  NEXT YP
+END SUB
+</code></pre>
+<h3 id="cambio-de-pagina-page-flipping">Cambio de Página (Page Flipping)</h3>
+<p>Una técnica fundamental para evitar el parpadeo en los juegos es el cambio de página o doble búfer. Esto permite dibujar en una pantalla invisible mientras el usuario ve otra, y luego intercambiarlas.</p>
+<pre><code class="language-qbasic">SCREEN 9, 0, 0, 1  ' Modo EGA: trabajamos en pág 0, mostramos pág 1
+
+' Dibujamos en la página invisible (0)
+CLS
+' ... (dibujar aquí) ...
+
+' Mostramos la página completa
+PCOPY 0, 1  ' Copia pág 0 (trabajo) a pág 1 (visible)
+</code></pre>
+<p>Desafortunadamente, el cambio de página con <code>PCOPY</code> solo está disponible en algunos modos de pantalla (7-9), no en el modo 13 (256 colores). Para estos casos, podemos crear nuestro propio sistema de doble búfer usando un array grande y <code>PUT</code>.</p>
+<h3 id="transparencia">Transparencia</h3>
+<p>Para hacer que partes de un sprite sean transparentes, podemos usar un valor especial en el mapa de bits que indique "no dibujar nada aquí":</p>
+<pre><code class="language-qbasic">SUB PUT2Transparent (Sprite() AS INTEGER, XSize AS INTEGER, YSize AS INTEGER, X AS INTEGER, Y AS INTEGER)
+  FOR YP = 0 TO YSize - 1
+    FOR XP = 0 TO XSize - 1
+      IF Sprite%(XP, YP) &lt;&gt; 0 THEN  ' 0 indica transparencia
+        PSET (X + XP, Y + YP), Sprite%(XP, YP)
+      END IF
+    NEXT XP
+  NEXT YP
+END SUB
+</code></pre>
+<h3 id="recorte-clipping">Recorte (Clipping)</h3>
+<p>Para evitar errores cuando los sprites se dibujan cerca de los bordes, debemos verificar los límites:</p>
+<pre><code class="language-qbasic">SUB PUT2WithClipping (Sprite() AS INTEGER, XSize AS INTEGER, YSize AS INTEGER, X AS INTEGER, Y AS INTEGER)
+  FOR YP = 0 TO YSize - 1
+    IF Y + YP &gt;= 0 AND Y + YP &lt; 200 THEN  ' Verificar límite Y
+      FOR XP = 0 TO XSize - 1
+        IF X + XP &gt;= 0 AND X + XP &lt; 320 THEN  ' Verificar límite X
+          IF Sprite%(XP, YP) &lt;&gt; 0 THEN  ' Transparencia
+            PSET (X + XP, Y + YP), Sprite%(XP, YP)
+          END IF
+        END IF
+      NEXT XP
+    END IF
+  NEXT YP
+END SUB
+</code></pre>
+<p>Con estas técnicas, podemos crear animaciones suaves y visualmente atractivas que formen la base de juegos en QBasic.</p>
+<h2 id="creacion-de-mapas-de-tiles">Creación de Mapas de Tiles</h2>
+<p>Una de las técnicas más utilizadas en juegos de QBasic es la creación de niveles usando "tiles" (baldosas o azulejos). Esta técnica permite crear grandes escenarios usando piezas pequeñas reutilizables.</p>
+<h3 id="conceptos-basicos-de-tiles">Conceptos Básicos de Tiles</h3>
+<p>Los tiles son pequeños sprites (generalmente cuadrados) que se colocan en posiciones específicas para formar un mapa o nivel. Ventajas:</p>
+<ul>
+<li>Ahorro de memoria: solo necesitas definir cada tile una vez</li>
+<li>Facilidad de edición: puedes crear niveles rápidamente</li>
+<li>Reusabilidad: puedes crear muchos niveles con los mismos tiles</li>
+</ul>
+<h3 id="dimensionando-arrays-para-un-sistema-de-tiles">Dimensionando Arrays para un Sistema de Tiles</h3>
+<p>Para crear un sistema de tiles, necesitas dos tipos de arrays:</p>
+<ol>
+<li><strong>Arrays de tiles</strong>: Para almacenar cada tipo de tile</li>
+<li><strong>Array de mapa</strong>: Para guardar la disposición de los tiles</li>
+</ol>
+<pre><code class="language-qbasic">' Dimensionar arrays para tiles (10x10 píxeles cada uno)
+DIM SueloTile(100)
+DIM ParedTile(100)
+DIM AguaTile(100)
+
+' Dimensionar array para mapa (21x15 tiles)
+DIM Mapa(21, 15)
+</code></pre>
+<h3 id="creando-los-tiles">Creando los Tiles</h3>
+<p>Para cada tile, usamos la técnica de DATA y GET:</p>
+<pre><code class="language-qbasic">SCREEN 13
+
+' Primer tile: suelo
+FOR y = 1 TO 10
+    FOR x = 1 TO 10
+        READ color
+        PSET (x, y), color
+    NEXT x
+NEXT y
+GET (1, 1)-(10, 10), SueloTile
+
+' Tile de suelo (arena marrón clara)
+DATA 6,6,6,6,6,6,6,6,6,6
+DATA 6,6,6,6,6,6,6,6,6,6
+DATA 6,6,14,6,6,6,6,6,6,6
+DATA 6,6,6,6,6,6,14,6,6,6
+DATA 6,6,6,6,6,6,6,6,6,6
+DATA 6,6,6,6,14,6,6,6,6,6
+DATA 6,6,6,6,6,6,6,6,6,6
+DATA 6,6,14,6,6,6,6,6,6,6
+DATA 6,6,6,6,6,6,6,14,6,6
+DATA 6,6,6,6,6,6,6,6,6,6
+
+' Segundo tile: pared
+FOR y = 1 TO 10
+    FOR x = 1 TO 10
+        READ color
+        PSET (x, y), color
+    NEXT x
+NEXT y
+GET (1, 1)-(10, 10), ParedTile
+
+' Tile de pared (piedra gris)
+DATA 8,7,8,7,8,7,8,7,8,7
+DATA 7,8,7,8,7,8,7,8,7,8
+DATA 8,7,8,7,8,7,8,7,8,7
+DATA 7,8,7,8,7,8,7,8,7,8
+DATA 8,7,8,7,8,7,8,7,8,7
+DATA 7,8,7,8,7,8,7,8,7,8
+DATA 8,7,8,7,8,7,8,7,8,7
+DATA 7,8,7,8,7,8,7,8,7,8
+DATA 8,7,8,7,8,7,8,7,8,7
+DATA 7,8,7,8,7,8,7,8,7,8
+
+' Tercer tile: agua
+FOR y = 1 TO 10
+    FOR x = 1 TO 10
+        READ color
+        PSET (x, y), color
+    NEXT x
+NEXT y
+GET (1, 1)-(10, 10), AguaTile
+
+' Tile de agua (azul)
+DATA 1,1,1,1,1,1,1,1,1,1
+DATA 1,1,1,1,1,1,1,1,1,1
+DATA 1,1,1,1,9,9,1,1,1,1
+DATA 1,1,1,9,9,9,9,1,1,1
+DATA 1,1,9,9,9,9,9,9,1,1
+DATA 1,1,9,9,9,9,9,9,1,1
+DATA 1,1,1,9,9,9,9,1,1,1
+DATA 1,1,1,1,9,9,1,1,1,1
+DATA 1,1,1,1,1,1,1,1,1,1
+DATA 1,1,1,1,1,1,1,1,1,1
+
+CLS
+</code></pre>
+<h3 id="cargando-el-diseno-del-mapa">Cargando el Diseño del Mapa</h3>
+<p>A continuación, cargamos la disposición de los tiles en el array del mapa:</p>
+<pre><code class="language-qbasic">' Cargar diseño de mapa desde DATA
+FOR y = 1 TO 15
+    FOR x = 1 TO 21
+        READ Mapa(x, y)
+    NEXT x
+NEXT y
+
+' Datos del mapa (1=Suelo, 2=Pared, 3=Agua)
+DATA 2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2
+DATA 2,1,1,1,1,1,1,1,1,1,2,1,1,1,1,1,1,1,1,1,2
+DATA 2,1,1,1,1,1,1,1,1,1,2,1,1,1,1,1,1,1,1,1,2
+DATA 2,1,1,1,1,1,1,1,1,1,2,1,1,1,1,1,1,1,1,1,2
+DATA 2,1,1,1,1,1,1,1,1,1,2,1,1,1,1,1,1,1,1,1,2
+DATA 2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2
+DATA 2,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,2,2,2,2
+DATA 2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2
+DATA 2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2
+DATA 2,2,2,2,2,1,2,2,2,2,2,2,2,2,2,2,1,2,2,2,2
+DATA 2,1,1,1,1,1,1,1,2,3,3,3,3,3,3,1,1,1,1,1,2
+DATA 2,1,1,1,1,1,1,1,1,3,3,3,3,3,3,1,1,1,1,1,2
+DATA 2,1,1,1,1,1,1,1,2,3,3,3,3,3,3,1,1,1,1,1,2
+DATA 2,1,1,1,1,1,1,1,2,3,3,3,3,3,3,1,1,1,1,1,2
+DATA 2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2
+</code></pre>
+<h3 id="dibujando-el-mapa">Dibujando el Mapa</h3>
+<p>Finalmente, recorremos el array de mapa y dibujamos cada tile en su posición correspondiente:</p>
+<pre><code class="language-qbasic">' Dibujar el mapa en pantalla
+FOR y = 1 TO 15
+    FOR x = 1 TO 21
+        ' Calcular posición en píxeles
+        pixelX = (x - 1) * 10
+        pixelY = (y - 1) * 10
+
+        ' Determinar qué tile dibujar según el valor en el mapa
+        SELECT CASE Mapa(x, y)
+            CASE 1: PUT (pixelX, pixelY), SueloTile, PSET
+            CASE 2: PUT (pixelX, pixelY), ParedTile, PSET
+            CASE 3: PUT (pixelX, pixelY), AguaTile, PSET
+        END SELECT
+    NEXT x
+NEXT y
+</code></pre>
+<h3 id="integrando-un-personaje-en-el-mapa-de-tiles">Integrando un Personaje en el Mapa de Tiles</h3>
+<p>Para añadir un personaje que pueda moverse por el mapa:</p>
+<pre><code class="language-qbasic">' Crear sprite de personaje (ejemplo simplificado)
+DIM Personaje(100)
+CLS
+CIRCLE (5, 5), 4, 12
+PAINT (5, 5), 12, 12
+GET (1, 1)-(10, 10), Personaje
+
+' Posición inicial del personaje
+personajeX = 5
+personajeY = 5
+
+' Dibujar mapa inicial
+GOSUB DibujarMapa
+
+' Bucle principal
+DO
+    k$ = INKEY$
+    IF k$ &lt;&gt; &quot;&quot; THEN
+        ' Guardar posición anterior
+        oldX = personajeX
+        oldY = personajeY
+
+        ' Actualizar posición según tecla
+        SELECT CASE k$
+            CASE CHR$(0) + &quot;H&quot;: personajeY = personajeY - 1  ' Arriba
+            CASE CHR$(0) + &quot;P&quot;: personajeY = personajeY + 1  ' Abajo
+            CASE CHR$(0) + &quot;K&quot;: personajeX = personajeX - 1  ' Izquierda
+            CASE CHR$(0) + &quot;M&quot;: personajeX = personajeX + 1  ' Derecha
+            CASE CHR$(27): EXIT DO  ' ESC para salir
+        END SELECT
+
+        ' Comprobar colisiones con paredes y agua
+        IF Mapa(personajeX, personajeY) = 2 OR Mapa(personajeX, personajeY) = 3 THEN
+            ' Restaurar posición anterior si hay colisión
+            personajeX = oldX
+            personajeY = oldY
+        ELSE
+            ' Redibujar el tile en la posición anterior
+            pixelX = (oldX - 1) * 10
+            pixelY = (oldY - 1) * 10
+            SELECT CASE Mapa(oldX, oldY)
+                CASE 1: PUT (pixelX, pixelY), SueloTile, PSET
+                CASE 2: PUT (pixelX, pixelY), ParedTile, PSET
+                CASE 3: PUT (pixelX, pixelY), AguaTile, PSET
+            END SELECT
+
+            ' Dibujar personaje en nueva posición
+            pixelX = (personajeX - 1) * 10
+            pixelY = (personajeY - 1) * 10
+            PUT (pixelX, pixelY), Personaje, PSET
+        END IF
+    END IF
+LOOP
+
+' Subrutina para dibujar todo el mapa
+DibujarMapa:
+FOR y = 1 TO 15
+    FOR x = 1 TO 21
+        pixelX = (x - 1) * 10
+        pixelY = (y - 1) * 10
+        SELECT CASE Mapa(x, y)
+            CASE 1: PUT (pixelX, pixelY), SueloTile, PSET
+            CASE 2: PUT (pixelX, pixelY), ParedTile, PSET
+            CASE 3: PUT (pixelX, pixelY), AguaTile, PSET
+        END SELECT
+    NEXT x
+NEXT y
+RETURN
+</code></pre>
+<h3 id="ampliando-el-sistema-de-tiles">Ampliando el Sistema de Tiles</h3>
+<p>Puedes mejorar el sistema de tiles añadiendo características como:</p>
+<ol>
+<li><strong>Tiles animados</strong>: Cambia el sprite de un tile en cada frame</li>
+<li><strong>Propiedades por tile</strong>: Define comportamientos especiales (daño, curación, etc.)</li>
+<li><strong>Múltiples capas</strong>: Una capa para el suelo, otra para objetos, etc.</li>
+<li><strong>Scrolling</strong>: Para mapas más grandes que la pantalla</li>
+</ol>
+<pre><code class="language-qbasic">' Ejemplo de scroll en un mapa grande (simplificado)
+' Asumimos Mapa(100, 100) para un mapa grande
+
+' Coordenadas de la &quot;cámara&quot;
+cameraX = 0
+cameraY = 0
+
+SUB DibujarMapaConScroll
+    ' Solo dibuja la parte visible del mapa
+    FOR y = 1 TO 15
+        FOR x = 1 TO 21
+            mapX = x + cameraX
+            mapY = y + cameraY
+
+            ' Verificar que estamos dentro del mapa
+            IF mapX &gt;= 1 AND mapX &lt;= 100 AND mapY &gt;= 1 AND mapY &lt;= 100 THEN
+                pixelX = (x - 1) * 10
+                pixelY = (y - 1) * 10
+
+                SELECT CASE Mapa(mapX, mapY)
+                    CASE 1: PUT (pixelX, pixelY), SueloTile, PSET
+                    CASE 2: PUT (pixelX, pixelY), ParedTile, PSET
+                    CASE 3: PUT (pixelX, pixelY), AguaTile, PSET
+                END SELECT
+            END IF
+        NEXT x
+    NEXT y
+END SUB
+</code></pre>
+<h2 id="cargando-gifs-y-paletas-personalizadas">Cargando GIFs y Paletas Personalizadas</h2>
+<p>QBasic no puede cargar GIFs directamente, pero podemos usar programas auxiliares o técnicas como BSAVE/BLOAD:</p>
+<pre><code class="language-qbasic">' Cambiar la paleta de colores
+SUB CargarPaleta (fichero$)
+    filenum% = FREEFILE
+    OPEN fichero$ FOR INPUT AS #filenum%
+    FOR Color% = 0 TO 255
+        INPUT #filenum%, r, g, b
+        OUT &amp;H3C8, Color%
+        OUT &amp;H3C9, r
+        OUT &amp;H3C9, g
+        OUT &amp;H3C9, b
+    NEXT Color%
+    CLOSE #filenum%
+END SUB
+
+' Cargar una imagen BSAVE desde QBasic
+SUB CargarImagen (fichero$)
+    DEF SEG = &amp;HA000
+    BLOAD fichero$, 0
+END SUB
+</code></pre>
+<h2 id="manipulacion-de-paletas-en-qbasic">Manipulación de Paletas en QBasic</h2>
+<p>QBasic ofrece potentes capacidades para trabajar con paletas de colores, lo que permite crear efectos visuales impresionantes incluso con las limitaciones gráficas de la época.</p>
+<h3 id="conceptos-basicos-de-paletas">Conceptos Básicos de Paletas</h3>
+<p>En los modos gráficos de QBasic, especialmente en el modo 13 (320x200 con 256 colores), cada color en pantalla está definido por un valor en la paleta. Esta paleta es esencialmente un array de colores donde cada entrada contiene valores RGB (Rojo, Verde, Azul).</p>
+<h3 id="el-comando-palette">El Comando PALETTE</h3>
+<p>La función <code>PALETTE</code> permite cambiar los valores de color en la paleta:</p>
+<pre><code class="language-qbasic">PALETTE color, valor
+</code></pre>
+<p>Donde:</p>
+<ul>
+<li><code>color</code> es el índice del color a cambiar (0-255 en modo 13)</li>
+<li><code>valor</code> es el nuevo valor RGB calculado con la fórmula:</li>
+</ul>
+<pre><code class="language-texto">valor = 65536 * Azul + 256 * Verde + Rojo
+</code></pre>
+<p>Los valores de Rojo, Verde y Azul pueden variar de 0 a 63, donde 0 es ausencia del color y 63 es la intensidad máxima.</p>
+<p>Ejemplo básico:</p>
+<pre><code class="language-qbasic">SCREEN 13
+PALETTE 15, 63     ' Cambia el color 15 a rojo puro
+PRINT &quot;Este texto es rojo!&quot;
+</code></pre>
+<h3 id="ejemplo-de-transicion-de-colores">Ejemplo de Transición de Colores</h3>
+<pre><code class="language-qbasic">SCREEN 13
+PRINT &quot;Color 15 cambiando constantemente!&quot;
+
+Azul = 63: Verde = 0: Rojo = 0
+
+DO
+  ' Transición de azul a rojo
+  FOR Azul = 63 TO 0 STEP -1
+     Rojo = 63 - Azul
+     valor = 65536 * Azul + 256 * Verde + Rojo
+     PALETTE 15, valor
+     FOR Delay = 1 TO 500: NEXT
+  NEXT
+
+  ' Transición de rojo a verde
+  FOR Rojo = 63 TO 0 STEP -1
+     Verde = 63 - Rojo
+     valor = 65536 * Azul + 256 * Verde + Rojo
+     PALETTE 15, valor
+     FOR Delay = 1 TO 500: NEXT
+  NEXT
+
+  ' Transición de verde a azul
+  FOR Verde = 63 TO 0 STEP -1
+     Azul = 63 - Verde
+     valor = 65536 * Azul + 256 * Verde + Rojo
+     PALETTE 15, valor
+     FOR Delay = 1 TO 500: NEXT
+  NEXT
+LOOP UNTIL INKEY$ &lt;&gt; &quot;&quot;
+</code></pre>
+<h3 id="optimizacion-con-acceso-directo-a-puertos">Optimización con Acceso Directo a Puertos</h3>
+<p>Para manipulaciones avanzadas de paleta, el comando <code>PALETTE</code> puede resultar lento. Una alternativa más eficiente es acceder directamente a los puertos de la tarjeta VGA:</p>
+<pre><code class="language-qbasic">' Cambiar el color 15 a púrpura usando puertos
+OUT &amp;H3C8, 15     ' Indicar qué color vamos a modificar
+OUT &amp;H3C9, 63     ' Componente Rojo (0-63)
+OUT &amp;H3C9, 0      ' Componente Verde (0-63)
+OUT &amp;H3C9, 63     ' Componente Azul (0-63)
+</code></pre>
+<p>Para leer los valores RGB de un color:</p>
+<pre><code class="language-qbasic">' Leer los valores RGB del color 15
+OUT &amp;H3C8, 15      ' Seleccionar el color
+Rojo = INP(&amp;H3C9)  ' Leer componente Rojo
+Verde = INP(&amp;H3C9) ' Leer componente Verde
+Azul = INP(&amp;H3C9)  ' Leer componente Azul
+</code></pre>
+<h3 id="aplicaciones-de-la-manipulacion-de-paletas">Aplicaciones de la Manipulación de Paletas</h3>
+<h4 id="fundidos-a-negro-o-blanco">Fundidos a Negro o Blanco</h4>
+<pre><code class="language-qbasic">' Fundido a negro de toda la paleta
+SCREEN 13
+' Dibujamos algo
+LINE (0, 0)-(319, 199), 15, BF
+CIRCLE (160, 100), 50, 4
+PAINT (160, 100), 12, 4
+
+' Guardar la paleta original
+DIM PaletaOriginal(0 TO 255, 0 TO 2)
+FOR C = 0 TO 255
+    OUT &amp;H3C8, C
+    PaletaOriginal(C, 0) = INP(&amp;H3C9) ' Rojo
+    PaletaOriginal(C, 1) = INP(&amp;H3C9) ' Verde
+    PaletaOriginal(C, 2) = INP(&amp;H3C9) ' Azul
+NEXT C
+
+' Fundido a negro
+FOR Intensidad = 63 TO 0 STEP -1
+    FOR C = 0 TO 255
+        OUT &amp;H3C8, C
+        R = PaletaOriginal(C, 0) * Intensidad \ 63
+        G = PaletaOriginal(C, 1) * Intensidad \ 63
+        B = PaletaOriginal(C, 2) * Intensidad \ 63
+        OUT &amp;H3C9, R
+        OUT &amp;H3C9, G
+        OUT &amp;H3C9, B
+    NEXT C
+
+    ' Pequeña pausa
+    FOR Delay = 1 TO 100: NEXT Delay
+NEXT Intensidad
+</code></pre>
+<h4 id="efectos-de-rotacion-de-paleta">Efectos de Rotación de Paleta</h4>
+<p>La rotación de paleta es una técnica que permite crear ilusión de movimiento sin redibujar los píxeles:</p>
+<pre><code class="language-qbasic">' Efecto de agua con rotación de paleta
+SCREEN 13
+
+' Crear una gama de azules
+FOR C = 16 TO 31
+    OUT &amp;H3C8, C
+    OUT &amp;H3C9, 0
+    OUT &amp;H3C9, 0
+    OUT &amp;H3C9, 32 + C
+NEXT C
+
+' Dibujar &quot;agua&quot; con esos colores
+FOR Y = 100 TO 199
+    FOR X = 0 TO 319
+        ' Patrón ondulante
+        Color = 16 + (SIN(X / 20) * 7 + SIN(Y / 10) * 7) MOD 16
+        PSET (X, Y), Color
+    NEXT X
+NEXT Y
+
+' Rotar la paleta para crear efecto de movimiento
+DO
+    ' Guardar el primer color
+    OUT &amp;H3C8, 16
+    R = INP(&amp;H3C9)
+    G = INP(&amp;H3C9)
+    B = INP(&amp;H3C9)
+
+    ' Desplazar todos los colores
+    FOR C = 16 TO 30
+        OUT &amp;H3C8, C + 1
+        RN = INP(&amp;H3C9)
+        GN = INP(&amp;H3C9)
+        BN = INP(&amp;H3C9)
+
+        OUT &amp;H3C8, C
+        OUT &amp;H3C9, RN
+        OUT &amp;H3C9, GN
+        OUT &amp;H3C9, BN
+    NEXT C
+
+    ' El último color recibe el valor del primero
+    OUT &amp;H3C8, 31
+    OUT &amp;H3C9, R
+    OUT &amp;H3C9, G
+    OUT &amp;H3C9, B
+
+    ' Control de velocidad
+    FOR Delay = 1 TO 200: NEXT Delay
+LOOP UNTIL INKEY$ &lt;&gt; &quot;&quot;
+</code></pre>
+<h3 id="nota-tecnica">Nota Técnica</h3>
+<p>Al leer valores de paleta mediante puertos, algunas tarjetas VGA pueden presentar un error donde el registro solicitado no corresponde al obtenido. Una solución para este problema es leer cada registro de color dos veces.</p>
+<h2 id="tutorial-de-paletas-vga-por-brian-bartels">Tutorial de Paletas VGA por Brian Bartels</h2>
+<h3 id="conceptos-de-paletas">Conceptos de Paletas</h3>
+<p>¿Has notado alguna vez, mientras creas gráficos para algún juego en QBasic, que la paleta VGA predeterminada es bastante limitada? ¿Te has preguntado si puedes cambiar esos colores? Efectivamente, es posible y es un proceso muy simple.</p>
+<p>Lo primero que debes entender es que cada color que tu monitor puede mostrar está compuesto por los tres colores primarios: rojo, verde y azul (RGB). Para cambiar los valores RGB de un color específico, solo necesitas usar este comando:</p>
+<pre><code class="language-qbasic">PALETTE color, rojo+(verde*256)+(azul*65536)
+</code></pre>
+<p>Los valores de rojo, verde y azul pueden variar entre 0 y 63. ¡Es así de simple!</p>
+<h3 id="temas-avanzados">Temas Avanzados</h3>
+<p>Después de experimentar con el comando PALETTE, probablemente hayas notado que es extremadamente lento. La instrucción PALETTE de QBasic es lenta por dos razones:</p>
+<ol>
+<li>Tiene que realizar todas esas operaciones matemáticas (<code>rojo+verde*256+azul*65536</code>) cada vez que la usas.</li>
+<li>Cada vez que la usas, espera a que la pantalla se refresque, lo que hace que esta instrucción sea totalmente inutilizable para hacer fundidos de entrada, salida o entre paletas.</li>
+</ol>
+<p>¿Cómo solucionamos este problema? Simplemente escribiendo nuestra propia subrutina PALETTE que no realice todos esos cálculos y no espere a que la pantalla se refresque. Esto se puede lograr fácilmente con cuatro simples comandos OUT:</p>
+<pre><code class="language-qbasic">SUB setpal (col%, r%, g%, b%)
+    OUT &amp;H3C8, col%
+    OUT &amp;H3C9, r%
+    OUT &amp;H3C9, g%
+    OUT &amp;H3C9, b%
+END SUB
+</code></pre>
+<h3 id="creando-gradientes-de-colores">Creando Gradientes de Colores</h3>
+<p>Con una rutina de paleta rápida, podemos hacer cosas interesantes como fundir toda la pantalla o crear transiciones entre paletas. Crear gradientes entre colores es más simple de lo que parece.</p>
+<p>Pensemos en cada color como tres valores: rojo, verde y azul. Veamos cómo generar un gradiente entre dos colores:</p>
+<p>Supongamos que el color número 26 es rojo brillante (su valor rojo es 63 y sus valores verde y azul son 0), y el color 65 es azul brillante (su valor azul es 63 y sus valores rojo y verde son 0).</p>
+<p>Queremos que todos los colores entre el 26 y el 65 formen un gradiente. Primero, almacenamos los valores RGB del primer color (26) en tres variables: <code>r1%</code>, <code>g1%</code> y <code>b1%</code>. También almacenamos los valores RGB del segundo color (65) en tres variables: <code>r2%</code>, <code>g2%</code> y <code>b2%</code>.</p>
+<p>Luego calculamos cuántos pasos necesitamos en el gradiente (65-26) y cuánto debemos incrementar los valores RGB en cada paso:</p>
+<pre><code class="language-qbasic">numofsteps% = 65 - 26
+rinc# = (r2% - r1%) / numofsteps%
+ginc# = (g2% - g1%) / numofsteps%
+binc# = (b2% - b1%) / numofsteps%
+</code></pre>
+<p>Finalmente, utilizamos un bucle FOR para añadir estos incrementos a los colores en nuestro gradiente secuencialmente:</p>
+<pre><code class="language-qbasic">r# = r1%
+g# = g1%
+b# = b1%
+FOR col% = 27 TO 64
+   r# = r# + rinc#
+   g# = g# + ginc#
+   b# = b# + binc#
+   setpal col%, INT(r#), INT(g#), INT(b#)
+NEXT
+</code></pre>
+<h3 id="fundidos-de-paleta">Fundidos de Paleta</h3>
+<p>Para realizar fundidos completos de paleta, aplicamos el mismo principio pero a todos los colores. Necesitamos varios arrays:</p>
+<pre><code class="language-qbasic">DIM startpal(2, 255) AS INTEGER    ' Paleta inicial
+DIM endpal(2, 255) AS INTEGER      ' Paleta final
+DIM pal(2, 255) AS DOUBLE          ' Paleta actual
+DIM palinc(2, 255) AS DOUBLE       ' Incrementos
+</code></pre>
+<p>Estos arrays se utilizan así:</p>
+<ul>
+<li><code>startpal(0, col%)</code> = valor rojo del color col%</li>
+<li><code>startpal(1, col%)</code> = valor verde del color col%</li>
+<li><code>startpal(2, col%)</code> = valor azul del color col%</li>
+</ul>
+<p>Para hacer un fundido de entrada, simplemente hacemos que todos los valores de <code>startpal</code> sean cero y que <code>endpal</code> sea la paleta que queremos mostrar. Para un fundido de salida, lo hacemos al revés. Para fundir de una paleta a otra, hacemos que <code>startpal</code> sea igual a la paleta actual y <code>endpal</code> sea la paleta a la que queremos cambiar.</p>
+<p>El número de pasos que utilices determinará la velocidad del fundido:</p>
+<pre><code class="language-qbasic">steps% = 50
+
+' Configurar startpal y endpal aquí
+
+' Calcular incrementos
+FOR col% = 0 TO 255
+   FOR j% = 0 TO 2
+      palinc(j%, col%) = (endpal(j%, col%) - startpal(j%, col%)) / steps%
+   NEXT
+NEXT
+
+' Inicializar paleta actual
+FOR col% = 0 TO 255
+   FOR j% = 0 TO 2
+      pal(j%, col%) = startpal(j%, col%)
+   NEXT
+NEXT
+
+' Realizar el fundido
+FOR q% = 0 TO steps%
+   FOR col% = 0 TO 255
+      FOR j% = 0 TO 2
+         pal(j%, col%) = pal(j%, col%) + palinc(j%, col%)
+      NEXT
+   NEXT
+
+   ' Aplicar la paleta actual
+   FOR col% = 0 TO 255
+      setpal col%, INT(pal(0, col%)), INT(pal(1, col%)), INT(pal(2, col%))
+   NEXT
+NEXT
+</code></pre>
+<h3 id="ejemplo-completo-fundido-entre-dos-paletas">Ejemplo Completo: Fundido entre Dos Paletas</h3>
+<pre><code class="language-qbasic">SCREEN 13
+DIM startpal(2, 255) AS INTEGER
+DIM endpal(2, 255) AS INTEGER
+DIM pal(2, 255) AS DOUBLE
+DIM palinc(2, 255) AS DOUBLE
+
+' Guardar paleta actual
+FOR col% = 0 TO 255
+    OUT &amp;H3C8, col%
+    startpal(0, col%) = INP(&amp;H3C9)  ' Rojo
+    startpal(1, col%) = INP(&amp;H3C9)  ' Verde
+    startpal(2, col%) = INP(&amp;H3C9)  ' Azul
+NEXT
+
+' Crear una paleta de destino (ejemplo: predominantemente roja)
+FOR col% = 0 TO 255
+    endpal(0, col%) = 63 * (col% MOD 64) / 63  ' Rojo
+    endpal(1, col%) = 31 * (col% MOD 64) / 63  ' Verde
+    endpal(2, col%) = 20 * (col% MOD 64) / 63  ' Azul
+NEXT
+
+' Dibujar algo en pantalla
+LINE (0, 0)-(319, 199), 15, BF
+CIRCLE (160, 100), 80, 4
+PAINT (160, 100), 9, 4
+
+' Realizar fundido
+steps% = 30
+FOR col% = 0 TO 255
+   FOR j% = 0 TO 2
+      palinc(j%, col%) = (endpal(j%, col%) - startpal(j%, col%)) / steps%
+   NEXT
+NEXT
+
+FOR col% = 0 TO 255
+   FOR j% = 0 TO 2
+      pal(j%, col%) = startpal(j%, col%)
+   NEXT
+NEXT
+
+FOR q% = 0 TO steps%
+   FOR col% = 0 TO 255
+      FOR j% = 0 TO 2
+         pal(j%, col%) = pal(j%, col%) + palinc(j%, col%)
+      NEXT
+   NEXT
+
+   FOR col% = 0 TO 255
+      OUT &amp;H3C8, col%
+      OUT &amp;H3C9, INT(pal(0, col%))
+      OUT &amp;H3C9, INT(pal(1, col%))
+      OUT &amp;H3C9, INT(pal(2, col%))
+   NEXT
+
+   ' Pequeña pausa para ver el efecto
+   FOR delay% = 1 TO 1000: NEXT
+NEXT
+</code></pre>
+<p>Con estas técnicas, puedes crear efectos visuales impresionantes en QBasic mediante la manipulación de paletas.</p>
+<h2 id="ejemplo-completo-editor-de-tiles-simple">Ejemplo Completo: Editor de Tiles Simple</h2>
+<pre><code class="language-qbasic">SCREEN 13
+DIM Tiles%(10, 129)  ' 10 tiles diferentes
+DIM Map%(20, 15)     ' Mapa de 20x15 tiles
+
+' Cargar tiles (simplificado, normalmente usarías DATA o archivos)
+FOR t = 1 TO 10
+    CIRCLE (8, 8), t, t + 5
+    PAINT (8, 8), t + 1, t + 5
+    GET (0, 0)-(15, 15), Tiles%(t, 0)
+    CLS
+NEXT t
+
+' Inicializar mapa
+FOR y = 0 TO 14
+    FOR x = 0 TO 19
+        Map%(x, y) = 1  ' Tile por defecto
+    NEXT x
+NEXT y
+
+' Dibujar mapa
+SUB DibujarMapa
+    FOR y = 0 TO 14
+        FOR x = 0 TO 19
+            PUT (x * 16, y * 16), Tiles%(Map%(x, y), 0), PSET
+        NEXT x
+    NEXT y
+END SUB
+
+' Bucle principal (simplificado)
+DibujarMapa
+DO
+    k$ = INKEY$
+    IF k$ &lt;&gt; &quot;&quot; THEN
+        IF ASC(k$) = 27 THEN EXIT DO  ' ESC para salir
+    END IF
+LOOP
+</code></pre>
+<h2 id="recursos-adicionales">Recursos Adicionales</h2>
+<p>Para aprender más sobre gráficos en QBasic:</p>
+<ul>
+<li>Explora ejemplos de juegos en <a href="http://www.petesqbsite.com/">Pete's QBasic Site</a></li>
+<li>Consulta tutoriales específicos sobre sprites y animación</li>
+<li>Prueba QB64 para acceder a capacidades gráficas mejoradas en sistemas modernos</li>
+</ul>
+<h2 id="efectos-avanzados">Efectos Avanzados</h2>
+<p>Esta sección cubre técnicas avanzadas para crear efectos gráficos impresionantes en QBasic, los cuales pueden utilizarse en demos, juegos o para explorar conceptos matemáticos de manera visual.</p>
+<h3 id="plasma-con-ondas-sinusoidales">Plasma con Ondas Sinusoidales</h3>
+<p>Uno de los efectos más llamativos que se pueden crear en QBasic es el plasma. Aunque estrictamente hablando puede no ser un "plasma" físico real, este efecto produce patrones coloridos y fluidos que se asemejan a un plasma, especialmente cuando se combinan con rotación de paleta.</p>
+<h4 id="fundamentos-matematicos-la-onda-sinusoidal">Fundamentos Matemáticos: La Onda Sinusoidal</h4>
+<p>La base de este efecto es la función seno (SIN). En QBasic, la función SIN opera en radianes y devuelve valores en el rango de -1 a 1. Para nuestros propósitos, necesitamos convertir este rango a valores útiles para colores o coordenadas.</p>
+<p>Para convertir de grados a radianes:</p>
+<pre><code class="language-qbasic">Radianes = Grados * 0.017453  ' Aproximadamente Grados * PI / 180
+</code></pre>
+<p>Para ajustar el rango de -1 a 1 a un rango de 0 a 100 (por ejemplo):</p>
+<pre><code class="language-qbasic">ValorAjustado = (SIN(Radianes) * 50) + 50
+</code></pre>
+<h4 id="dibujando-una-onda-sinusoidal-basica">Dibujando una Onda Sinusoidal Básica</h4>
+<p>Este código dibuja una onda sinusoidal básica en la pantalla:</p>
+<pre><code class="language-qbasic">SCREEN 13
+FOR x% = 0 TO 359
+  xx% = (x% / 360) * 320        ' Ajustar al ancho de pantalla (320 píxeles)
+  rd = x% * 0.017453            ' Convertir a radianes
+  y% = (SIN(rd) * 50) + 50      ' Ajustar a un rango de 0-100
+  PSET (xx%, y%), 15            ' Dibujar el punto
+NEXT x%
+</code></pre>
+<h4 id="mezclando-ondas-sinusoidales">Mezclando Ondas Sinusoidales</h4>
+<p>La clave para crear patrones de plasma interesantes es mezclar varias ondas sinusoidales con diferentes frecuencias. Esto crea patrones complejos y aparentemente aleatorios:</p>
+<pre><code class="language-qbasic">SCREEN 13
+FOR x% = 0 TO 359
+  xx% = (x% / 360) * 320
+  rd = x% * 0.017453
+  ' Mezclar dos ondas sinusoidales con diferentes frecuencias
+  srd = (SIN(rd) + SIN(rd * 2.8)) / 2  ' Promedio de dos ondas
+  y% = (srd * 50) + 50
+  PSET (xx%, y%), 15
+NEXT x%
+</code></pre>
+<h4 id="aplicando-ondas-sinusoidales-a-la-paleta-de-colores">Aplicando Ondas Sinusoidales a la Paleta de Colores</h4>
+<p>Podemos usar estos valores sinusoidales para generar paletas de colores dinámicas:</p>
+<pre><code class="language-qbasic">SCREEN 13
+' Generar una paleta basada en ondas sinusoidales
+FOR x% = 0 TO 359
+  xx% = (x% / 360) * 100         ' Escalar a 100 colores
+  rd = x% * 0.017453
+  srd = (SIN(rd) + SIN(rd * 2.8)) / 2
+  colorValue = (srd * 31) + 31   ' Ajustar a rango de 0-63 para palette
+
+  OUT &amp;H3C8, xx% + 1             ' Seleccionar color (comenzando desde 1)
+  OUT &amp;H3C9, colorValue          ' Componente rojo
+  OUT &amp;H3C9, 0                   ' Componente verde
+  OUT &amp;H3C9, 0                   ' Componente azul
+NEXT x%
+
+' Dibujar un patrón que use los colores
+FOR x% = 1 TO 100
+  FOR y% = 1 TO 100
+    PSET (x%, y%), (x% + y%) / 2
+  NEXT y%
+NEXT x%
+</code></pre>
+<h4 id="tipos-de-plasmas">Tipos de Plasmas</h4>
+<p>Esencialmente, existen dos enfoques principales para crear efectos de plasma:</p>
+<ol>
+<li>
+<p><strong>Rotación de Paleta</strong>: Rápido y eficiente, pero produce plasmas estáticos donde solo cambian los colores.</p>
+</li>
+<li>
+<p><strong>Funcional (Trigonométrico)</strong>: Más lento pero produce efectos mucho más dinámicos y versátiles, permitiendo animaciones genuinas.</p>
+</li>
+</ol>
+<p>La técnica funcional tiene la ventaja de que puede limitarse a un determinado rango de colores, lo que la hace ideal para su uso en juegos donde no se desea afectar a todo el esquema de colores.</p>
+<h4 id="creacion-de-paletas-para-plasma">Creación de Paletas para Plasma</h4>
+<p>La calidad visual de un plasma depende en gran medida de la paleta de colores utilizada. Es importante crear una paleta que se "envuelva" sobre sí misma, es decir, donde el último color se mezcle suavemente con el primero. Esto permite transiciones suaves en las animaciones de plasma.</p>
+<p>Para crear una paleta envolvente:</p>
+<pre><code class="language-qbasic">' Crear una paleta arcoíris envolvente
+FOR c = 0 TO 63
+    ' Rojo: sube, baja, se mantiene bajo
+    IF c &lt; 21 THEN r = c * 3 ELSE IF c &lt; 42 THEN r = 63 - ((c - 21) * 3) ELSE r = 0
+
+    ' Verde: se mantiene bajo, sube, baja
+    IF c &lt; 21 THEN g = 0 ELSE IF c &lt; 42 THEN g = (c - 21) * 3 ELSE g = 63 - ((c - 42) * 3)
+
+    ' Azul: baja, se mantiene bajo, sube
+    IF c &lt; 21 THEN b = 63 - (c * 3) ELSE IF c &lt; 42 THEN b = 0 ELSE b = (c - 42) * 3
+
+    ' Establecer color en la paleta
+    OUT &amp;H3C8, c
+    OUT &amp;H3C9, r
+    OUT &amp;H3C9, g
+    OUT &amp;H3C9, b
+NEXT c
+</code></pre>
+<h4 id="plasmas-avanzados-combinacion-de-funciones-sinusoidales">Plasmas Avanzados: Combinación de Funciones Sinusoidales</h4>
+<p>La clave para crear plasmas visualmente impresionantes es combinar múltiples funciones sinusoidales con diferentes parámetros. Cada función contribuye a la apariencia final del plasma.</p>
+<pre><code class="language-qbasic">SCREEN 13
+CONST PI = 3.141593
+
+' Crear una tabla de búsqueda para la función SIN
+DIM SinTable(359) AS SINGLE
+FOR i = 0 TO 359
+    SinTable(i) = SIN(i * PI / 180)
+NEXT i
+
+' Variables de movimiento
+offset = 0
+
+DO
+    ' Incrementar offset para animar
+    offset = (offset + 1) MOD 360
+
+    ' Generar plasma
+    FOR y = 0 TO 199
+        FOR x = 0 TO 319
+            ' Combinar múltiples ondas sinusoidales
+            c1 = SinTable((x * 8 + offset) MOD 360) * 32 + 32
+            c2 = SinTable((y * 8 + offset) MOD 360) * 32 + 32
+            c3 = SinTable(((x + y) * 4 + offset) MOD 360) * 32 + 32
+            c4 = SinTable((SQR((x - 160) ^ 2 + (y - 100) ^ 2) * 2 + offset) MOD 360) * 32 + 32
+
+            ' Combinar valores y convertir a color
+            color = (c1 + c2 + c3 + c4) MOD 64
+
+            ' Dibujar píxel
+            PSET (x, y), color
+        NEXT x
+    NEXT y
+
+    ' Control de tiempo para no saturar CPU
+    WAIT &amp;H3DA, 8
+
+LOOP UNTIL INKEY$ &lt;&gt; &quot;&quot;
+</code></pre>
+<p>Este código combina cuatro patrones sinusoidales diferentes:</p>
+<ol>
+<li>Una onda horizontal (en función de x)</li>
+<li>Una onda vertical (en función de y)</li>
+<li>Una onda diagonal (en función de x+y)</li>
+<li>Una onda circular (en función de la distancia al centro)</li>
+</ol>
+<h4 id="plasma-en-coordenadas-polares">Plasma en Coordenadas Polares</h4>
+<p>También se puede crear un plasma utilizando coordenadas polares en lugar de cartesianas, lo que produce efectos visuales diferentes:</p>
+<pre><code class="language-qbasic">SCREEN 13
+CONST PI = 3.141593
+
+DO
+    offset = offset + 0.1
+
+    FOR y = 0 TO 199
+        y2 = y - 100
+        FOR x = 0 TO 319
+            x2 = x - 160
+
+            ' Calcular radio y ángulo (coordenadas polares)
+            radio = SQR(x2 * x2 + y2 * y2)
+            IF x2 = 0 THEN
+                IF y2 &lt; 0 THEN angulo = -PI / 2 ELSE angulo = PI / 2
+            ELSE
+                angulo = ATN(y2 / x2)
+                IF x2 &lt; 0 THEN angulo = angulo + PI
+            END IF
+
+            ' Aplicar funciones sinusoidales en coordenadas polares
+            c1 = SIN(radio * 0.1 + offset) * 32 + 32
+            c2 = SIN(angulo * 3 + offset) * 32 + 32
+
+            ' Calcular color final
+            color = (c1 + c2) MOD 64
+
+            ' Dibujar píxel
+            PSET (x, y), color
+        NEXT x
+    NEXT y
+
+    WAIT &amp;H3DA, 8
+
+LOOP UNTIL INKEY$ &lt;&gt; &quot;&quot;
+</code></pre>
+<h4 id="plasmas-semitransparentes">Plasmas Semitransparentes</h4>
+<p>Se puede crear un efecto de semitransparencia superponiendo dos plasmas diferentes en el mismo fotograma:</p>
+<pre><code class="language-qbasic">SCREEN 13
+CONST PI = 3.141593
+
+' Crear un fondo o cargar una imagen
+FOR y = 0 TO 199
+    FOR x = 0 TO 319
+        PSET (x, y), (x + y) MOD 64 + 64
+    NEXT x
+NEXT y
+
+DO
+    offset1 = offset1 + 0.05
+    offset2 = offset2 + 0.07
+
+    FOR y = 0 TO 199 STEP 2  ' Optimización: procesar cada 2 píxeles
+        FOR x = 0 TO 319 STEP 2
+            ' Primer plasma
+            p1 = SIN((x + offset1) * 0.05) * 32 + SIN((y + offset1) * 0.05) * 32
+
+            ' Segundo plasma
+            p2 = SIN(((x + y) * 0.05 + offset2)) * 64
+
+            ' Combinar ambos plasmas con un efecto semitransparente
+            color = (p1 + p2) MOD 64
+
+            ' Aplicar a un bloque de 2x2 para optimización
+            PSET (x, y), color
+            PSET (x + 1, y), color
+            PSET (x, y + 1), color
+            PSET (x + 1, y + 1), color
+        NEXT x
+    NEXT y
+
+    WAIT &amp;H3DA, 8
+
+LOOP UNTIL INKEY$ &lt;&gt; &quot;&quot;
+</code></pre>
+<h4 id="optimizaciones-para-mayor-velocidad">Optimizaciones para Mayor Velocidad</h4>
+<p>Dado que los efectos de plasma pueden ser intensivos en cálculos, aquí hay varias técnicas de optimización:</p>
+<ol>
+<li>
+<p><strong>Tablas de búsqueda</strong>: Precalcular valores de seno/coseno y almacenarlos en arrays.</p>
+</li>
+<li>
+<p><strong>Reducir resolución</strong>: Calcular el plasma a una resolución menor y ampliar los píxeles.</p>
+</li>
+<li>
+<p><strong>Usar enteros</strong>: Cuando sea posible, utilizar variables enteras en lugar de flotantes.</p>
+</li>
+<li>
+<p><strong>Limitar el área</strong>: Generar el plasma solo en una parte de la pantalla.</p>
+</li>
+<li>
+<p><strong>Funciones más simples</strong>: A veces, funciones más simples pueden producir resultados similares con mejor rendimiento.</p>
+</li>
+<li>
+<p><strong>Código ensamblador</strong>: Para optimizaciones críticas, se puede recurrir a rutinas en ensamblador.</p>
+</li>
+</ol>
+<h4 id="aplicaciones-en-juegos-comerciales">Aplicaciones en Juegos Comerciales</h4>
+<p>Estas técnicas de plasma se han utilizado en numerosos juegos comerciales para crear efectos especiales, fondos dinámicos y transiciones:</p>
+<ul>
+<li>La serie Final Fantasy usó plasmas para efectos mágicos</li>
+<li>Chrono Trigger utilizó efectos similares para las animaciones de distorsión temporal</li>
+<li>Bahamut Lagoon incorporó efectos de plasma para representar energía mágica</li>
+<li>Seiken Densetsu 3 (Secret of Mana 2) usó plasmas para efectos elementales</li>
+</ul>
+<h4 id="plasma-en-modo-texto">Plasma en Modo Texto</h4>
+<p>Incluso es posible crear efectos de plasma en modo texto, utilizando caracteres ASCII para representar diferentes intensidades:</p>
+<pre><code class="language-qbasic">SCREEN 0
+WIDTH 80, 25
+CONST PI = 3.141593
+
+DO
+    offset = offset + 0.1
+
+    FOR y = 1 TO 25
+        FOR x = 1 TO 80
+            ' Calcular valor del plasma
+            valor = SIN(x * 0.2 + offset) * 8 + SIN(y * 0.1 + offset) * 8
+            valor = (valor + 16) \ 2  ' Convertir a rango 0-15
+
+            ' Seleccionar carácter según intensidad
+            SELECT CASE valor
+                CASE 0 TO 3: char$ = &quot; &quot;
+                CASE 4 TO 7: char$ = &quot;.&quot;
+                CASE 8 TO 11: char$ = &quot;o&quot;
+                CASE 12 TO 15: char$ = &quot;O&quot;
+            END SELECT
+
+            ' Imprimir carácter
+            LOCATE y, x
+            PRINT char$;
+        NEXT x
+    NEXT y
+
+    ' Pausa para controlar velocidad
+    FOR delay = 1 TO 1000: NEXT delay
+
+LOOP UNTIL INKEY$ &lt;&gt; &quot;&quot;
+</code></pre>
+<h3 id="efecto-de-ondulacion-ripple">Efecto de Ondulación (Ripple)</h3>
+<p>El efecto de ondulación o "ripple" permite simular la refracción de la luz a través de una superficie líquida ondulante. Este efecto es particularmente útil para crear animaciones de agua, lagos o cualquier superficie líquida en movimiento.</p>
+<h4 id="fundamentos-matematicos">Fundamentos Matemáticos</h4>
+<p>La base del efecto de ondulación se encuentra en dos conceptos físicos principales:</p>
+<ol>
+<li><strong>Ondas sinusoidales</strong>: El movimiento de la superficie del líquido sigue un patrón sinusoidal.</li>
+<li><strong>Refracción de la luz</strong>: La luz cambia de dirección cuando pasa a través de la superficie del líquido.</li>
+</ol>
+<h5 id="caso-unidimensional-1d">Caso Unidimensional (1D)</h5>
+<p>Para entender mejor el concepto, comenzamos con el caso unidimensional. En una onda sinusoidal 1D:</p>
+<ul>
+<li>La altura del punto en la onda está dada por <code>y = d + sin(x)</code>, donde <code>d</code> es la profundidad.</li>
+<li>La pendiente instantánea en cualquier punto es el coseno de <code>x</code>.</li>
+<li>Un rayo de luz que incide verticalmente se refracta según la pendiente de la superficie.</li>
+</ul>
+<p>La fórmula para calcular la posición horizontal donde aparecería un punto después de la refracción es:</p>
+<pre><code class="language-qbasic">u = x - cos(x) * (d + sin(x))
+</code></pre>
+<p>Donde:</p>
+<ul>
+<li><code>x</code> es la posición horizontal original</li>
+<li><code>d</code> es la profundidad del agua</li>
+<li><code>u</code> es la nueva posición horizontal después de la refracción</li>
+</ul>
+<h5 id="caso-bidimensional-2d">Caso Bidimensional (2D)</h5>
+<p>Para crear un efecto de ondulación 2D, aplicamos los mismos principios pero considerando la distancia desde el centro de la ondulación:</p>
+<ol>
+<li>La distancia desde el centro se calcula usando el teorema de Pitágoras: <code>distancia = SQR(x^2 + y^2)</code></li>
+<li>La altura de la onda en un punto es: <code>altura = d + sin(distancia)</code></li>
+<li>La refracción se calcula para cada componente (X e Y) manteniendo el ángulo en el plano XY</li>
+</ol>
+<p>Las fórmulas finales para calcular las coordenadas después de la refracción son:</p>
+<pre><code class="language-qbasic">magnitud = SQR(x^2 + y^2)
+n = magnitud  ' Para evitar división por cero, si n=0 entonces establecer n=1
+angulo = ATN(y / x)  ' Ajustar según el cuadrante
+
+u = (magnitud - (d + a * (SIN(magnitud + w) / n)) * a * COS(magnitud + w)) * COS(angulo)
+v = (magnitud - (d + a * (SIN(magnitud + w) / n)) * a * COS(magnitud + w)) * SIN(angulo)
+</code></pre>
+<p>Donde:</p>
+<ul>
+<li><code>a</code> es la amplitud máxima</li>
+<li><code>w</code> es el parámetro de animación (se decrementa para crear el movimiento)</li>
+<li><code>u</code> y <code>v</code> son las nuevas coordenadas X e Y después de la refracción</li>
+</ul>
+<h4 id="implementacion-en-qbasic">Implementación en QBasic</h4>
+<pre><code class="language-qbasic">SCREEN 13
+CONST PI = 3.14159
+
+' Cargar imagen de fondo
+DIM Fondo(320, 200)
+' Aquí cargarías tu imagen o generarías un patrón
+
+' Parámetros del efecto
+profundidad = 2
+amplitudMax = 0.5
+w = 0
+
+' Buffer para doble búfer
+DIM Buffer(320, 200)
+
+DO
+    ' Decrementar el parámetro de animación
+    w = w - 0.1
+    IF w &lt; 0 THEN w = 2 * PI
+
+    ' Centro de la pantalla
+    centroX = 160
+    centroY = 100
+
+    ' Radio de la ondulación
+    radio = 100
+
+    ' Procesar cada píxel en el área de ondulación
+    FOR y = centroY - radio TO centroY + radio
+        FOR x = centroX - radio TO centroX + radio
+            ' Calcular desplazamiento desde el centro
+            dx = x - centroX
+            dy = y - centroY
+
+            ' Calcular magnitud (distancia desde el centro)
+            mag = SQR(dx * dx + dy * dy)
+
+            ' Si estamos dentro del radio de ondulación
+            IF mag &lt;= radio THEN
+                ' Evitar división por cero
+                n = mag
+                IF n = 0 THEN n = 1
+
+                ' Calcular fase de la onda
+                fase = mag + w
+
+                ' Calcular nueva magnitud después de refracción
+                nuevaMag = mag - (profundidad + amplitudMax * (SIN(fase) / n)) * amplitudMax * COS(fase)
+
+                ' Calcular ángulo
+                IF dx &lt;&gt; 0 THEN
+                    angulo = ATN(dy / dx)
+                    ' Ajustar para cuadrantes correctos
+                    IF dx &lt; 0 THEN angulo = angulo + PI
+                ELSE
+                    IF dy &gt;= 0 THEN angulo = PI / 2 ELSE angulo = -PI / 2
+                END IF
+
+                ' Calcular nuevas coordenadas
+                u = centroX + nuevaMag * COS(angulo)
+                v = centroY + nuevaMag * SIN(angulo)
+
+                ' Verificar que estamos dentro de los límites
+                IF u &gt;= 0 AND u &lt; 320 AND v &gt;= 0 AND v &lt; 200 THEN
+                    ' Obtener color de fondo en (u,v) y colocarlo en (x,y)
+                    Buffer(x, y) = Fondo(u, v)
+                END IF
+            ELSE
+                ' Fuera del radio de ondulación, copiar directamente
+                Buffer(x, y) = Fondo(x, y)
+            END IF
+        NEXT x
+    NEXT y
+
+    ' Copiar buffer a pantalla
+    ' Aquí implementarías la copia del buffer a la pantalla
+
+    ' Control de tiempo
+    FOR Delay = 1 TO 1000: NEXT Delay
+
+LOOP UNTIL INKEY$ &lt;&gt; &quot;&quot;
+</code></pre>
+<h4 id="optimizaciones">Optimizaciones</h4>
+<p>Como el efecto de ondulación es computacionalmente intensivo, hay varias optimizaciones que se pueden aplicar:</p>
+<ol>
+<li>
+<p><strong>Tablas precalculadas</strong>: Calcular los valores de seno una sola vez al inicio y almacenarlos en un array.</p>
+</li>
+<li>
+<p><strong>Procesamiento por bloques</strong>: Actualizar solo partes de la pantalla en cada fotograma.</p>
+</li>
+<li>
+<p><strong>Uso de WAIT para sincronización</strong>: Para evitar parpadeos y conseguir un refresco suave.</p>
+</li>
+</ol>
+<h4 id="aplicaciones">Aplicaciones</h4>
+<p>Este tipo de efectos puede utilizarse para:</p>
+<ul>
+<li>Fondos animados en juegos</li>
+<li>Demostraciones gráficas</li>
+<li>Visualización de música</li>
+<li>Base para otros efectos como fuego, agua o nubes</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>

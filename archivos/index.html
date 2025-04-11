@@ -1,0 +1,2197 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../mouse/">
+      
+      
+        <link rel="next" href="../sonido/">
+      
+      
+      <link rel="icon" href="../assets/images/QBlogo2.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.11">
+    
+    
+      
+        <title>Manejo de Archivos - Documentación de QBasic</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.4af4bdda.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#manejo-de-archivos" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Documentación de QBasic" class="md-header__button md-logo" aria-label="Documentación de QBasic" data-md-component="logo">
+      
+  <img src="../assets/images/QBlogo2.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Documentación de QBasic
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Manejo de Archivos
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Automatico"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Automatico" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-purple"  aria-label="Modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Modo claro" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="brown" data-md-color-accent="amber"  aria-label="Modo oscuro"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Modo oscuro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 2c-1.82 0-3.53.5-5 1.35C8 5.08 10 8.3 10 12s-2 6.92-5 8.65C6.47 21.5 8.18 22 10 22a10 10 0 0 0 10-10A10 10 0 0 0 10 2"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Documentación de QBasic" class="md-nav__button md-logo" aria-label="Documentación de QBasic" data-md-component="logo">
+      
+  <img src="../assets/images/QBlogo2.png" alt="logo">
+
+    </a>
+    Documentación de QBasic
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Inicio
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FAQ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../historia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Historia
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../instalacion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Instalación y Configuración
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../implementaciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Implementaciones
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../recursos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Recursos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sintaxis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sintaxis
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../instrucciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Instrucciones Básicas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../estructuras-control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Estructuras de Control
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../funciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Funciones
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../programacion-modular/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Programación Modular
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Gráficos
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            Gráficos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../graficos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introducción
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2D/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gráficos 2D
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3D/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gráficos 3D
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../raycasting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Raycasting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../animaciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Animaciones
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Entrada de Usuario
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
+            <span class="md-nav__icon md-icon"></span>
+            Entrada de Usuario
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mouse/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Uso del Ratón
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Manejo de Archivos
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Manejo de Archivos
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#conceptos-basicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conceptos Básicos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Conceptos Básicos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tipos-de-acceso-a-archivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tipos de Acceso a Archivos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#canales-de-archivo-file-handles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Canales de Archivo (File Handles)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trabajando-con-archivos-secuenciales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Trabajando con Archivos Secuenciales
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Trabajando con Archivos Secuenciales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#abrir-y-cerrar-archivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Abrir y Cerrar Archivos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modos-de-apertura" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modos de Apertura
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lectura-y-escritura" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lectura y Escritura
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lectura y Escritura">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#print" class="md-nav__link">
+    <span class="md-ellipsis">
+      PRINT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#input" class="md-nav__link">
+    <span class="md-ellipsis">
+      INPUT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#line-input" class="md-nav__link">
+    <span class="md-ellipsis">
+      LINE INPUT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eof" class="md-nav__link">
+    <span class="md-ellipsis">
+      EOF
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-guardar-y-cargar-un-registro" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo: Guardar y Cargar un Registro
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#archivos-de-acceso-aleatorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Archivos de Acceso Aleatorio
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Archivos de Acceso Aleatorio">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definicion-de-estructura" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definición de Estructura
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#abrir-y-cerrar-archivos-aleatorios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Abrir y Cerrar Archivos Aleatorios
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lectura-y-escritura_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lectura y Escritura
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lectura y Escritura">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#put" class="md-nav__link">
+    <span class="md-ellipsis">
+      PUT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get" class="md-nav__link">
+    <span class="md-ellipsis">
+      GET
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-base-de-datos-simple" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo: Base de Datos Simple
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#archivos-binarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Archivos Binarios
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funciones-y-comandos-adicionales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Funciones y Comandos Adicionales
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Funciones y Comandos Adicionales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#loc-y-lof" class="md-nav__link">
+    <span class="md-ellipsis">
+      LOC y LOF
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#seek" class="md-nav__link">
+    <span class="md-ellipsis">
+      SEEK
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kill" class="md-nav__link">
+    <span class="md-ellipsis">
+      KILL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#name" class="md-nav__link">
+    <span class="md-ellipsis">
+      NAME
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mkdir-y-rmdir" class="md-nav__link">
+    <span class="md-ellipsis">
+      MKDIR y RMDIR
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chdir" class="md-nav__link">
+    <span class="md-ellipsis">
+      CHDIR
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tecnicas-avanzadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Técnicas Avanzadas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Técnicas Avanzadas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#encriptacion-simple-de-archivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Encriptación Simple de Archivos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#guardado-de-sprites-en-archivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Guardado de Sprites en Archivos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#manejo-de-errores" class="md-nav__link">
+    <span class="md-ellipsis">
+      Manejo de Errores
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recomendaciones-de-buenas-practicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recomendaciones de Buenas Prácticas
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_15" >
+        
+          
+          <label class="md-nav__link" for="__nav_15" id="__nav_15_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Sonido
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_15_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_15">
+            <span class="md-nav__icon md-icon"></span>
+            Sonido
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sonido/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Conceptos Básicos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../manipulacion-sonido/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Manipulación de Sonido
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16" >
+        
+          
+          <label class="md-nav__link" for="__nav_16" id="__nav_16_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Comunicaciones
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_16_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_16">
+            <span class="md-nav__icon md-icon"></span>
+            Comunicaciones
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modem/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Uso del Módem
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestion-memoria/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gestión de Memoria
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18" >
+        
+          
+          <label class="md-nav__link" for="__nav_18" id="__nav_18_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Estructuras de Datos
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_18_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_18">
+            <span class="md-nav__icon md-icon"></span>
+            Estructuras de Datos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pilas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pilas (Stacks)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../buenas-practicas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Buenas Prácticas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../estandares/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Estándares
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tecnicas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Técnicas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#conceptos-basicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conceptos Básicos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Conceptos Básicos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tipos-de-acceso-a-archivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tipos de Acceso a Archivos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#canales-de-archivo-file-handles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Canales de Archivo (File Handles)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trabajando-con-archivos-secuenciales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Trabajando con Archivos Secuenciales
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Trabajando con Archivos Secuenciales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#abrir-y-cerrar-archivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Abrir y Cerrar Archivos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modos-de-apertura" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modos de Apertura
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lectura-y-escritura" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lectura y Escritura
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lectura y Escritura">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#print" class="md-nav__link">
+    <span class="md-ellipsis">
+      PRINT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#input" class="md-nav__link">
+    <span class="md-ellipsis">
+      INPUT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#line-input" class="md-nav__link">
+    <span class="md-ellipsis">
+      LINE INPUT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eof" class="md-nav__link">
+    <span class="md-ellipsis">
+      EOF
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-guardar-y-cargar-un-registro" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo: Guardar y Cargar un Registro
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#archivos-de-acceso-aleatorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Archivos de Acceso Aleatorio
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Archivos de Acceso Aleatorio">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definicion-de-estructura" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definición de Estructura
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#abrir-y-cerrar-archivos-aleatorios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Abrir y Cerrar Archivos Aleatorios
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lectura-y-escritura_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lectura y Escritura
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lectura y Escritura">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#put" class="md-nav__link">
+    <span class="md-ellipsis">
+      PUT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get" class="md-nav__link">
+    <span class="md-ellipsis">
+      GET
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-base-de-datos-simple" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo: Base de Datos Simple
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#archivos-binarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Archivos Binarios
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funciones-y-comandos-adicionales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Funciones y Comandos Adicionales
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Funciones y Comandos Adicionales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#loc-y-lof" class="md-nav__link">
+    <span class="md-ellipsis">
+      LOC y LOF
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#seek" class="md-nav__link">
+    <span class="md-ellipsis">
+      SEEK
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kill" class="md-nav__link">
+    <span class="md-ellipsis">
+      KILL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#name" class="md-nav__link">
+    <span class="md-ellipsis">
+      NAME
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mkdir-y-rmdir" class="md-nav__link">
+    <span class="md-ellipsis">
+      MKDIR y RMDIR
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chdir" class="md-nav__link">
+    <span class="md-ellipsis">
+      CHDIR
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tecnicas-avanzadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Técnicas Avanzadas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Técnicas Avanzadas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#encriptacion-simple-de-archivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Encriptación Simple de Archivos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#guardado-de-sprites-en-archivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Guardado de Sprites en Archivos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#manejo-de-errores" class="md-nav__link">
+    <span class="md-ellipsis">
+      Manejo de Errores
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recomendaciones-de-buenas-practicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recomendaciones de Buenas Prácticas
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="manejo-de-archivos">Manejo de Archivos</h1>
+<p>QBasic ofrece un conjunto completo de instrucciones para trabajar con archivos, permitiendo leer y escribir datos en almacenamiento permanente. Esta funcionalidad es esencial para crear programas que puedan guardar información entre sesiones.</p>
+<h2 id="conceptos-basicos">Conceptos Básicos</h2>
+<h3 id="tipos-de-acceso-a-archivos">Tipos de Acceso a Archivos</h3>
+<p>QBasic soporta varios modos de acceso a archivos:</p>
+<ul>
+<li><strong>Secuencial</strong>: Lectura/escritura lineal del archivo desde el principio</li>
+<li><strong>Aleatorio</strong>: Acceso directo a registros específicos en cualquier posición</li>
+<li><strong>Binario</strong>: Lectura/escritura de datos sin formato</li>
+</ul>
+<h3 id="canales-de-archivo-file-handles">Canales de Archivo (File Handles)</h3>
+<p>Cada archivo abierto en QBasic usa un número de canal. Puedes especificar un número o usar <code>FREEFILE</code> para obtener el siguiente disponible.</p>
+<h2 id="trabajando-con-archivos-secuenciales">Trabajando con Archivos Secuenciales</h2>
+<h3 id="abrir-y-cerrar-archivos">Abrir y Cerrar Archivos</h3>
+<pre><code class="language-qbasic">' Abrir un archivo para OUTPUT (escritura)
+OPEN &quot;datos.txt&quot; FOR OUTPUT AS #1
+
+' Escribir algunos datos
+PRINT #1, &quot;Hola Mundo&quot;
+PRINT #1, 123, 456, &quot;texto&quot;
+
+' Cerrar archivo
+CLOSE #1
+
+' Abrir para INPUT (lectura)
+OPEN &quot;datos.txt&quot; FOR INPUT AS #1
+
+' Leer datos
+INPUT #1, texto$
+INPUT #1, a, b, c$
+
+' Cerrar archivo
+CLOSE #1
+</code></pre>
+<p>También puedes usar <code>FREEFILE</code> para obtener el siguiente canal disponible:</p>
+<pre><code class="language-qbasic">fileNum% = FREEFILE
+OPEN &quot;datos.txt&quot; FOR OUTPUT AS #fileNum%
+</code></pre>
+<h3 id="modos-de-apertura">Modos de Apertura</h3>
+<ul>
+<li><code>OUTPUT</code>: Crea un nuevo archivo (borra si existe)</li>
+<li><code>INPUT</code>: Abre para lectura</li>
+<li><code>APPEND</code>: Añade al final de un archivo existente</li>
+</ul>
+<h3 id="lectura-y-escritura">Lectura y Escritura</h3>
+<h4 id="print">PRINT</h4>
+<p>Escribe datos a un archivo secuencial:</p>
+<pre><code class="language-qbasic">PRINT #1, &quot;Texto&quot;
+PRINT #1, variable
+PRINT #1, a; b; c       ' Separados por espacios
+PRINT #1, a, b, c       ' Separados por tabulaciones
+</code></pre>
+<h4 id="input">INPUT</h4>
+<p>Lee datos formateados de un archivo secuencial:</p>
+<pre><code class="language-qbasic">INPUT #1, a$           ' Lee texto hasta coma o fin de línea
+INPUT #1, a%, b#, c$   ' Lee múltiples variables
+</code></pre>
+<h4 id="line-input">LINE INPUT</h4>
+<p>Lee una línea completa (incluyendo comas, comillas, etc.):</p>
+<pre><code class="language-qbasic">LINE INPUT #1, texto$  ' Lee toda la línea
+</code></pre>
+<h4 id="eof">EOF</h4>
+<p>Comprueba si se ha llegado al final del archivo:</p>
+<pre><code class="language-qbasic">OPEN &quot;datos.txt&quot; FOR INPUT AS #1
+
+DO WHILE NOT EOF(1)
+    LINE INPUT #1, texto$
+    PRINT texto$
+LOOP
+
+CLOSE #1
+</code></pre>
+<h3 id="ejemplo-guardar-y-cargar-un-registro">Ejemplo: Guardar y Cargar un Registro</h3>
+<pre><code class="language-qbasic">TYPE Persona
+    Nombre AS STRING * 30
+    Edad AS INTEGER
+    Salario AS DOUBLE
+END TYPE
+
+DIM p AS Persona
+
+' Guardar registros
+SUB GuardarDatos(archivo$)
+    fileNum% = FREEFILE
+    OPEN archivo$ FOR OUTPUT AS #fileNum%
+
+    p.Nombre = &quot;Juan Pérez&quot;
+    p.Edad = 35
+    p.Salario = 45000.5
+
+    PRINT #fileNum%, p.Nombre
+    PRINT #fileNum%, p.Edad
+    PRINT #fileNum%, p.Salario
+
+    CLOSE #fileNum%
+END SUB
+
+' Cargar registros
+SUB CargarDatos(archivo$)
+    fileNum% = FREEFILE
+    OPEN archivo$ FOR INPUT AS #fileNum%
+
+    LINE INPUT #fileNum%, p.Nombre
+    INPUT #fileNum%, p.Edad
+    INPUT #fileNum%, p.Salario
+
+    CLOSE #fileNum%
+
+    PRINT &quot;Nombre: &quot;; p.Nombre
+    PRINT &quot;Edad: &quot;; p.Edad
+    PRINT &quot;Salario: &quot;; p.Salario
+END SUB
+</code></pre>
+<h2 id="archivos-de-acceso-aleatorio">Archivos de Acceso Aleatorio</h2>
+<p>Los archivos de acceso aleatorio permiten leer y escribir registros en cualquier posición del archivo.</p>
+<h3 id="definicion-de-estructura">Definición de Estructura</h3>
+<pre><code class="language-qbasic">TYPE Empleado
+    ID AS INTEGER
+    Nombre AS STRING * 30
+    Departamento AS STRING * 20
+    Salario AS SINGLE
+END TYPE
+
+DIM E AS Empleado
+</code></pre>
+<h3 id="abrir-y-cerrar-archivos-aleatorios">Abrir y Cerrar Archivos Aleatorios</h3>
+<pre><code class="language-qbasic">' Abrir archivo aleatorio
+OPEN &quot;empleados.dat&quot; FOR RANDOM AS #1 LEN = LEN(E)
+
+' Cerrar archivo
+CLOSE #1
+</code></pre>
+<h3 id="lectura-y-escritura_1">Lectura y Escritura</h3>
+<h4 id="put">PUT</h4>
+<p>Escribe un registro en la posición especificada:</p>
+<pre><code class="language-qbasic">E.ID = 101
+E.Nombre = &quot;Juan Pérez&quot;
+E.Departamento = &quot;Contabilidad&quot;
+E.Salario = 45000!
+
+PUT #1, E.ID, E  ' Guarda en la posición E.ID
+</code></pre>
+<h4 id="get">GET</h4>
+<p>Lee un registro de la posición especificada:</p>
+<pre><code class="language-qbasic">GET #1, 101, E   ' Lee el registro en posición 101
+PRINT E.Nombre, E.Departamento, E.Salario
+</code></pre>
+<h3 id="ejemplo-base-de-datos-simple">Ejemplo: Base de Datos Simple</h3>
+<pre><code class="language-qbasic">CONST MAX_EMPLEADOS = 100
+
+TYPE Empleado
+    ID AS INTEGER
+    Nombre AS STRING * 30
+    Departamento AS STRING * 20
+    Salario AS SINGLE
+END TYPE
+
+DIM E AS Empleado
+
+' Crear archivo si no existe
+SUB InicializarBD
+    OPEN &quot;empleados.dat&quot; FOR RANDOM AS #1 LEN = LEN(E)
+    CLOSE #1
+END SUB
+
+' Añadir un empleado
+SUB AgregarEmpleado(id%, nombre$, departamento$, salario!)
+    OPEN &quot;empleados.dat&quot; FOR RANDOM AS #1 LEN = LEN(E)
+
+    E.ID = id%
+    E.Nombre = nombre$
+    E.Departamento = departamento$
+    E.Salario = salario!
+
+    PUT #1, id%, E
+
+    CLOSE #1
+END SUB
+
+' Buscar un empleado
+SUB BuscarEmpleado(id%)
+    OPEN &quot;empleados.dat&quot; FOR RANDOM AS #1 LEN = LEN(E)
+
+    GET #1, id%, E
+
+    IF E.ID = id% THEN
+        PRINT &quot;ID: &quot;; E.ID
+        PRINT &quot;Nombre: &quot;; RTRIM$(E.Nombre)
+        PRINT &quot;Departamento: &quot;; RTRIM$(E.Departamento)
+        PRINT &quot;Salario: &quot;; E.Salario
+    ELSE
+        PRINT &quot;Empleado no encontrado&quot;
+    END IF
+
+    CLOSE #1
+END SUB
+</code></pre>
+<h2 id="archivos-binarios">Archivos Binarios</h2>
+<p>Los archivos binarios permiten leer y escribir datos en su formato "crudo", sin conversión.</p>
+<pre><code class="language-qbasic">' Escribir matriz en archivo binario
+SUB GuardarMatrizBinaria(matriz%(), archivo$)
+    fileNum% = FREEFILE
+    OPEN archivo$ FOR BINARY AS #fileNum%
+
+    filas% = UBOUND(matriz, 1)
+    columnas% = UBOUND(matriz, 2)
+
+    ' Guardar dimensiones
+    PUT #fileNum%, , filas%
+    PUT #fileNum%, , columnas%
+
+    ' Guardar datos
+    FOR i = 1 TO filas%
+        FOR j = 1 TO columnas%
+            PUT #fileNum%, , matriz%(i, j)
+        NEXT j
+    NEXT i
+
+    CLOSE #fileNum%
+END SUB
+
+' Leer matriz desde archivo binario
+SUB CargarMatrizBinaria(matriz%(), archivo$)
+    fileNum% = FREEFILE
+    OPEN archivo$ FOR BINARY AS #fileNum%
+
+    ' Leer dimensiones
+    GET #fileNum%, , filas%
+    GET #fileNum%, , columnas%
+
+    REDIM matriz%(filas%, columnas%)
+
+    ' Leer datos
+    FOR i = 1 TO filas%
+        FOR j = 1 TO columnas%
+            GET #fileNum%, , matriz%(i, j)
+        NEXT j
+    NEXT i
+
+    CLOSE #fileNum%
+END SUB
+</code></pre>
+<h2 id="funciones-y-comandos-adicionales">Funciones y Comandos Adicionales</h2>
+<h3 id="loc-y-lof">LOC y LOF</h3>
+<ul>
+<li><code>LOC(n)</code>: Devuelve la posición actual en el archivo</li>
+<li><code>LOF(n)</code>: Devuelve el tamaño del archivo en bytes</li>
+</ul>
+<pre><code class="language-qbasic">PRINT &quot;Tamaño del archivo: &quot;; LOF(1); &quot; bytes&quot;
+PRINT &quot;Posición actual: &quot;; LOC(1)
+</code></pre>
+<h3 id="seek">SEEK</h3>
+<p>Cambia la posición actual en el archivo:</p>
+<pre><code class="language-qbasic">SEEK #1, 1   ' Posiciona al inicio del archivo
+</code></pre>
+<h3 id="kill">KILL</h3>
+<p>Elimina un archivo:</p>
+<pre><code class="language-qbasic">KILL &quot;archivo.txt&quot;
+</code></pre>
+<h3 id="name">NAME</h3>
+<p>Renombra un archivo:</p>
+<pre><code class="language-qbasic">NAME &quot;viejo.txt&quot; AS &quot;nuevo.txt&quot;
+</code></pre>
+<h3 id="mkdir-y-rmdir">MKDIR y RMDIR</h3>
+<p>Crea y elimina directorios:</p>
+<pre><code class="language-qbasic">MKDIR &quot;datos&quot;
+RMDIR &quot;datos&quot;
+</code></pre>
+<h3 id="chdir">CHDIR</h3>
+<p>Cambia el directorio actual:</p>
+<pre><code class="language-qbasic">CHDIR &quot;c:\proyectos&quot;
+</code></pre>
+<h2 id="tecnicas-avanzadas">Técnicas Avanzadas</h2>
+<h3 id="encriptacion-simple-de-archivos">Encriptación Simple de Archivos</h3>
+<pre><code class="language-qbasic">' Encripta/desencripta un archivo con XOR
+SUB EncriptarArchivo(origen$, destino$, clave%)
+    OPEN origen$ FOR BINARY AS #1
+    OPEN destino$ FOR BINARY AS #2
+
+    tamaño&amp; = LOF(1)
+
+    FOR i&amp; = 1 TO tamaño&amp;
+        GET #1, , b%
+        b% = b% XOR clave%
+        PUT #2, , b%
+    NEXT i&amp;
+
+    CLOSE #1, #2
+END SUB
+</code></pre>
+<h3 id="guardado-de-sprites-en-archivos">Guardado de Sprites en Archivos</h3>
+<pre><code class="language-qbasic">' Guardar array de sprite en archivo
+SUB GuardarSprite(sprite%(), archivo$)
+    fileNum% = FREEFILE
+    OPEN archivo$ FOR BINARY AS #fileNum%
+
+    ' Obtener tamaño del sprite
+    tamaño% = UBOUND(sprite)
+
+    ' Guardar tamaño
+    PUT #fileNum%, , tamaño%
+
+    ' Guardar datos del sprite
+    FOR i = 0 TO tamaño%
+        PUT #fileNum%, , sprite%(i)
+    NEXT i
+
+    CLOSE #fileNum%
+END SUB
+
+' Cargar array de sprite desde archivo
+SUB CargarSprite(sprite%(), archivo$)
+    fileNum% = FREEFILE
+    OPEN archivo$ FOR BINARY AS #fileNum%
+
+    ' Leer tamaño
+    GET #fileNum%, , tamaño%
+
+    ' Dimensionar array
+    REDIM sprite%(tamaño%)
+
+    ' Leer datos
+    FOR i = 0 TO tamaño%
+        GET #fileNum%, , sprite%(i)
+    NEXT i
+
+    CLOSE #fileNum%
+END SUB
+</code></pre>
+<h2 id="manejo-de-errores">Manejo de Errores</h2>
+<p>Es importante manejar posibles errores al trabajar con archivos:</p>
+<pre><code class="language-qbasic">ON ERROR GOTO ManejadorErrores
+
+OPEN &quot;datos.txt&quot; FOR INPUT AS #1
+' Código para procesar el archivo
+CLOSE #1
+END
+
+ManejadorErrores:
+    IF ERR = 53 THEN ' Archivo no encontrado
+        PRINT &quot;El archivo no existe&quot;
+    ELSEIF ERR = 70 THEN ' Permiso denegado
+        PRINT &quot;No se puede acceder al archivo&quot;
+    ELSE
+        PRINT &quot;Error: &quot;; ERR
+    END IF
+    RESUME Next
+</code></pre>
+<h2 id="recomendaciones-de-buenas-practicas">Recomendaciones de Buenas Prácticas</h2>
+<ol>
+<li><strong>Siempre cierra tus archivos</strong>: Usar <code>CLOSE</code> para cada archivo abierto</li>
+<li><strong>Comprueba si los archivos existen</strong> antes de intentar leerlos</li>
+<li><strong>Usa FREEFILE</strong> para obtener automáticamente números de canal</li>
+<li><strong>Maneja errores</strong> relacionados con los archivos</li>
+<li><strong>Libera recursos</strong> abriendo archivos solo cuando sea necesario</li>
+<li><strong>Haz copias de seguridad</strong> antes de sobrescribir datos importantes</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>

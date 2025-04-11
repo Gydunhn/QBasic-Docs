@@ -1,0 +1,1824 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../graficos/">
+      
+      
+        <link rel="next" href="../3D/">
+      
+      
+      <link rel="icon" href="../assets/images/QBlogo2.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.11">
+    
+    
+      
+        <title>Gráficos 2D - Documentación de QBasic</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.4af4bdda.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#graficos-2d-en-qbasic" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Documentación de QBasic" class="md-header__button md-logo" aria-label="Documentación de QBasic" data-md-component="logo">
+      
+  <img src="../assets/images/QBlogo2.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Documentación de QBasic
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Gráficos 2D
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Automatico"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Automatico" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-purple"  aria-label="Modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Modo claro" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="brown" data-md-color-accent="amber"  aria-label="Modo oscuro"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Modo oscuro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 2c-1.82 0-3.53.5-5 1.35C8 5.08 10 8.3 10 12s-2 6.92-5 8.65C6.47 21.5 8.18 22 10 22a10 10 0 0 0 10-10A10 10 0 0 0 10 2"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Documentación de QBasic" class="md-nav__button md-logo" aria-label="Documentación de QBasic" data-md-component="logo">
+      
+  <img src="../assets/images/QBlogo2.png" alt="logo">
+
+    </a>
+    Documentación de QBasic
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Inicio
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FAQ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../historia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Historia
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../instalacion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Instalación y Configuración
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../implementaciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Implementaciones
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../recursos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Recursos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sintaxis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sintaxis
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../instrucciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Instrucciones Básicas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../estructuras-control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Estructuras de Control
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../funciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Funciones
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../programacion-modular/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Programación Modular
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Gráficos
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            Gráficos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../graficos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introducción
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Gráficos 2D
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gráficos 2D
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#rotacion-de-graficos-2d" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rotación de Gráficos 2D
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Rotación de Gráficos 2D">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fundamentos-matematicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fundamentos Matemáticos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rotacion-de-cualquier-punto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rotación de Cualquier Punto
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementacion-en-qbasic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementación en QBasic
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#explicacion-del-algoritmo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Explicación del Algoritmo
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Explicación del Algoritmo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#paso-1-precalculo-de-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paso 1: Precálculo de Variables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-2-captacion-del-grafico" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paso 2: Captación del Gráfico
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-3-rotacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paso 3: Rotación
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-4-dibujo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paso 4: Dibujo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optimizaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optimizaciones
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consideraciones-adicionales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consideraciones Adicionales
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sistemas-de-coordenadas-y-rotacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sistemas de Coordenadas y Rotación
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sistemas de Coordenadas y Rotación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#coordenadas-fisicas-vs-coordenadas-virtuales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Coordenadas Físicas vs. Coordenadas Virtuales
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#formulas-de-rotacion-2d" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fórmulas de Rotación 2D
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#direccion-de-rotacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dirección de Rotación
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conversion-entre-grados-y-radianes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conversión entre Grados y Radianes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-de-rotacion-alrededor-de-un-punto-arbitrario" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo de Rotación Alrededor de un Punto Arbitrario
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consideraciones-importantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consideraciones Importantes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aplicaciones-practicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aplicaciones Prácticas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusión
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3D/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gráficos 3D
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../raycasting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Raycasting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../animaciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Animaciones
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Entrada de Usuario
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
+            <span class="md-nav__icon md-icon"></span>
+            Entrada de Usuario
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mouse/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Uso del Ratón
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archivos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Manejo de Archivos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_15" >
+        
+          
+          <label class="md-nav__link" for="__nav_15" id="__nav_15_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Sonido
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_15_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_15">
+            <span class="md-nav__icon md-icon"></span>
+            Sonido
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sonido/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Conceptos Básicos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../manipulacion-sonido/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Manipulación de Sonido
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16" >
+        
+          
+          <label class="md-nav__link" for="__nav_16" id="__nav_16_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Comunicaciones
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_16_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_16">
+            <span class="md-nav__icon md-icon"></span>
+            Comunicaciones
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modem/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Uso del Módem
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestion-memoria/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gestión de Memoria
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18" >
+        
+          
+          <label class="md-nav__link" for="__nav_18" id="__nav_18_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Estructuras de Datos
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_18_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_18">
+            <span class="md-nav__icon md-icon"></span>
+            Estructuras de Datos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pilas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pilas (Stacks)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../buenas-practicas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Buenas Prácticas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../estandares/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Estándares
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tecnicas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Técnicas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#rotacion-de-graficos-2d" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rotación de Gráficos 2D
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Rotación de Gráficos 2D">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fundamentos-matematicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fundamentos Matemáticos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rotacion-de-cualquier-punto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rotación de Cualquier Punto
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementacion-en-qbasic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementación en QBasic
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#explicacion-del-algoritmo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Explicación del Algoritmo
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Explicación del Algoritmo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#paso-1-precalculo-de-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paso 1: Precálculo de Variables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-2-captacion-del-grafico" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paso 2: Captación del Gráfico
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-3-rotacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paso 3: Rotación
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-4-dibujo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paso 4: Dibujo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optimizaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optimizaciones
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consideraciones-adicionales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consideraciones Adicionales
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sistemas-de-coordenadas-y-rotacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sistemas de Coordenadas y Rotación
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sistemas de Coordenadas y Rotación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#coordenadas-fisicas-vs-coordenadas-virtuales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Coordenadas Físicas vs. Coordenadas Virtuales
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#formulas-de-rotacion-2d" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fórmulas de Rotación 2D
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#direccion-de-rotacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dirección de Rotación
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conversion-entre-grados-y-radianes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conversión entre Grados y Radianes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-de-rotacion-alrededor-de-un-punto-arbitrario" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo de Rotación Alrededor de un Punto Arbitrario
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consideraciones-importantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consideraciones Importantes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aplicaciones-practicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aplicaciones Prácticas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusión
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="graficos-2d-en-qbasic">Gráficos 2D en QBasic</h1>
+<p>QBasic ofrece potentes capacidades para crear gráficos bidimensionales. Esta sección cubre desde conceptos básicos hasta técnicas avanzadas para crear gráficos 2D en QBasic.</p>
+<h2 id="rotacion-de-graficos-2d">Rotación de Gráficos 2D</h2>
+<p>La rotación de gráficos es una técnica fundamental para crear animaciones y efectos visuales interesantes. Aunque QBasic no tiene una función nativa para rotar gráficos, podemos implementarla usando principios trigonométricos básicos.</p>
+<h3 id="fundamentos-matematicos">Fundamentos Matemáticos</h3>
+<p>El principio fundamental para la rotación es el siguiente: si tenemos un punto en un círculo de radio 1 ubicado en la posición (1,0) y rotamos este punto un ángulo A en sentido antihorario, sus nuevas coordenadas serán (COS(A), SIN(A)).</p>
+<pre><code class="language-text">        *****
+      **  |  **
+     *    |    *
+    *_____|O____X
+    *     |     *
+     *    |    *
+      **  |  **
+        *****
+</code></pre>
+<p>En el diagrama anterior, si rotamos el punto X un ángulo A, terminaría en la posición determinada por las coordenadas (COS(A), SIN(A)).</p>
+<h3 id="rotacion-de-cualquier-punto">Rotación de Cualquier Punto</h3>
+<p>Para rotar cualquier punto (no solo los que están exactamente a 1 unidad del origen), necesitamos:</p>
+<ol>
+<li>Calcular la distancia del punto al origen (el radio)</li>
+<li>Calcular el ángulo inicial del punto</li>
+<li>Sumar el ángulo de rotación al ángulo inicial</li>
+<li>Calcular las nuevas coordenadas usando seno y coseno</li>
+</ol>
+<h3 id="implementacion-en-qbasic">Implementación en QBasic</h3>
+<p>A continuación se presenta un ejemplo de cómo implementar la rotación de un objeto gráfico en QBasic:</p>
+<pre><code class="language-qbasic">DEFINT A-Z
+
+CONST pi! = 3.141593
+
+' Definir coordenadas del rectángulo a rotar, con (0,0) en el centro de la pantalla
+CONST BOXX1 = -12    ' Coordenada X izquierda
+CONST BOXX2 = 12     ' Coordenada X derecha
+CONST BOXY1 = -12    ' Coordenada Y superior
+CONST BOXY2 = 12     ' Coordenada Y inferior
+
+' Matrices para almacenar radio, ángulo y color de cada pixel
+DIM r!(BOXX1 TO BOXX2, BOXY1 TO BOXY2)    ' Radio (distancia al origen)
+DIM a!(BOXX1 TO BOXX2, BOXY1 TO BOXY2)    ' Ángulo original
+DIM p(BOXX1 TO BOXX2, BOXY1 TO BOXY2)     ' Color del pixel
+
+' Precalcular radio y ángulo para cada punto
+FOR x = BOXX1 TO BOXX2
+  FOR y = BOXY1 TO BOXY2
+    ' Calcular radio (distancia al origen)
+    r!(x, y) = SQR((x ^ 2) + (y ^ 2))
+    IF x &lt; 0 THEN r!(x, y) = -r!(x, y)
+
+    ' Calcular ángulo inicial
+    IF x = 0 THEN 
+      a!(x, y) = (pi / 4) 
+    ELSE 
+      a!(x, y) = ATN(y / x)
+    END IF
+  NEXT y
+NEXT x
+
+' Configurar modo gráfico y sistema de coordenadas centrado
+SCREEN 7
+WINDOW (-160, 100)-(160, -100)    ' (0,0) en el centro de la pantalla
+
+' Dibujar el objeto que se va a rotar
+LINE (-12, 12)-(12, -12), 15, B    ' Rectángulo exterior, color 15
+LINE (-11, 11)-(11, -11), 12, B    ' Rectángulo interior, color 12
+LINE (-12, 12)-(12, -12), 13       ' Diagonal, color 13
+LINE (-12, -12)-(12, 12), 14       ' Diagonal, color 14
+
+' Capturar el objeto dibujado en nuestra matriz
+FOR x = BOXX1 TO BOXX2
+  FOR y = BOXY1 TO BOXY2
+    p(x, y) = POINT(x, y)    ' Guardar el color de cada pixel
+  NEXT y
+NEXT x
+
+' Esperar a que el usuario presione una tecla antes de comenzar la animación
+a$ = INPUT$(1)
+
+' Código de rotación (los ángulos están en RADIANES, donde 2π rad = 360°)
+curpage = 0    ' Para animación con doble buffer
+
+DO
+  ' Rotar 360 grados en incrementos de 0.1 radianes
+  FOR angle! = 0 TO 2 * pi! STEP .1
+    SCREEN 7, , curpage, 1 - curpage    ' Configurar buffer invisible
+    CLS    ' Limpiar pantalla
+
+    ' Dibujar el objeto rotado
+    FOR x = BOXX1 TO BOXX2
+      FOR y = BOXY1 TO BOXY2
+        ' Calcular nuevas coordenadas después de la rotación
+        newx = COS(angle! + a!(x, y)) * r!(x, y)
+        newy = SIN(angle! + a!(x, y)) * r!(x, y)
+
+        ' Dibujar el pixel en su nueva posición con su color original
+        PSET (newx, newy), p(x, y)
+      NEXT y
+    NEXT x
+
+    curpage = 1 - curpage    ' Alternar entre páginas para doble buffer
+  NEXT angle!
+LOOP UNTIL INKEY$ = CHR$(27)    ' Continuar hasta que se presione ESC
+</code></pre>
+<h3 id="explicacion-del-algoritmo">Explicación del Algoritmo</h3>
+<h4 id="paso-1-precalculo-de-variables">Paso 1: Precálculo de Variables</h4>
+<p>Antes de realizar la rotación, precalculamos:</p>
+<ul>
+<li><strong>Radio (r)</strong>: La distancia de cada punto al origen, usando el teorema de Pitágoras:</li>
+</ul>
+<p><code>qbasic
+  r!(x, y) = SQR((x ^ 2) + (y ^ 2))</code></p>
+<ul>
+<li><strong>Ángulo inicial (a)</strong>: El ángulo que forma cada punto con respecto al eje X positivo:</li>
+</ul>
+<p><code>qbasic
+  a!(x, y) = ATN(y / x)    ' Si x ≠ 0</code></p>
+<h4 id="paso-2-captacion-del-grafico">Paso 2: Captación del Gráfico</h4>
+<p>Guardamos el color de cada píxel en la matriz <code>p</code>:</p>
+<pre><code class="language-qbasic">p(x, y) = POINT(x, y)
+</code></pre>
+<h4 id="paso-3-rotacion">Paso 3: Rotación</h4>
+<p>Para cada ángulo de rotación, calculamos las nuevas coordenadas de cada punto:</p>
+<pre><code class="language-qbasic">newx = COS(angle! + a!(x, y)) * r!(x, y)
+newy = SIN(angle! + a!(x, y)) * r!(x, y)
+</code></pre>
+<p>Estas fórmulas aplican la regla mencionada anteriormente: las nuevas coordenadas se calculan combinando el ángulo inicial del punto con el ángulo de rotación, y multiplicando por el radio.</p>
+<h4 id="paso-4-dibujo">Paso 4: Dibujo</h4>
+<p>Dibujamos cada punto en su nueva posición, manteniendo su color original:</p>
+<pre><code class="language-qbasic">PSET (newx, newy), p(x, y)
+</code></pre>
+<h3 id="optimizaciones">Optimizaciones</h3>
+<ol>
+<li>
+<p><strong>Doble Buffer</strong>: La técnica de doble buffer (<code>SCREEN 7, , curpage, 1 - curpage</code>) reduce el parpadeo durante la animación.</p>
+</li>
+<li>
+<p><strong>Precálculo</strong>: Al calcular los radios y ángulos iniciales una sola vez, el programa es más eficiente durante la animación.</p>
+</li>
+<li>
+<p><strong>Manejo de Casos Especiales</strong>: El programa maneja el caso especial donde x = 0, que causaría una división por cero en el cálculo del ángulo.</p>
+</li>
+</ol>
+<h3 id="consideraciones-adicionales">Consideraciones Adicionales</h3>
+<ul>
+<li>
+<p>Este método funciona bien para dibujos pequeños. Para gráficos más grandes, considera usar otras técnicas como sprites o arrays de puntos.</p>
+</li>
+<li>
+<p>La rotación se realiza alrededor del punto (0,0). Para rotar alrededor de un punto diferente, primero debes traducir las coordenadas.</p>
+</li>
+<li>
+<p>Se pueden lograr efectos interesantes combinando rotación con escalado o traslación.</p>
+</li>
+</ul>
+<h2 id="sistemas-de-coordenadas-y-rotacion">Sistemas de Coordenadas y Rotación</h2>
+<p>Una limitación aparente al trabajar con rotación 2D en QBasic es que la rotación debe realizarse alrededor del origen del sistema de coordenadas (0,0), que en QBasic se encuentra en la esquina superior izquierda de la pantalla. Sin embargo, podemos superar esta limitación mediante el uso de un sistema de coordenadas virtual.</p>
+<h3 id="coordenadas-fisicas-vs-coordenadas-virtuales">Coordenadas Físicas vs. Coordenadas Virtuales</h3>
+<p>Para rotar objetos alrededor de cualquier punto de la pantalla, podemos implementar dos sistemas de coordenadas:</p>
+<ol>
+<li>
+<p><strong>Sistema de Coordenadas Físicas</strong>: El sistema nativo de QBasic donde (0,0) está en la esquina superior izquierda.</p>
+</li>
+<li>
+<p><strong>Sistema de Coordenadas Virtuales</strong>: Un sistema definido por nosotros donde el origen (0,0) puede estar en cualquier lugar de la pantalla.</p>
+</li>
+</ol>
+<p>Mediante la definición de variables que contengan la ubicación X e Y de nuestro origen virtual, podemos transformar las coordenadas calculadas relativas al origen virtual a coordenadas físicas de pantalla.</p>
+<h3 id="formulas-de-rotacion-2d">Fórmulas de Rotación 2D</h3>
+<p>Las fórmulas trigonométricas para rotar un par de coordenadas (x, y) son:</p>
+<pre><code class="language-qbasic">x = (x_anterior * COS(angulo)) + (y_anterior * SIN(angulo))
+y = (y_anterior * COS(angulo)) - (x_anterior * SIN(angulo))
+</code></pre>
+<p>Donde:</p>
+<ul>
+<li><code>x_anterior</code> y <code>y_anterior</code> son las coordenadas originales antes de la rotación</li>
+<li><code>angulo</code> es el ángulo de rotación en radianes</li>
+<li><code>x</code> e <code>y</code> son las nuevas coordenadas después de la rotación</li>
+</ul>
+<h3 id="direccion-de-rotacion">Dirección de Rotación</h3>
+<ul>
+<li>Para una rotación en sentido <strong>horario</strong>, utiliza un ángulo <strong>negativo</strong> (ejemplo: -45 grados)</li>
+<li>Para una rotación en sentido <strong>antihorario</strong>, utiliza un ángulo <strong>positivo</strong> (ejemplo: 45 grados)</li>
+</ul>
+<h3 id="conversion-entre-grados-y-radianes">Conversión entre Grados y Radianes</h3>
+<p>Las funciones trigonométricas en QBasic requieren que el ángulo esté en radianes, pero es más intuitivo pensar en grados. Las fórmulas de conversión son:</p>
+<pre><code class="language-qbasic">Radianes = Grados * 0.017453  ' Aproximadamente Grados * PI / 180
+Grados = Radianes * 57.29577  ' Aproximadamente Radianes * 180 / PI
+</code></pre>
+<h3 id="ejemplo-de-rotacion-alrededor-de-un-punto-arbitrario">Ejemplo de Rotación Alrededor de un Punto Arbitrario</h3>
+<p>El siguiente ejemplo muestra cómo rotar un píxel alrededor de un punto arbitrario en la pantalla:</p>
+<pre><code class="language-qbasic">SCREEN 9  ' Establecer modo gráfico de alta resolución
+
+' Definir coordenadas del origen virtual
+VX = 250  ' Coordenada X del origen virtual
+VY = 150  ' Coordenada Y del origen virtual
+
+' Coordenadas iniciales del punto a rotar (relativas al origen virtual)
+X = 100
+Y = 100
+
+Rotacion = 0           ' Contador de rotación
+Angulo = -5 * 0.017453 ' 5 grados en sentido horario (convertidos a radianes)
+
+DO
+  ' Guardar coordenadas actuales
+  AnteriorX = X
+  AnteriorY = Y
+
+  ' Calcular nuevas coordenadas rotadas
+  X = (AnteriorX * COS(Angulo)) + (AnteriorY * SIN(Angulo))
+  Y = (AnteriorY * COS(Angulo)) - (AnteriorX * SIN(Angulo))
+
+  ' Dibujar en la pantalla (convertir de coordenadas virtuales a físicas)
+  ' Multiplicar Y por 0.75 para compensar la relación de aspecto de los píxeles
+  PSET (X + VX, (0.75 * Y) + VY), 15
+
+  ' Dibujar un círculo en la posición actual
+  CIRCLE (X + VX, (0.75 * Y) + VY), 5, 15
+
+  ' Incrementar el contador de rotación
+  Rotacion = Rotacion + 5
+LOOP WHILE Rotacion &lt; 360  ' Completar una rotación completa
+</code></pre>
+<h3 id="consideraciones-importantes">Consideraciones Importantes</h3>
+<ol>
+<li>
+<p><strong>Relación de Aspecto</strong>: Para crear un patrón circular (en lugar de elíptico) en muchos modos gráficos de QBasic, es necesario ajustar la coordenada Y multiplicándola por un factor (como 0.75 en el ejemplo) para compensar la forma no cuadrada de los píxeles.</p>
+</li>
+<li>
+<p><strong>Tipos de Variables</strong>: Al utilizar funciones trigonométricas, el argumento del ángulo debe expresarse como tipo Single y en radianes para obtener resultados precisos.</p>
+</li>
+<li>
+<p><strong>Rendimiento</strong>: Para animaciones más complejas, considera usar tablas precalculadas de seno y coseno para evitar cálculos trigonométricos repetitivos.</p>
+</li>
+</ol>
+<h3 id="aplicaciones-practicas">Aplicaciones Prácticas</h3>
+<p>La rotación 2D puede utilizarse para crear:</p>
+<ul>
+<li>Diales y medidores en simulaciones</li>
+<li>Manecillas de relojes en aplicaciones de tiempo</li>
+<li>Objetos giratorios en juegos</li>
+<li>Partículas y efectos visuales</li>
+<li>Sistemas planetarios simples</li>
+</ul>
+<h2 id="conclusion">Conclusión</h2>
+<p>La rotación de gráficos 2D en QBasic demuestra cómo los principios matemáticos básicos pueden utilizarse para crear efectos visuales complejos. Aunque QBasic no tiene funciones nativas para rotación, con un poco de trigonometría podemos implementar esta funcionalidad de manera eficiente.</p>
+<p>Estos conceptos sirven como base para entender técnicas más avanzadas en gráficos por computadora, y son muy útiles para crear juegos, simulaciones o demostraciones visuales en QBasic.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>

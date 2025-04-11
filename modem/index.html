@@ -1,0 +1,1512 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../manipulacion-sonido/">
+      
+      
+        <link rel="next" href="../gestion-memoria/">
+      
+      
+      <link rel="icon" href="../assets/images/QBlogo2.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.11">
+    
+    
+      
+        <title>Uso del Módem - Documentación de QBasic</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.4af4bdda.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#uso-del-modem-en-qbasic" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Documentación de QBasic" class="md-header__button md-logo" aria-label="Documentación de QBasic" data-md-component="logo">
+      
+  <img src="../assets/images/QBlogo2.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Documentación de QBasic
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Uso del Módem
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Automatico"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Automatico" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-purple"  aria-label="Modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Modo claro" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="brown" data-md-color-accent="amber"  aria-label="Modo oscuro"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Modo oscuro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 2c-1.82 0-3.53.5-5 1.35C8 5.08 10 8.3 10 12s-2 6.92-5 8.65C6.47 21.5 8.18 22 10 22a10 10 0 0 0 10-10A10 10 0 0 0 10 2"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Documentación de QBasic" class="md-nav__button md-logo" aria-label="Documentación de QBasic" data-md-component="logo">
+      
+  <img src="../assets/images/QBlogo2.png" alt="logo">
+
+    </a>
+    Documentación de QBasic
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Inicio
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FAQ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../historia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Historia
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../instalacion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Instalación y Configuración
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../implementaciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Implementaciones
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../recursos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Recursos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sintaxis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sintaxis
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../instrucciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Instrucciones Básicas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../estructuras-control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Estructuras de Control
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../funciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Funciones
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../programacion-modular/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Programación Modular
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Gráficos
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            Gráficos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../graficos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introducción
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2D/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gráficos 2D
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3D/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gráficos 3D
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../raycasting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Raycasting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../animaciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Animaciones
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Entrada de Usuario
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
+            <span class="md-nav__icon md-icon"></span>
+            Entrada de Usuario
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mouse/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Uso del Ratón
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archivos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Manejo de Archivos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_15" >
+        
+          
+          <label class="md-nav__link" for="__nav_15" id="__nav_15_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Sonido
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_15_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_15">
+            <span class="md-nav__icon md-icon"></span>
+            Sonido
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sonido/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Conceptos Básicos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../manipulacion-sonido/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Manipulación de Sonido
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_16" id="__nav_16_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Comunicaciones
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_16_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_16">
+            <span class="md-nav__icon md-icon"></span>
+            Comunicaciones
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Uso del Módem
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Uso del Módem
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#como-funciona-un-modem" class="md-nav__link">
+    <span class="md-ellipsis">
+      ¿Cómo funciona un módem?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#programando-el-modem-en-qbasic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Programando el módem en QBasic
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Programando el módem en QBasic">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#estableciendo-comunicacion-con-el-modem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estableciendo comunicación con el módem
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enviando-comandos-al-modem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enviando comandos al módem
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-marcador-telefonico-simple" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo: Marcador telefónico simple
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#leyendo-la-informacion-del-modem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Leyendo la información del módem
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#programa-completo-de-comunicaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Programa completo de comunicaciones
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitaciones-y-consideraciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limitaciones y consideraciones
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusión
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestion-memoria/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gestión de Memoria
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18" >
+        
+          
+          <label class="md-nav__link" for="__nav_18" id="__nav_18_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Estructuras de Datos
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_18_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_18">
+            <span class="md-nav__icon md-icon"></span>
+            Estructuras de Datos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pilas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pilas (Stacks)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../buenas-practicas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Buenas Prácticas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../estandares/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Estándares
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tecnicas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Técnicas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#como-funciona-un-modem" class="md-nav__link">
+    <span class="md-ellipsis">
+      ¿Cómo funciona un módem?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#programando-el-modem-en-qbasic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Programando el módem en QBasic
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Programando el módem en QBasic">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#estableciendo-comunicacion-con-el-modem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estableciendo comunicación con el módem
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enviando-comandos-al-modem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enviando comandos al módem
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-marcador-telefonico-simple" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo: Marcador telefónico simple
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#leyendo-la-informacion-del-modem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Leyendo la información del módem
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#programa-completo-de-comunicaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Programa completo de comunicaciones
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitaciones-y-consideraciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limitaciones y consideraciones
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusión
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="uso-del-modem-en-qbasic">Uso del Módem en QBasic</h1>
+<p><em>Autor: Matthew River Knight (HORIZONS Interactive Entertainment)</em></p>
+<p>El módem ha sido posiblemente el dispositivo informático más influyente jamás creado. Su aparición ha transformado por completo el mundo de los negocios y la publicidad, ha permitido comunicaciones internacionales más económicas y eficientes, y ha tenido un enorme impacto tanto en profesionales como en aficionados a la informática.</p>
+<p>Para muchos, el módem es una pequeña caja mágica que abre nuestro ordenador al mundo. En realidad, es muy sencillo de usar y, lo que es más importante, de programar.</p>
+<h2 id="como-funciona-un-modem">¿Cómo funciona un módem?</h2>
+<p>El módem toma bytes de datos, los convierte en señales acústicas y los envía a través de la línea telefónica. Teóricamente, si pudieras silbar lo suficientemente rápido y con los tonos adecuados, podrías enviar un archivo mediante los sonidos que produces.</p>
+<p>Básicamente, el ordenador envía un archivo a través del módem de la siguiente manera:</p>
+<ol>
+<li>El módem envía un carácter ASCII para informar al otro ordenador que está enviando un archivo</li>
+<li>Divide ese archivo en fragmentos y lo envía por bloques de bytes</li>
+<li>El módem espera un carácter ASCII del otro ordenador confirmando que todo está bien, para enviar el siguiente fragmento</li>
+</ol>
+<h2 id="programando-el-modem-en-qbasic">Programando el módem en QBasic</h2>
+<p>Programar comunicaciones con el módem en QBasic es sorprendentemente sencillo. Solo necesitas 4 comandos básicos:</p>
+<ol>
+<li><strong>OPEN COM</strong>: Abre el módem para que lo use QBasic</li>
+<li><strong>INPUT$</strong>: Obtiene datos del módem</li>
+<li><strong>LOC</strong>: Indica si el módem ha recibido datos de una fuente externa</li>
+<li><strong>PRINT #</strong>: Envía datos al módem</li>
+</ol>
+<h3 id="estableciendo-comunicacion-con-el-modem">Estableciendo comunicación con el módem</h3>
+<p>Para empezar a trabajar con el módem, primero debes abrir un "camino" hacia él. Esto es similar a abrir un archivo, pero se utiliza la sentencia <code>OPEN COM</code>:</p>
+<pre><code class="language-qbasic">OPEN &quot;COM2:2400,N,8,1,RB2048,TB2048&quot; FOR RANDOM AS #1
+</code></pre>
+<p>Aunque parece complicado, es bastante simple. Lo único que debes tener en cuenta es:</p>
+<ul>
+<li>El número entre "COM" y ":" es el puerto COM en el que está conectado tu módem (COM1 o COM2)</li>
+<li>El número entre ":" y ",N" es la velocidad (baudios) del módem</li>
+</ul>
+<p>QBasic solo puede acceder a los puertos COM 1 y 2. Si tu módem está en otro puerto, existen formas de modificar las direcciones de memoria de los puertos COM, pero eso es tema para otro artículo.</p>
+<p>En cuanto a los baudios, QBasic no puede acceder a los puertos COM a velocidades superiores a 9600. Así que aunque tengas un módem de 56K, QBasic no podrá utilizarlo a más de 9600 baudios.</p>
+<h3 id="enviando-comandos-al-modem">Enviando comandos al módem</h3>
+<p>Para enviar datos a tu módem se utiliza la sentencia <code>PRINT #n</code>, donde n es el número de archivo (en el ejemplo anterior, 1). Sin embargo, todavía no estás conectado a nada, solo has creado una ruta entre tu programa y el módem.</p>
+<p>Para que el módem se comunique con una fuente externa (como un BBS), debes indicarle que marque un número. Para ello, debes utilizar los comandos AT integrados en la memoria del módem:</p>
+<table>
+<thead>
+<tr>
+<th>Comando del módem</th>
+<th>Significado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ATDT###-###-####</td>
+<td>Marca el número ###-###-####</td>
+</tr>
+<tr>
+<td>ATZ</td>
+<td>Cuelga el teléfono</td>
+</tr>
+<tr>
+<td>ATS0=#</td>
+<td>Espera a que alguien llame y el teléfono suene # veces, luego intenta conectar los módems</td>
+</tr>
+<tr>
+<td>ATM2H1L#</td>
+<td>Establece el volumen del altavoz en # (1-3)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ejemplo-marcador-telefonico-simple">Ejemplo: Marcador telefónico simple</h3>
+<p>Aquí tienes un programa simple que marcará un número telefónico:</p>
+<pre><code class="language-qbasic">CLS
+PRINT &quot;Abriendo una ruta hacia tu módem...&quot;
+OPEN &quot;COM2:2400,N,8,1,RB7048,TB7048&quot; FOR RANDOM AS #1
+PRINT &quot;Por favor, introduce el número de teléfono que deseas llamar&quot;
+INPUT PhoneNumber$
+PRINT &quot;Comunicándose con tu módem...&quot;
+PRINT #1, &quot;ATDT&quot;; PhoneNumber$
+PRINT &quot;¡Listo! Levanta el teléfono y habla.&quot;
+PRINT &quot;Presiona la tecla ESC para colgar.&quot;
+DO
+LOOP UNTIL INKEY$ = CHR$(27)
+PRINT #1, &quot;ATZ&quot;
+</code></pre>
+<h3 id="leyendo-la-informacion-del-modem">Leyendo la información del módem</h3>
+<p>El mayor desafío en la programación de módems con QBasic es leer los datos que llegan. Para esto se utiliza la función <code>LOC</code>, que indica si el módem ha recibido algo:</p>
+<pre><code class="language-qbasic">LOC(n)  ' donde n es el número de archivo
+</code></pre>
+<p>LOC te indica dónde te encuentras en un archivo. ¿Archivo? ¡Pero estamos intentando acceder al módem! Como dije antes, los archivos y dispositivos funcionan de la misma manera. Pero con un módem, LOC te dice si ha recibido algo.</p>
+<p>Para leer lo que está recibiendo el módem, utilizas <code>INPUT$(x,y)</code>, donde:</p>
+<ul>
+<li>x es el número de bytes a obtener</li>
+<li>y es el número del archivo/dispositivo abierto</li>
+</ul>
+<p>El valor x debería ser SIEMPRE 1. Sé que esto significa que solo se puede leer 1 carácter en cada pasada, pero de esta manera se lee CADA carácter, y no se omite ninguno. Si estuvieras recibiendo una transmisión de 11 bytes, y x fuera 2, solo se leerían los primeros 10 caracteres (porque 10 es múltiplo de 2). La última parte se omitiría. Esta es la forma para comunicaciones NORMALES. ¡Mantén x como 1!</p>
+<h2 id="programa-completo-de-comunicaciones">Programa completo de comunicaciones</h2>
+<p>Este es un programa completo de comunicaciones con módem que te permite conectarte a cualquier BBS e interactuar con él:</p>
+<pre><code class="language-qbasic">CLS
+PRINT &quot;Programa de comunicaciones simple en QBasic.&quot;
+PRINT &quot;¿Qué puerto COM utiliza tu módem?&quot;
+INPUT &quot;&gt;&quot;, port$
+baud$ = &quot;9600&quot; '9600 debería funcionar bien con la mayoría de los módems. Si tienes
+              'uno más antiguo, usa 2400.
+'Abre ese puerto COM.
+OPEN &quot;COM&quot; + port$ + &quot;:&quot; + baud$ + &quot;,N,8,1,RB2048,TB2048&quot; FOR RANDOM AS #1
+
+PRINT &quot;OPCIONES:&quot;
+PRINT &quot;1-Llamar a otro ordenador&quot;
+PRINT &quot;2-Esperar una llamada&quot;
+PRINT &quot;3-Salir&quot;
+DO
+a = VAL(INKEY$)
+LOOP UNTIL a &gt;= 1 AND a &lt;= 3
+IF a = 3 THEN CLOSE : SYSTEM
+IF a = 2 THEN GOTO wait
+
+PRINT &quot;¿Número a llamar?&quot;
+INPUT &quot;&gt;&quot;, number$
+PRINT #1, &quot;ATDT&quot; + number$  'Indica al módem que marque el número.
+GOTO chat
+wait:
+PRINT #1, &quot;ATS0=1&quot;         'Indica al módem que se conecte después de 1 timbre.
+
+'Cuando un módem se conecta, devuelve &quot;CONNECT ####&quot;
+'El siguiente bloque de código espera hasta que el módem se conecte antes de continuar
+
+a$ = &quot;&quot;
+DO
+IF LOC(1) THEN a$ = a$ + INPUT$(1, 1) 'Si hay algo en el módem, añádelo a a$
+LOOP UNTIL INSTR(a$, &quot;CONNECT&quot;) 'Espera hasta que los módems se hayan conectado.
+
+chat:
+'Si estabas esperando una llamada, se imprimirán muchos caracteres ASCII
+'en la pantalla. No te preocupes, son solo los ordenadores sincronizándose y
+'comunicándose. Además, no verás lo que escribes.
+
+CLS
+PRINT &quot;Ahora estás listo para chatear, presiona ESC para salir.&quot;
+DO
+t$ = INKEY$
+IF LEN(t$) THEN PRINT #1, t$    'Si escribiste algo, envíalo al módem
+                                'esto será enviado por el módem al otro
+                                'ordenador
+IF LOC(1) THEN r$ = INPUT$(1, 1) 'Si hay algo que recibir, guárdalo en r$
+
+IF LEN(r$) THEN PRINT r$;       'Si r$ &lt;&gt; &quot;&quot; entonces imprímelo. &quot;;&quot; significa que
+                                'no se inicia una nueva línea
+LOOP UNTIL t$ = CHR$(27)        'Continúa haciendo esto hasta que se presione ESC
+PRINT #1, &quot;ATZ&quot;                 'Indica al módem que cuelgue
+CLOSE                           'Cierra la sentencia COM abierta
+</code></pre>
+<h2 id="limitaciones-y-consideraciones">Limitaciones y consideraciones</h2>
+<ul>
+<li>QBasic solo puede acceder a los puertos COM 1 y 2</li>
+<li>La velocidad máxima es de 9600 baudios</li>
+<li>Este programa básico no incluye capacidades de carga o descarga de archivos</li>
+<li>Al esperar una llamada, se mostrarán muchos caracteres ASCII en la pantalla durante la sincronización</li>
+</ul>
+<h2 id="conclusion">Conclusión</h2>
+<p>¡Y eso es todo! ¿Fácil, verdad? Ahora tienes un programa genial que puedes usar para hablar con tus amigos a través del módem en QBasic.</p>
+<p>La programación de comunicaciones con módem en QBasic es mucho más sencilla de lo que podría parecer inicialmente. Con solo cuatro comandos fundamentales (<code>OPEN COM</code>, <code>INPUT$</code>, <code>LOC</code> y <code>PRINT #</code>), puedes crear programas funcionales para comunicarte con otros ordenadores a través de la línea telefónica.</p>
+<p>Este conocimiento básico te permitirá experimentar con las comunicaciones por módem y sentar las bases para desarrollar aplicaciones más complejas que incluyan transferencia de archivos y otros protocolos de comunicación.</p>
+<p>Antes de dejarte experimentar con tus nuevos conocimientos, me gustaría extender mi agradecimiento a las siguientes personas que me han ayudado de alguna manera con mi programación en general: LordAcidus, Petter Holmberg, Tek, ZKman, y por último, pero no menos importante, Christian Garms. Chicos, me habéis ayudado mucho.</p>
+<p>¡Feliz hacking para todos!</p>
+<p><em>Este artículo apareció originalmente en The BASIX Fanzine, Número 17, en abril de 2000.</em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>

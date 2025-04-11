@@ -1,0 +1,1867 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../sonido/">
+      
+      
+        <link rel="next" href="../modem/">
+      
+      
+      <link rel="icon" href="../assets/images/QBlogo2.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.11">
+    
+    
+      
+        <title>Manipulación de Sonido - Documentación de QBasic</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.4af4bdda.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#manipulacion-de-sonido-en-qbasic" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Documentación de QBasic" class="md-header__button md-logo" aria-label="Documentación de QBasic" data-md-component="logo">
+      
+  <img src="../assets/images/QBlogo2.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Documentación de QBasic
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Manipulación de Sonido
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Automatico"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Automatico" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-purple"  aria-label="Modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Modo claro" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="brown" data-md-color-accent="amber"  aria-label="Modo oscuro"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Modo oscuro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 2c-1.82 0-3.53.5-5 1.35C8 5.08 10 8.3 10 12s-2 6.92-5 8.65C6.47 21.5 8.18 22 10 22a10 10 0 0 0 10-10A10 10 0 0 0 10 2"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Documentación de QBasic" class="md-nav__button md-logo" aria-label="Documentación de QBasic" data-md-component="logo">
+      
+  <img src="../assets/images/QBlogo2.png" alt="logo">
+
+    </a>
+    Documentación de QBasic
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Inicio
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FAQ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../historia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Historia
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../instalacion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Instalación y Configuración
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../implementaciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Implementaciones
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../recursos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Recursos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sintaxis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sintaxis
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../instrucciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Instrucciones Básicas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../estructuras-control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Estructuras de Control
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../funciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Funciones
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../programacion-modular/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Programación Modular
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Gráficos
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            Gráficos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../graficos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introducción
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2D/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gráficos 2D
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3D/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gráficos 3D
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../raycasting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Raycasting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../animaciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Animaciones
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Entrada de Usuario
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
+            <span class="md-nav__icon md-icon"></span>
+            Entrada de Usuario
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mouse/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Uso del Ratón
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archivos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Manejo de Archivos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_15" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_15" id="__nav_15_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Sonido
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_15_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_15">
+            <span class="md-nav__icon md-icon"></span>
+            Sonido
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sonido/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Conceptos Básicos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Manipulación de Sonido
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Manipulación de Sonido
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#fundamentos-del-sonido-digital" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fundamentos del Sonido Digital
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reproduccion-de-sonido-en-hardware-basico" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reproducción de Sonido en Hardware Básico
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Reproducción de Sonido en Hardware Básico">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dac-en-puerto-paralelo-lpt" class="md-nav__link">
+    <span class="md-ellipsis">
+      DAC en Puerto Paralelo (LPT)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#altavoz-interno-de-la-pc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Altavoz Interno de la PC
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formatos-de-archivo-de-sonido" class="md-nav__link">
+    <span class="md-ellipsis">
+      Formatos de Archivo de Sonido
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Formatos de Archivo de Sonido">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#archivos-sam-amiga" class="md-nav__link">
+    <span class="md-ellipsis">
+      Archivos SAM (Amiga)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#formato-de-archivo-wav" class="md-nav__link">
+    <span class="md-ellipsis">
+      Formato de Archivo WAV
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#formato-de-archivo-voc-creative-labs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Formato de Archivo VOC (Creative Labs)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Formato de Archivo VOC (Creative Labs)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bloque-0-end-block" class="md-nav__link">
+    <span class="md-ellipsis">
+      BLOQUE 0 - "END BLOCK"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bloque-1-data-block" class="md-nav__link">
+    <span class="md-ellipsis">
+      BLOQUE 1 - "DATA BLOCK"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bloque-2-more-data-block" class="md-nav__link">
+    <span class="md-ellipsis">
+      BLOQUE 2 - "MORE DATA BLOCK"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bloque-3-silence-block" class="md-nav__link">
+    <span class="md-ellipsis">
+      BLOQUE 3 - "SILENCE BLOCK"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bloque-4-marker-block" class="md-nav__link">
+    <span class="md-ellipsis">
+      BLOQUE 4 - "MARKER BLOCK"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bloque-5-message-block" class="md-nav__link">
+    <span class="md-ellipsis">
+      BLOQUE 5 - "MESSAGE BLOCK"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bloque-6-repeat-block" class="md-nav__link">
+    <span class="md-ellipsis">
+      BLOQUE 6 - "REPEAT BLOCK"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bloque-7-end-repeat-block" class="md-nav__link">
+    <span class="md-ellipsis">
+      BLOQUE 7 - "END REPEAT BLOCK"
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#formato-de-archivo-mod-protracker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Formato de Archivo MOD (Protracker)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#archivos-snd-sounder" class="md-nav__link">
+    <span class="md-ellipsis">
+      Archivos SND (Sounder)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#archivos-snd-sound-tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      Archivos SND (Sound Tool)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-de-codigo-para-reproducir-sonido" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo de Código para Reproducir Sonido
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consejos-para-trabajar-con-sonido-en-qbasic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consejos para Trabajar con Sonido en QBasic
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusión
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16" >
+        
+          
+          <label class="md-nav__link" for="__nav_16" id="__nav_16_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Comunicaciones
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_16_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_16">
+            <span class="md-nav__icon md-icon"></span>
+            Comunicaciones
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modem/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Uso del Módem
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestion-memoria/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gestión de Memoria
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18" >
+        
+          
+          <label class="md-nav__link" for="__nav_18" id="__nav_18_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Estructuras de Datos
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_18_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_18">
+            <span class="md-nav__icon md-icon"></span>
+            Estructuras de Datos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pilas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pilas (Stacks)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../buenas-practicas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Buenas Prácticas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../estandares/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Estándares
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tecnicas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Técnicas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#fundamentos-del-sonido-digital" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fundamentos del Sonido Digital
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reproduccion-de-sonido-en-hardware-basico" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reproducción de Sonido en Hardware Básico
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Reproducción de Sonido en Hardware Básico">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dac-en-puerto-paralelo-lpt" class="md-nav__link">
+    <span class="md-ellipsis">
+      DAC en Puerto Paralelo (LPT)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#altavoz-interno-de-la-pc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Altavoz Interno de la PC
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formatos-de-archivo-de-sonido" class="md-nav__link">
+    <span class="md-ellipsis">
+      Formatos de Archivo de Sonido
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Formatos de Archivo de Sonido">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#archivos-sam-amiga" class="md-nav__link">
+    <span class="md-ellipsis">
+      Archivos SAM (Amiga)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#formato-de-archivo-wav" class="md-nav__link">
+    <span class="md-ellipsis">
+      Formato de Archivo WAV
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#formato-de-archivo-voc-creative-labs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Formato de Archivo VOC (Creative Labs)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Formato de Archivo VOC (Creative Labs)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bloque-0-end-block" class="md-nav__link">
+    <span class="md-ellipsis">
+      BLOQUE 0 - "END BLOCK"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bloque-1-data-block" class="md-nav__link">
+    <span class="md-ellipsis">
+      BLOQUE 1 - "DATA BLOCK"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bloque-2-more-data-block" class="md-nav__link">
+    <span class="md-ellipsis">
+      BLOQUE 2 - "MORE DATA BLOCK"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bloque-3-silence-block" class="md-nav__link">
+    <span class="md-ellipsis">
+      BLOQUE 3 - "SILENCE BLOCK"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bloque-4-marker-block" class="md-nav__link">
+    <span class="md-ellipsis">
+      BLOQUE 4 - "MARKER BLOCK"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bloque-5-message-block" class="md-nav__link">
+    <span class="md-ellipsis">
+      BLOQUE 5 - "MESSAGE BLOCK"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bloque-6-repeat-block" class="md-nav__link">
+    <span class="md-ellipsis">
+      BLOQUE 6 - "REPEAT BLOCK"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bloque-7-end-repeat-block" class="md-nav__link">
+    <span class="md-ellipsis">
+      BLOQUE 7 - "END REPEAT BLOCK"
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#formato-de-archivo-mod-protracker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Formato de Archivo MOD (Protracker)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#archivos-snd-sounder" class="md-nav__link">
+    <span class="md-ellipsis">
+      Archivos SND (Sounder)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#archivos-snd-sound-tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      Archivos SND (Sound Tool)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-de-codigo-para-reproducir-sonido" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo de Código para Reproducir Sonido
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consejos-para-trabajar-con-sonido-en-qbasic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consejos para Trabajar con Sonido en QBasic
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusión
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="manipulacion-de-sonido-en-qbasic">Manipulación de Sonido en QBasic</h1>
+<p>Este artículo proporciona información detallada sobre la manipulación de sonido digital en QBasic, incluyendo cómo reproducir diferentes formatos de archivos de sonido y los detalles técnicos sobre las estructuras de estos formatos.</p>
+<h2 id="fundamentos-del-sonido-digital">Fundamentos del Sonido Digital</h2>
+<p>Un archivo de sonido digital básicamente consiste en una serie de valores de volumen. En la PC, generalmente un valor de 128 representa el silencio. Los valores más alejados de 128 (en cualquier dirección) son más fuertes según su distancia de este punto medio. Los valores 0 y 255 representan los volúmenes más altos.</p>
+<p>Es importante destacar que 128 no es necesariamente un silencio absoluto. Cuando se hace una grabación, siempre hay ruido de fondo, por lo que lo que puede sonar como silencio suele estar entre 126-130.</p>
+<h2 id="reproduccion-de-sonido-en-hardware-basico">Reproducción de Sonido en Hardware Básico</h2>
+<h3 id="dac-en-puerto-paralelo-lpt">DAC en Puerto Paralelo (LPT)</h3>
+<p>Para reproducir archivos de sonido digital (VOC, WAV, SND, etc.) en un DAC conectado al puerto paralelo:</p>
+<ol>
+<li>Lee un byte del archivo</li>
+<li>Envíalo al puerto paralelo</li>
+<li>Repite con el siguiente byte</li>
+</ol>
+<p>Para obtener la dirección I/O del puerto paralelo:</p>
+<ul>
+<li>LPT1: Lee la palabra en la ubicación de memoria 40h:8h</li>
+<li>LPT2: 40h:0Ah</li>
+<li>LPT3: 40h:0Ch</li>
+<li>LPT4 (en no-PS/2): 40h:0Eh</li>
+</ul>
+<h3 id="altavoz-interno-de-la-pc">Altavoz Interno de la PC</h3>
+<p>Reproducir sonido digital en el altavoz interno es más complicado porque este componente no fue diseñado para ese propósito. Para reproducir sonido, primero debes configurar correctamente el chip temporizador:</p>
+<pre><code class="language-qbasic">' Configurar el chip temporizador
+OUT 43, &amp;HB6
+OUT 42, &amp;HFF
+OUT 42, 0
+OUT 43, &amp;H90
+a = INP(61)
+a = a OR 3
+OUT 61, a
+</code></pre>
+<p>Después de esta configuración, para reproducir el sonido:</p>
+<ol>
+<li>Obtén un byte del archivo de sonido</li>
+<li>Divide el byte por un "valor de desplazamiento" (shift value)</li>
+<li>Envía este nuevo byte al puerto 42h</li>
+<li>Repite para todo el archivo</li>
+</ol>
+<p>El "valor de desplazamiento" varía según el equipo. Depende del tamaño del altavoz y otros factores. Generalmente, un valor de 4 funciona en todas las computadoras. Cuanto menor sea el valor de desplazamiento, más alto será el volumen de reproducción, pero un valor demasiado pequeño causará distorsión.</p>
+<p>Después de reproducir el sonido, debes restaurar el chip temporizador:</p>
+<pre><code class="language-qbasic">' Restaurar el chip temporizador
+OUT 43, &amp;HB6
+a = INP(61)
+a = a AND &amp;HFC
+OUT 61, a
+</code></pre>
+<h2 id="formatos-de-archivo-de-sonido">Formatos de Archivo de Sonido</h2>
+<h3 id="archivos-sam-amiga">Archivos SAM (Amiga)</h3>
+<p>Los archivos SAM no contienen un encabezado o estructura específica; son archivos de sonido "raw" (sin procesar). Lo importante a recordar es que utilizan valores "signed" (con signo), lo que significa que cuando el bit 7 está activado, el número es negativo.</p>
+<p>Para convertir un archivo signed a unsigned:</p>
+<ol>
+<li>Lee un byte del archivo original</li>
+<li>Suma 128 a ese byte</li>
+<li>Escribe el resultado en un nuevo archivo</li>
+</ol>
+<p>En el mundo Amiga, un byte de 0 equivale al silencio, mientras que -128 y +128 son los volúmenes más altos. En la PC, 0 y 255 son los volúmenes más altos, y 128 equivale al silencio.</p>
+<h3 id="formato-de-archivo-wav">Formato de Archivo WAV</h3>
+<pre><code>BYTE(S)        CONTENIDO NORMAL              PROPÓSITO/DESCRIPCIÓN
+-----------------------------------------------------------------------
+00 - 03        &quot;RIFF&quot;                        Bloque de identificación
+04 - 07        ???                           Entero largo que indica el
+                                             tamaño del archivo en bytes,
+                                             incluyendo el encabezado
+08 - 11        &quot;WAVE&quot;                        Identificador de formato
+12 - 15        &quot;fmt &quot;                        Identificador de formato
+16 - 19        16, 0, 0, 0                   Tamaño del encabezado hasta este punto
+20 - 21        1, 0                          Etiqueta de formato
+22 - 23        1, 0                          Canales
+24 - 27        ???                           Frecuencia de muestreo (samples por segundo)
+28 - 31        ???                           Bytes promedio por segundo
+32 - 33        1, 0                          Alineación de bloque
+34 - 35        8, 0                          Bits por muestra (8, 12 o 16)
+36 - 39        &quot;data&quot;                        Marcador que precede a los datos reales
+40 - 43        ???                           Número de bytes en la muestra
+</code></pre>
+<h3 id="formato-de-archivo-voc-creative-labs">Formato de Archivo VOC (Creative Labs)</h3>
+<pre><code>BYTE(S)        CONTENIDO NORMAL              PROPÓSITO/DESCRIPCIÓN
+-----------------------------------------------------------------------
+00 - 19        &quot;Creative Voice File&quot;, 26     Bloque de identificación
+20 - 21        26, 00                        Desplazamiento al primer bloque de datos
+22 - 23        10, 1                         Número de versión (1.10)
+24 - 25        41, 17                        Dígitos de verificación
+</code></pre>
+<p>Después del encabezado (a partir del byte 26), el archivo VOC contiene bloques de datos. Hay ocho tipos, numerados de 0 a 7:</p>
+<h4 id="bloque-0-end-block">BLOQUE 0 - "END BLOCK"</h4>
+<ul>
+<li>Byte 1: '0' para denotar el tipo "fin de bloque"</li>
+<li>Este bloque marca el final del archivo VOC</li>
+</ul>
+<h4 id="bloque-1-data-block">BLOQUE 1 - "DATA BLOCK"</h4>
+<ul>
+<li>Byte 1: '1' para denotar el tipo "bloque de datos"</li>
+<li>Bytes 2-4: Longitud del bloque</li>
+<li>Byte 5: Frecuencia de muestreo (calculada como 1000000 / (256-b5))</li>
+<li>Byte 6: Tipo de compresión (0=sin compresión, 1=4 bits, 2=2 bits, 3=1 bit)</li>
+<li>Byte 7: Comienzan los datos reales de la muestra</li>
+</ul>
+<h4 id="bloque-2-more-data-block">BLOQUE 2 - "MORE DATA BLOCK"</h4>
+<ul>
+<li>Byte 1: '2' para denotar el tipo "más datos"</li>
+<li>Bytes 2-4: Longitud del bloque</li>
+<li>Byte 5: Comienzan los datos de la muestra</li>
+<li>Utiliza la misma frecuencia de muestreo y compresión que el bloque de datos anterior</li>
+</ul>
+<h4 id="bloque-3-silence-block">BLOQUE 3 - "SILENCE BLOCK"</h4>
+<ul>
+<li>Byte 1: '3' para denotar el tipo "bloque de silencio"</li>
+<li>Bytes 2-4: Longitud del bloque (generalmente 3)</li>
+<li>Bytes 5-6: Duración del silencio</li>
+<li>Byte 7: Frecuencia de muestreo</li>
+</ul>
+<h4 id="bloque-4-marker-block">BLOQUE 4 - "MARKER BLOCK"</h4>
+<ul>
+<li>Byte 1: '4' para denotar el tipo "bloque marcador"</li>
+<li>Bytes 2-4: Longitud del bloque</li>
+<li>Bytes 5-6: Valor del marcador</li>
+</ul>
+<h4 id="bloque-5-message-block">BLOQUE 5 - "MESSAGE BLOCK"</h4>
+<ul>
+<li>Byte 1: '5' para denotar el tipo "bloque de mensaje"</li>
+<li>Bytes 2-4: Longitud del bloque</li>
+<li>Bytes 5-?: Mensaje en texto ASCII</li>
+<li>Byte ?: 0, para denotar fin del texto</li>
+</ul>
+<h4 id="bloque-6-repeat-block">BLOQUE 6 - "REPEAT BLOCK"</h4>
+<ul>
+<li>Byte 1: '6' para denotar el tipo "bloque de repetición"</li>
+<li>Bytes 2-4: Longitud del bloque</li>
+<li>Bytes 5-6: Número de veces que los datos deben repetirse</li>
+</ul>
+<h4 id="bloque-7-end-repeat-block">BLOQUE 7 - "END REPEAT BLOCK"</h4>
+<ul>
+<li>Byte 1: '7' para denotar el tipo "fin de bloque de repetición"</li>
+<li>Bytes 2-4: Longitud del bloque (siempre cero)</li>
+</ul>
+<h3 id="formato-de-archivo-mod-protracker">Formato de Archivo MOD (Protracker)</h3>
+<p>El formato MOD (Module) originario del Amiga es un formato de música tracker con las siguientes secciones:</p>
+<pre><code>Offset   Bytes   Descripción
+------   -----   -----------
+0        20      Nombre de la canción (con bytes nulos al final)
+</code></pre>
+<p>Información para las muestras 1-31:</p>
+<pre><code>Offset   Bytes   Descripción
+------   -----   -----------
+20       22      Nombre de la muestra 1 (rellenado con bytes nulos)
+42       2       Longitud de la muestra 1 en palabras (multiplicar por 2 para obtener longitud en bytes)
+44       1       Los 4 bits inferiores son el valor de ajuste fino (signed)
+45       1       Volumen para la muestra 1 (rango 0-64 decimal)
+46       2       Punto de repetición para la muestra 1 (en palabras)
+48       2       Longitud de repetición para la muestra 1 (en palabras)
+</code></pre>
+<p>La información para las siguientes 30 muestras continúa de manera similar.</p>
+<pre><code>Offset   Bytes   Descripción
+------   -----   -----------
+950      1       Longitud de la canción (rango 1-128)
+951      1       Este byte se establece en 127
+952      128     Posiciones de la canción 0-127
+1080     4       Las cuatro letras &quot;M.K.&quot; - Identificador
+1084     1024    Datos para el patrón 00
+</code></pre>
+<p>Cada nota se almacena como 4 bytes, y las cuatro notas en cada posición del patrón se almacenan una tras otra.</p>
+<p>Información para cada nota:</p>
+<pre><code>Byte 1             Byte 2      Byte 3             Byte 4
+------------------  ---------   -----------------   ----------
+Cuatro bits        12 bits      Cuatro bits         Comando
+superiores del     para el      inferiores del      de efecto
+número de muestra  período      número de muestra
+</code></pre>
+<h3 id="archivos-snd-sounder">Archivos SND (Sounder)</h3>
+<pre><code>BYTE(S)        CONTENIDO NORMAL              PROPÓSITO/DESCRIPCIÓN
+-----------------------------------------------------------------------
+00 - 01        0, 0                          Bits por muestra (normalmente 0 para 8 bits)
+02 - 03        ???                           Frecuencia de muestreo
+04 - 05        ???                           Volumen de reproducción
+06 - 07        4, 0                          Valor de desplazamiento (shift)
+</code></pre>
+<h3 id="archivos-snd-sound-tool">Archivos SND (Sound Tool)</h3>
+<pre><code>BYTE(S)        CONTENIDO NORMAL              PROPÓSITO/DESCRIPCIÓN
+-----------------------------------------------------------------------
+00 - 05        &quot;SOUND&quot;, 26                   Identificación
+08 - 11        ???                           Número de bytes en la muestra
+12 - 15        ???                           Primer byte a reproducir
+16 - 19        ???                           Último byte a reproducir
+20 - 21        ???                           Frecuencia de muestreo
+22 - 23        ???                           Bits por muestra
+24 - 25        ???                           Volumen de reproducción
+26 - 27        4, 0                          Valor de desplazamiento
+28 - 123       ???                           Nombre de la muestra (termina con ASCII 0)
+</code></pre>
+<h2 id="ejemplo-de-codigo-para-reproducir-sonido">Ejemplo de Código para Reproducir Sonido</h2>
+<p>A continuación se presenta un ejemplo simplificado de cómo reproducir un archivo WAV sin comprimir en el altavoz interno de la PC:</p>
+<pre><code class="language-qbasic">' Abrir el archivo WAV
+OPEN &quot;sonido.wav&quot; FOR BINARY AS #1
+
+' Saltar el encabezado (primeros 44 bytes generalmente)
+SEEK #1, 45
+
+' Configurar el chip temporizador
+OUT 43, &amp;HB6
+OUT 42, &amp;HFF
+OUT 42, 0
+OUT 43, &amp;H90
+a = INP(61)
+a = a OR 3
+OUT 61, a
+
+' Reproducir el sonido
+shiftValue = 4 ' Ajustar según sea necesario
+DO WHILE NOT EOF(1)
+  ' Leer un byte del archivo
+  byte$ = INPUT$(1, #1)
+  value = ASC(byte$)
+
+  ' Dividir por el valor de desplazamiento
+  value = value \ shiftValue
+
+  ' Enviar al puerto del altavoz
+  OUT 42, value
+
+  ' Pequeña pausa para la frecuencia de muestreo
+  ' (esto debería ajustarse según la frecuencia del archivo)
+  FOR delay = 1 TO 8: NEXT delay
+LOOP
+
+' Restaurar el chip temporizador
+OUT 43, &amp;HB6
+a = INP(61)
+a = a AND &amp;HFC
+OUT 61, a
+
+' Cerrar el archivo
+CLOSE #1
+</code></pre>
+<h2 id="consejos-para-trabajar-con-sonido-en-qbasic">Consejos para Trabajar con Sonido en QBasic</h2>
+<ol>
+<li>
+<p><strong>Frecuencia de muestreo</strong>: Cuanto mayor sea la frecuencia, mejor será la calidad del sonido, pero también requerirá más recursos. Las frecuencias comunes son 22 KHz, 11 KHz, 7.33 KHz y 5.5 KHz.</p>
+</li>
+<li>
+<p><strong>Altavoz interno vs DAC</strong>: El altavoz interno tiene limitaciones significativas en la calidad de sonido. Un DAC en el puerto paralelo ofrece mejor calidad.</p>
+</li>
+<li>
+<p><strong>Conversión signed a unsigned</strong>: Recuerda que los formatos Amiga (MOD, SAM) utilizan valores signed, mientras que los formatos PC suelen usar unsigned.</p>
+</li>
+<li>
+<p><strong>Valor de desplazamiento (shift)</strong>: Experimenta con diferentes valores (2-6) para encontrar el mejor equilibrio entre volumen y distorsión para tu sistema.</p>
+</li>
+<li>
+<p><strong>Timing</strong>: La reproducción de sonido en tiempo real requiere un timing preciso. En sistemas más rápidos, es posible que necesites agregar retrasos adicionales para mantener la frecuencia de muestreo correcta.</p>
+</li>
+</ol>
+<h2 id="conclusion">Conclusión</h2>
+<p>Aunque QBasic no fue diseñado específicamente para la manipulación de sonido avanzada, con las técnicas adecuadas es posible reproducir una variedad de formatos de sonido digital. Los programadores experimentados pueden incluso crear aplicaciones con efectos de sonido y música de fondo utilizando estas técnicas.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>

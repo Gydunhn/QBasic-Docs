@@ -1,0 +1,2065 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../estandares/">
+      
+      
+      
+      <link rel="icon" href="../assets/images/QBlogo2.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.11">
+    
+    
+      
+        <title>Técnicas - Documentación de QBasic</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.4af4bdda.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#tecnicas" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Documentación de QBasic" class="md-header__button md-logo" aria-label="Documentación de QBasic" data-md-component="logo">
+      
+  <img src="../assets/images/QBlogo2.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Documentación de QBasic
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Técnicas
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Automatico"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Automatico" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-purple"  aria-label="Modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Modo claro" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="brown" data-md-color-accent="amber"  aria-label="Modo oscuro"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Modo oscuro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 2c-1.82 0-3.53.5-5 1.35C8 5.08 10 8.3 10 12s-2 6.92-5 8.65C6.47 21.5 8.18 22 10 22a10 10 0 0 0 10-10A10 10 0 0 0 10 2"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Documentación de QBasic" class="md-nav__button md-logo" aria-label="Documentación de QBasic" data-md-component="logo">
+      
+  <img src="../assets/images/QBlogo2.png" alt="logo">
+
+    </a>
+    Documentación de QBasic
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Inicio
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FAQ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../historia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Historia
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../instalacion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Instalación y Configuración
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../implementaciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Implementaciones
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../recursos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Recursos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sintaxis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sintaxis
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../instrucciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Instrucciones Básicas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../estructuras-control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Estructuras de Control
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../funciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Funciones
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../programacion-modular/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Programación Modular
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Gráficos
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            Gráficos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../graficos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introducción
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2D/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gráficos 2D
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3D/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gráficos 3D
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../raycasting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Raycasting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../animaciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Animaciones
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Entrada de Usuario
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
+            <span class="md-nav__icon md-icon"></span>
+            Entrada de Usuario
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mouse/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Uso del Ratón
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archivos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Manejo de Archivos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_15" >
+        
+          
+          <label class="md-nav__link" for="__nav_15" id="__nav_15_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Sonido
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_15_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_15">
+            <span class="md-nav__icon md-icon"></span>
+            Sonido
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sonido/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Conceptos Básicos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../manipulacion-sonido/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Manipulación de Sonido
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16" >
+        
+          
+          <label class="md-nav__link" for="__nav_16" id="__nav_16_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Comunicaciones
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_16_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_16">
+            <span class="md-nav__icon md-icon"></span>
+            Comunicaciones
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modem/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Uso del Módem
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestion-memoria/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gestión de Memoria
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18" >
+        
+          
+          <label class="md-nav__link" for="__nav_18" id="__nav_18_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Estructuras de Datos
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_18_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_18">
+            <span class="md-nav__icon md-icon"></span>
+            Estructuras de Datos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pilas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pilas (Stacks)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../buenas-practicas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Buenas Prácticas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../estandares/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Estándares
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Técnicas
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Técnicas
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tecnicas-graficas-avanzadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Técnicas Gráficas Avanzadas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Técnicas Gráficas Avanzadas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#manipulacion-de-la-paleta" class="md-nav__link">
+    <span class="md-ellipsis">
+      Manipulación de la Paleta
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#graficos-rapidos-con-acceso-directo-a-memoria" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gráficos Rápidos con Acceso Directo a Memoria
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cargar-imagenes-pcx" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cargar Imágenes PCX
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#carga-de-archivos-bmp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Carga de Archivos BMP
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Carga de Archivos BMP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cargando-la-cabecera-bmp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cargando la cabecera BMP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configurando-la-paleta" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configurando la paleta
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mostrando-la-imagen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mostrando la imagen
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optimizacion-para-mayor-velocidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optimización para mayor velocidad
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metodo-ultra-rapido-con-acceso-directo-a-memoria" class="md-nav__link">
+    <span class="md-ellipsis">
+      Método ultra-rápido con acceso directo a memoria
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#algoritmos-aleatorios-para-graficos-realistas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Algoritmos Aleatorios para Gráficos Realistas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consejos-para-mejorar-los-graficos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consejos para Mejorar los Gráficos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tecnicas-de-programacion-3d" class="md-nav__link">
+    <span class="md-ellipsis">
+      Técnicas de Programación 3D
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Técnicas de Programación 3D">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conceptos-basicos-del-espacio-3d" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conceptos Básicos del Espacio 3D
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proyeccion-3d-a-2d" class="md-nav__link">
+    <span class="md-ellipsis">
+      Proyección 3D a 2D
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rotaciones-3d" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rotaciones 3D
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optimizacion-con-tablas-trigonometricas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optimización con Tablas Trigonométricas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estructura-de-datos-para-objetos-3d" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estructura de Datos para Objetos 3D
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-de-cubo-rotando-en-3d" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo de Cubo Rotando en 3D
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consejos-para-mejorar-los-graficos-3d" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consejos para Mejorar los Gráficos 3D
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tecnicas-graficas-avanzadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Técnicas Gráficas Avanzadas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Técnicas Gráficas Avanzadas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#manipulacion-de-la-paleta" class="md-nav__link">
+    <span class="md-ellipsis">
+      Manipulación de la Paleta
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#graficos-rapidos-con-acceso-directo-a-memoria" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gráficos Rápidos con Acceso Directo a Memoria
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cargar-imagenes-pcx" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cargar Imágenes PCX
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#carga-de-archivos-bmp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Carga de Archivos BMP
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Carga de Archivos BMP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cargando-la-cabecera-bmp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cargando la cabecera BMP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configurando-la-paleta" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configurando la paleta
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mostrando-la-imagen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mostrando la imagen
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optimizacion-para-mayor-velocidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optimización para mayor velocidad
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metodo-ultra-rapido-con-acceso-directo-a-memoria" class="md-nav__link">
+    <span class="md-ellipsis">
+      Método ultra-rápido con acceso directo a memoria
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#algoritmos-aleatorios-para-graficos-realistas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Algoritmos Aleatorios para Gráficos Realistas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consejos-para-mejorar-los-graficos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consejos para Mejorar los Gráficos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tecnicas-de-programacion-3d" class="md-nav__link">
+    <span class="md-ellipsis">
+      Técnicas de Programación 3D
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Técnicas de Programación 3D">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conceptos-basicos-del-espacio-3d" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conceptos Básicos del Espacio 3D
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proyeccion-3d-a-2d" class="md-nav__link">
+    <span class="md-ellipsis">
+      Proyección 3D a 2D
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rotaciones-3d" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rotaciones 3D
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optimizacion-con-tablas-trigonometricas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optimización con Tablas Trigonométricas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estructura-de-datos-para-objetos-3d" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estructura de Datos para Objetos 3D
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-de-cubo-rotando-en-3d" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo de Cubo Rotando en 3D
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consejos-para-mejorar-los-graficos-3d" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consejos para Mejorar los Gráficos 3D
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="tecnicas">Técnicas</h1>
+<p>Programación estructurada, modularidad, comentarios.</p>
+<h2 id="tecnicas-graficas-avanzadas">Técnicas Gráficas Avanzadas</h2>
+<p>Esta sección cubre técnicas avanzadas para manipular gráficos en QBasic, basadas en los tutoriales de Damian Nikodem ("Hacker").</p>
+<h3 id="manipulacion-de-la-paleta">Manipulación de la Paleta</h3>
+<p>La paleta en QBasic es una serie de números donde se almacenan los valores de los colores. Al modificar la paleta, puedes cambiar los colores de una imagen sin alterar su estructura.</p>
+<p>Para manipular la paleta, se utilizan comandos de entrada/salida directos al hardware:</p>
+<pre><code class="language-qbasic">' Cambiar un color en la paleta
+OUT &amp;H3C8, color     ' Seleccionar el color a modificar (0-255)
+OUT &amp;H3C9, rojo      ' Componente rojo (0-63)
+OUT &amp;H3C9, verde     ' Componente verde (0-63)
+OUT &amp;H3C9, azul      ' Componente azul (0-63)
+</code></pre>
+<p>Los valores de cada componente de color (rojo, verde, azul) deben estar entre 0 y 63.</p>
+<p>Para guardar y cargar paletas desde archivos, puedes utilizar las siguientes subrutinas:</p>
+<pre><code class="language-qbasic">SUB guardarPaleta (archivo$)
+  OPEN archivo$ FOR OUTPUT AS #1
+  FOR x% = 0 TO 255
+    CALL obtenerColor(x%, r%, g%, b%)
+    PRINT #1, CHR$(r%); CHR$(g%); CHR$(b%);
+  NEXT x%
+  CLOSE #1
+END SUB
+
+SUB obtenerColor (Color%, Rojo%, Verde%, Azul%)
+  OUT &amp;H3C7, Color%
+  Rojo% = INP(&amp;H3C9)
+  Verde% = INP(&amp;H3C9)
+  Azul% = INP(&amp;H3C9)
+END SUB
+
+SUB cargarPaleta (archivo$)
+  OPEN archivo$ FOR BINARY AS #1
+  r$ = &quot; &quot;
+  g$ = &quot; &quot;
+  b$ = &quot; &quot;
+  FOR x% = 0 TO 255
+    GET #1, , r$: r% = ASC(r$)
+    GET #1, , g$: g% = ASC(g$)
+    GET #1, , b$: b% = ASC(b$)
+    CALL cambiarColor(x%, r%, g%, b%)
+  NEXT x%
+  CLOSE #1
+END SUB
+
+SUB cambiarColor (Color%, Rojo%, Verde%, Azul%)
+  OUT &amp;H3C8, Color%
+  OUT &amp;H3C9, Rojo%
+  OUT &amp;H3C9, Verde%
+  OUT &amp;H3C9, Azul%
+END SUB
+</code></pre>
+<h3 id="graficos-rapidos-con-acceso-directo-a-memoria">Gráficos Rápidos con Acceso Directo a Memoria</h3>
+<p>PSET es un comando relativamente lento para dibujar píxeles. Una alternativa mucho más rápida es escribir directamente en la memoria de vídeo:</p>
+<pre><code class="language-qbasic">SCREEN 13           ' Modo gráfico 320x200 con 256 colores
+DEF SEG = &amp;HA000    ' Apuntar al segmento de memoria de vídeo
+x = 10              ' Posición X del píxel
+y = 10              ' Posición Y del píxel
+color = 30          ' Color del píxel
+POKE (y * 320) + x, color  ' Colocar el píxel en la pantalla
+</code></pre>
+<p>El cálculo <code>(y * 320) + x</code> determina la posición exacta en la memoria de vídeo. En el modo 13h (SCREEN 13), cada línea tiene 320 píxeles, por lo que multiplicamos la coordenada Y por 320 para determinar la línea, y luego sumamos X para determinar la columna.</p>
+<h3 id="cargar-imagenes-pcx">Cargar Imágenes PCX</h3>
+<p>Las imágenes PCX son un formato común en la época de DOS. Para cargar una imagen PCX en QBasic, necesitamos manejar:</p>
+<ol>
+<li><strong>La cabecera</strong>: Contiene información sobre la imagen, como dimensiones</li>
+<li><strong>Los datos de la imagen</strong>: Comprimidos usando un esquema sencillo</li>
+<li><strong>La paleta</strong>: Almacenada al final del archivo</li>
+</ol>
+<p>Este es un ejemplo simplificado para cargar imágenes PCX de 320x200 directamente a la memoria de vídeo:</p>
+<pre><code class="language-qbasic">SUB cargarPCX (archivo$)
+  OPEN archivo$ FOR BINARY AS #1
+
+  ' Saltar la cabecera de 128 bytes
+  SEEK #1, 129
+
+  DEF SEG = &amp;HA000
+  dirMem = 0
+
+  DO UNTIL EOF(1) OR dirMem &gt;= 64000  ' 320x200 = 64000 bytes
+    GET #1, , dato$
+    datoByte = ASC(dato$)
+
+    ' Comprobar si es un byte de compresión
+    IF datoByte &gt;= 192 AND datoByte &lt;= 255 THEN
+      ' Obtener el contador de repetición
+      contador = datoByte - 192
+
+      ' Obtener el byte a repetir
+      GET #1, , dato$
+      repetir = ASC(dato$)
+
+      ' Repetir el byte en memoria
+      FOR i = 1 TO contador
+        POKE dirMem, repetir
+        dirMem = dirMem + 1
+      NEXT i
+    ELSE
+      ' Byte sin comprimir
+      POKE dirMem, datoByte
+      dirMem = dirMem + 1
+    END IF
+  LOOP
+
+  ' Cargar la paleta (los últimos 768 bytes)
+  ' Si queda suficiente espacio en el archivo
+  IF LOF(1) - 768 &gt; 0 THEN
+    SEEK #1, LOF(1) - 768 + 1
+
+    FOR color = 0 TO 255
+      GET #1, , r$: r = ASC(r$)
+      GET #1, , g$: g = ASC(g$)
+      GET #1, , b$: b = ASC(b$)
+
+      ' Escalar valores de 0-255 a 0-63 para QBasic
+      cambiarColor color, r \ 4, g \ 4, b \ 4
+    NEXT color
+  END IF
+
+  CLOSE #1
+END SUB
+</code></pre>
+<h3 id="carga-de-archivos-bmp">Carga de Archivos BMP</h3>
+<p>Los archivos BMP son uno de los formatos de imagen más simples ya que no utilizan compresión. Esto los hace ideales para trabajar con ellos directamente en QBasic.</p>
+<p>Un archivo BMP típico tiene una cabecera de 1078 bytes que contiene información esencial como las dimensiones de la imagen, la profundidad de color y la paleta. Podemos definir esta estructura utilizando el tipo de datos <code>TYPE</code> de QBasic:</p>
+<pre><code class="language-qbasic">TYPE BMPHeaderType       
+    id AS STRING * 2      ' Debe ser &quot;BM&quot;
+    size AS LONG          ' Tamaño de los datos
+    rr1 AS INTEGER        ' Reservado
+    rr2 AS INTEGER        ' Reservado
+    offset AS LONG        ' Posición del inicio de los datos de píxeles
+    horz AS LONG          ' Reservado
+    wid AS LONG           ' Ancho de la imagen
+    hei AS LONG           ' Alto de la imagen
+    planes AS INTEGER     ' Planos de color
+    bpp AS INTEGER        ' Bits por píxel (8 para una imagen de 256 colores)
+    pakbyte AS LONG       ' Compresión
+    imagebytes AS LONG    ' Ancho*Alto
+    xres AS LONG          ' Resolución X
+    yres AS LONG          ' Resolución Y
+    colch AS LONG         ' Colores utilizados
+    ic AS LONG            ' Colores importantes
+    pal AS STRING * 1024  ' Paleta almacenada como &lt;Azul, Verde, Rojo, 0&gt;
+END TYPE
+</code></pre>
+<h4 id="cargando-la-cabecera-bmp">Cargando la cabecera BMP</h4>
+<p>Para cargar un archivo BMP, primero debemos abrir el archivo en modo binario y leer la cabecera:</p>
+<pre><code class="language-qbasic">DIM BmpHeader AS BMPHeaderType
+
+OPEN &quot;imagen.bmp&quot; FOR BINARY AS #1
+GET #1, , BmpHeader
+
+' Verificar que es un archivo BMP válido
+IF BmpHeader.id &lt;&gt; &quot;BM&quot; THEN
+    PRINT &quot;No es un archivo BMP válido&quot;
+    CLOSE #1
+    END
+END IF
+</code></pre>
+<h4 id="configurando-la-paleta">Configurando la paleta</h4>
+<p>Antes de mostrar la imagen, necesitamos establecer la paleta de colores:</p>
+<pre><code class="language-qbasic">SCREEN 13                           ' Modo gráfico 320x200, 256 colores
+
+a$ = BmpHeader.pal                  ' La paleta se almacena en un string de 1024 caracteres
+
+OUT &amp;H3C8, 0                        ' Comenzar a escribir desde el Color 0
+FOR i% = 1 TO 1024 STEP 4
+    b% = ASC(MID$(a$, i%, 1)) \ 4   ' Azul (dividido por 4 para convertir de 0-255 a 0-63)
+    g% = ASC(MID$(a$, i% + 1, 1)) \ 4 ' Verde
+    r% = ASC(MID$(a$, i% + 2, 1)) \ 4 ' Rojo
+                                    ' i% + 3 es cero (no se utiliza)
+    OUT &amp;H3C9, r%                   ' Establecer el color
+    OUT &amp;H3C9, g%
+    OUT &amp;H3C9, b%
+NEXT
+</code></pre>
+<h4 id="mostrando-la-imagen">Mostrando la imagen</h4>
+<p>Una particularidad de los archivos BMP es que las imágenes se almacenan invertidas verticalmente. Por eso, al leer los píxeles, debemos recorrer las filas de abajo hacia arriba:</p>
+<pre><code class="language-qbasic">' Método básico (lento) - un píxel a la vez
+DIM Pixel AS STRING * 1              ' Nuestro &quot;byte&quot; de píxel
+iHeight% = BmpHeader.hei - 1         ' Restar 1 para la posición real en pantalla
+iWidth% = BmpHeader.wid - 1
+
+FOR y% = iHeight% TO 0 STEP -1       ' Cuenta regresiva para la imagen invertida
+    FOR x% = 0 TO iWidth%
+        GET #1, , Pixel              ' Leer un píxel (byte)
+        PSET (x%, y%), ASC(Pixel)    ' Dibujar el píxel
+    NEXT x%
+NEXT y%
+</code></pre>
+<h4 id="optimizacion-para-mayor-velocidad">Optimización para mayor velocidad</h4>
+<p>El método anterior funciona, pero es muy lento. Podemos mejorar significativamente el rendimiento leyendo una línea completa de píxeles a la vez:</p>
+<pre><code class="language-qbasic">' Método optimizado - una línea a la vez
+Pixel$ = SPACE$(BmpHeader.wid)      ' Crear un buffer para una línea completa
+
+iHeight% = BmpHeader.hei - 1
+iWidth% = BmpHeader.wid - 1
+
+FOR y% = iHeight% TO 0 STEP -1
+    GET #1, , Pixel$                ' Leer una línea completa de una vez
+
+    FOR x% = 0 TO iWidth%
+        PSET (x%, y%), ASC(MID$(Pixel$, x% + 1, 1))
+    NEXT x%
+NEXT y%
+</code></pre>
+<p>Esta optimización puede hacer que la carga de imágenes sea hasta 8 veces más rápida, especialmente en computadoras más lentas.</p>
+<h4 id="metodo-ultra-rapido-con-acceso-directo-a-memoria">Método ultra-rápido con acceso directo a memoria</h4>
+<p>Para una velocidad aún mayor, se puede copiar directamente los datos de la imagen a la memoria de vídeo. Esto requiere conocimientos sobre interrupciones DOS y acceso directo a la memoria, pero ofrece el mejor rendimiento posible:</p>
+<pre><code class="language-qbasic">' Método ultra-rápido con acceso directo a memoria
+DECLARE SUB InterruptX (intnum AS INTEGER, inreg AS RegTypeX, outreg AS RegTypeX)
+
+TYPE RegTypeX
+    ax    AS INTEGER
+    bx    AS INTEGER
+    cx    AS INTEGER
+    dx    AS INTEGER
+    bp    AS INTEGER
+    si    AS INTEGER
+    di    AS INTEGER
+    flags AS INTEGER
+    ds    AS INTEGER
+    es    AS INTEGER
+END TYPE
+
+DIM inregs AS RegTypeX, outregs AS RegTypeX
+Pixel$ = SPACE$(BmpHeader.wid)
+
+DEF SEG = &amp;HA000                    ' Segmento de memoria de vídeo
+iHeight% = BmpHeader.hei - 1
+
+FOR y% = iHeight% TO 0 STEP -1
+    offset% = y% * 320              ' Calcular posición en la memoria de vídeo
+
+    ' Configurar registros para INT 21h (DOS), función 3Fh (Leer desde archivo)
+    inregs.ax = &amp;H3F00              ' Función 3Fh
+    inregs.bx = FREEFILE            ' Handle del archivo
+    inregs.cx = BmpHeader.wid       ' Número de bytes a leer
+    inregs.dx = offset%             ' Offset en memoria donde escribir
+    inregs.ds = &amp;HA000              ' Segmento de memoria
+
+    ' Llamar a la interrupción DOS
+    InterruptX &amp;H21, inregs, outregs
+NEXT y%
+</code></pre>
+<p>Este último método es el más rápido, pero requiere una comprensión avanzada de interrupciones y memoria en DOS.</p>
+<h3 id="algoritmos-aleatorios-para-graficos-realistas">Algoritmos Aleatorios para Gráficos Realistas</h3>
+<p>Los algoritmos aleatorios pueden dar un aspecto más natural y realista a tus gráficos. Por ejemplo, para crear una textura de césped:</p>
+<pre><code class="language-qbasic">SCREEN 13
+RANDOMIZE TIMER
+
+' Crear una textura de césped de 15x15 píxeles
+FOR x = 1 TO 15
+  FOR y = 1 TO 15
+    ' Elegir entre diferentes tonos de verde y marrón
+    z = INT(RND * 8) + 1
+    color = z + 186  ' Colores 187-194 (ajustar según la paleta)
+
+    PSET (x, y), color
+  NEXT y
+NEXT x
+</code></pre>
+<p>Este enfoque añade variación y sutileza a tus gráficos. Puedes aplicar técnicas similares para crear:</p>
+<ul>
+<li>Texturas de terreno (tierra, arena, roca)</li>
+<li>Efectos de cielo y nubes</li>
+<li>Efectos de luz y sombra</li>
+<li>Degradados con transiciones naturales</li>
+</ul>
+<h3 id="consejos-para-mejorar-los-graficos">Consejos para Mejorar los Gráficos</h3>
+<ol>
+<li>
+<p><strong>Usa paletas personalizadas</strong>: Crea paletas específicas para tus escenas para obtener colores más realistas.</p>
+</li>
+<li>
+<p><strong>Combina técnicas de acceso directo a memoria</strong> con algoritmos aleatorios para gráficos rápidos y naturales.</p>
+</li>
+<li>
+<p><strong>Simula profundidad</strong> utilizando variaciones de color y gradientes sutiles.</p>
+</li>
+<li>
+<p><strong>Estudia imágenes reales</strong> para entender cómo la aleatoriedad afecta a las texturas naturales.</p>
+</li>
+<li>
+<p><strong>Optimiza tus rutinas gráficas</strong> para mantener un rendimiento aceptable, especialmente en bucles anidados.</p>
+</li>
+</ol>
+<h2 id="tecnicas-de-programacion-3d">Técnicas de Programación 3D</h2>
+<p>Esta sección explora los conceptos básicos para crear gráficos tridimensionales en QBasic, basada en el trabajo de Aaron Severn.</p>
+<h3 id="conceptos-basicos-del-espacio-3d">Conceptos Básicos del Espacio 3D</h3>
+<p>Para programar en 3D, es fundamental comprender cómo representar el espacio tridimensional. En un sistema de coordenadas 3D tenemos:</p>
+<ul>
+<li><strong>Eje X</strong>: Representa el movimiento horizontal (izquierda/derecha)</li>
+<li><strong>Eje Y</strong>: Representa el movimiento vertical (arriba/abajo)</li>
+<li><strong>Eje Z</strong>: Representa la profundidad (cerca/lejos)</li>
+</ul>
+<p>En la programación 3D básica, usamos esta representación gráfica del espacio:</p>
+<pre><code class="language-text">                 Z             Donde Y es el eje horizontal
+                 |                   Z es el eje vertical
+                 |                   X es el eje que sale de la pantalla
+                 |φ
+                 |_______            θ es el ángulo en el plano XY
+                 /       Y           φ es el ángulo desde el eje Z
+                / θ 
+               / 
+              /
+             X
+</code></pre>
+<h3 id="proyeccion-3d-a-2d">Proyección 3D a 2D</h3>
+<p>El principal desafío de la programación 3D es representar un objeto tridimensional en una pantalla bidimensional. La técnica básica consiste en dividir las coordenadas por la distancia al observador (valor Z), creando así un efecto de perspectiva.</p>
+<p>Las fórmulas para convertir coordenadas 3D a 2D son:</p>
+<pre><code class="language-qbasic">x2D = 256 * (x3D / (z3D + zCentro)) + xCentro
+y2D = 256 * (y3D / (z3D + zCentro)) + yCentro
+</code></pre>
+<p>Donde:</p>
+<ul>
+<li><code>(x2D, y2D)</code> es el punto a dibujar en la pantalla</li>
+<li><code>(x3D, y3D, z3D)</code> es el punto en el espacio 3D</li>
+<li><code>xCentro</code> y <code>yCentro</code> representan el centro de la pantalla (generalmente 160,100 en modo 13h)</li>
+<li><code>zCentro</code> representa la distancia del observador (generalmente 256)</li>
+</ul>
+<p>El valor 256 en las ecuaciones ajusta la escala para obtener un tamaño adecuado en pantalla.</p>
+<h3 id="rotaciones-3d">Rotaciones 3D</h3>
+<p>Para rotar objetos en el espacio 3D, necesitamos aplicar transformaciones matemáticas a cada punto. Estas transformaciones utilizan funciones trigonométricas para calcular las nuevas posiciones.</p>
+<p>Las fórmulas para rotar un punto en 3D son:</p>
+<pre><code class="language-qbasic">xR = -xO * SIN(θ) + yO * COS(θ)
+yR = -xO * COS(θ) * SIN(φ) - yO * SIN(θ) * SIN(φ) - zO * COS(φ) + p
+zR = -xO * COS(θ) * COS(φ) - yO * SIN(θ) * COS(φ) + zO * SIN(φ)
+</code></pre>
+<p>Donde:</p>
+<ul>
+<li><code>(xO, yO, zO)</code> son las coordenadas originales del punto</li>
+<li><code>(xR, yR, zR)</code> son las coordenadas rotadas</li>
+<li><code>θ</code> (theta) es el ángulo de rotación en el plano XY</li>
+<li><code>φ</code> (phi) es el ángulo desde el eje Z</li>
+<li><code>p</code> es la distancia desde el centro del objeto (generalmente 1 para puntos en la superficie)</li>
+</ul>
+<h3 id="optimizacion-con-tablas-trigonometricas">Optimización con Tablas Trigonométricas</h3>
+<p>Las operaciones trigonométricas son costosas en términos de tiempo de procesamiento. Para optimizar, se recomienda crear tablas de senos y cosenos precalculados:</p>
+<pre><code class="language-qbasic">CONST PI = 3.141592
+DIM s!(359)   ' Tabla de senos
+DIM c!(359)   ' Tabla de cosenos
+
+FOR i = 0 TO 359
+   s!(i) = SIN(i * (PI / 180))
+   c!(i) = COS(i * (PI / 180))
+NEXT
+</code></pre>
+<p>Luego, en lugar de calcular <code>SIN(angulo)</code> y <code>COS(angulo)</code> cada vez, simplemente usamos <code>s!(angulo)</code> y <code>c!(angulo)</code>.</p>
+<h3 id="estructura-de-datos-para-objetos-3d">Estructura de Datos para Objetos 3D</h3>
+<p>Para representar objetos 3D, es útil definir una estructura que contenga las coordenadas de cada punto:</p>
+<pre><code class="language-qbasic">TYPE punto3D
+    x AS INTEGER    ' Coordenada X
+    y AS INTEGER    ' Coordenada Y
+    z AS INTEGER    ' Coordenada Z
+    p AS INTEGER    ' Distancia desde el centro del objeto
+END TYPE
+</code></pre>
+<h3 id="ejemplo-de-cubo-rotando-en-3d">Ejemplo de Cubo Rotando en 3D</h3>
+<p>A continuación se presenta un ejemplo simplificado de un cubo rotando en 3D:</p>
+<pre><code class="language-qbasic">DEFINT A-Z
+
+' Definir tipo para puntos 3D
+TYPE pnt
+    x AS INTEGER        ' Coordenada X
+    y AS INTEGER        ' Coordenada Y
+    z AS INTEGER        ' Coordenada Z
+    p AS INTEGER        ' Distancia desde centro
+END TYPE
+
+' Número de líneas para dibujar el cubo
+numLineas = 11  ' 0 a 11 = 12 líneas
+
+' Arreglos para almacenar coordenadas
+DIM lO(numLineas, 1) AS pnt      ' Coordenadas originales
+DIM lR(numLineas, 1) AS pnt      ' Coordenadas rotadas
+DIM scrX(numLineas, 1)           ' Coordenada X en pantalla
+DIM scrY(numLineas, 1)           ' Coordenada Y en pantalla
+DIM oldX(numLineas, 1)           ' Coordenada X anterior (para borrar)
+DIM oldY(numLineas, 1)           ' Coordenada Y anterior (para borrar)
+
+' Tablas trigonométricas precalculadas
+DIM s!(359)
+DIM c!(359)
+CONST PI = 3.141592
+
+' Crear tablas de seno y coseno
+FOR i = 0 TO 359
+   s!(i) = SIN(i * (PI / 180))
+   c!(i) = COS(i * (PI / 180))
+NEXT
+
+' Leer coordenadas del cubo (definidas al final)
+FOR i = 0 TO numLineas
+   READ lO(i, 0).x, lO(i, 0).y, lO(i, 0).z, lO(i, 0).p
+   READ lO(i, 1).x, lO(i, 1).y, lO(i, 1).z, lO(i, 1).p
+NEXT
+
+' Configurar modo gráfico
+SCREEN 13
+CLS
+
+' Configurar parámetros iniciales
+xCentro = 160: yCentro = 100: zCentro = 256
+theta = 0: phi = 0
+thetaRot = 2: phiRot = 2
+
+justStarted = 1
+DO
+  ' Para cada línea del cubo
+  FOR i = 0 TO numLineas
+     ' Guardar valores anteriores para borrado
+     oldX(i, 0) = scrX(i, 0): oldY(i, 0) = scrY(i, 0)
+     oldX(i, 1) = scrX(i, 1): oldY(i, 1) = scrY(i, 1)
+
+     ' Rotar ambos puntos de cada línea
+     lR(i, 0).x = -lO(i, 0).x * s!(theta) + lO(i, 0).y * c!(theta)
+     lR(i, 0).y = -lO(i, 0).x * c!(theta) * s!(phi) - lO(i, 0).y * s!(theta) * s!(phi) - lO(i, 0).z * c!(phi) + lO(i, 0).p
+     lR(i, 0).z = -lO(i, 0).x * c!(theta) * c!(phi) - lO(i, 0).y * s!(theta) * c!(phi) + lO(i, 0).z * s!(phi)
+
+     lR(i, 1).x = -lO(i, 1).x * s!(theta) + lO(i, 1).y * c!(theta)
+     lR(i, 1).y = -lO(i, 1).x * c!(theta) * s!(phi) - lO(i, 1).y * s!(theta) * s!(phi) - lO(i, 1).z * c!(phi) + lO(i, 1).p
+     lR(i, 1).z = -lO(i, 1).x * c!(theta) * c!(phi) - lO(i, 1).y * s!(theta) * c!(phi) + lO(i, 1).z * s!(phi)
+
+     ' Convertir de 3D a 2D
+     IF (lR(i, 0).z + zCentro) &lt;&gt; 0 THEN
+       scrX(i, 0) = 256 * (lR(i, 0).x / (lR(i, 0).z + zCentro)) + xCentro
+       scrY(i, 0) = 256 * (lR(i, 0).y / (lR(i, 0).z + zCentro)) + yCentro
+     END IF
+
+     IF (lR(i, 1).z + zCentro) &lt;&gt; 0 THEN
+       scrX(i, 1) = 256 * (lR(i, 1).x / (lR(i, 1).z + zCentro)) + xCentro
+       scrY(i, 1) = 256 * (lR(i, 1).y / (lR(i, 1).z + zCentro)) + yCentro
+     END IF
+  NEXT i
+
+  ' Borrar líneas anteriores
+  WAIT &amp;H3DA, 8  ' Sincronizar con refresco vertical para evitar parpadeo
+  IF justStarted = 0 THEN
+    FOR i = 0 TO numLineas
+       LINE (oldX(i, 0), oldY(i, 0))-(oldX(i, 1), oldY(i, 1)), 0
+    NEXT i
+  END IF
+
+  ' Dibujar nuevas líneas
+  FOR i = 0 TO numLineas
+     LINE (scrX(i, 0), scrY(i, 0))-(scrX(i, 1), scrY(i, 1)), 11
+  NEXT i
+
+  ' Actualizar ángulos para siguiente fotograma
+  theta = (theta + thetaRot) MOD 360
+  phi = (phi + phiRot) MOD 360
+
+  justStarted = 0
+LOOP UNTIL INKEY$ = CHR$(27)  ' Salir con ESC
+
+' Datos para las líneas del cubo: formato (X1,Y1,Z1,p1, X2,Y2,Z2,p2)
+DATA -50,50,50,1,50,50,50,1
+DATA 50,-50,50,1,50,50,50,1
+DATA 50,50,-50,1,50,50,50,1
+DATA -50,-50,50,1,-50,50,50,1
+DATA -50,50,-50,1,-50,50,50,1
+DATA -50,-50,50,1,50,-50,50,1
+DATA -50,50,-50,1,50,50,-50,1
+DATA -50,-50,-50,1,50,-50,-50,1
+DATA -50,-50,-50,1,-50,50,-50,1
+DATA 50,-50,-50,1,50,-50,50,1
+DATA 50,-50,-50,1,50,50,-50,1
+DATA -50,-50,-50,1,-50,-50,50,1
+</code></pre>
+<h3 id="consejos-para-mejorar-los-graficos-3d">Consejos para Mejorar los Gráficos 3D</h3>
+<ol>
+<li>
+<p><strong>Utiliza sincronización vertical</strong> (WAIT &amp;H3DA, 8) para evitar parpadeos al redibujar objetos 3D.</p>
+</li>
+<li>
+<p><strong>Implementa la eliminación de caras ocultas</strong> para que los objetos sólidos se vean más realistas.</p>
+</li>
+<li>
+<p><strong>Utiliza tablas precalculadas</strong> para todas las operaciones trigonométricas para mejorar significativamente el rendimiento.</p>
+</li>
+<li>
+<p><strong>Aumenta la complejidad gradualmente</strong>, empezando con objetos simples como cubos antes de pasar a geometría más compleja.</p>
+</li>
+<li>
+<p><strong>Considera usar técnicas de doble búfer</strong> para lograr animaciones más suaves y sin parpadeos.</p>
+</li>
+<li>
+<p><strong>Añade iluminación simple</strong> calculando el ángulo entre una superficie y una fuente de luz ficticia para sombrear objetos 3D.</p>
+</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>

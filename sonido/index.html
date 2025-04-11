@@ -1,0 +1,1946 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../archivos/">
+      
+      
+        <link rel="next" href="../manipulacion-sonido/">
+      
+      
+      <link rel="icon" href="../assets/images/QBlogo2.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.11">
+    
+    
+      
+        <title>Conceptos Básicos - Documentación de QBasic</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.4af4bdda.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#sonido" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Documentación de QBasic" class="md-header__button md-logo" aria-label="Documentación de QBasic" data-md-component="logo">
+      
+  <img src="../assets/images/QBlogo2.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Documentación de QBasic
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Conceptos Básicos
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Automatico"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Automatico" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-purple"  aria-label="Modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Modo claro" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="brown" data-md-color-accent="amber"  aria-label="Modo oscuro"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Modo oscuro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 2c-1.82 0-3.53.5-5 1.35C8 5.08 10 8.3 10 12s-2 6.92-5 8.65C6.47 21.5 8.18 22 10 22a10 10 0 0 0 10-10A10 10 0 0 0 10 2"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Documentación de QBasic" class="md-nav__button md-logo" aria-label="Documentación de QBasic" data-md-component="logo">
+      
+  <img src="../assets/images/QBlogo2.png" alt="logo">
+
+    </a>
+    Documentación de QBasic
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Inicio
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FAQ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../historia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Historia
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../instalacion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Instalación y Configuración
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../implementaciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Implementaciones
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../recursos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Recursos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sintaxis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sintaxis
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../instrucciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Instrucciones Básicas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../estructuras-control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Estructuras de Control
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../funciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Funciones
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../programacion-modular/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Programación Modular
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Gráficos
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            Gráficos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../graficos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introducción
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2D/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gráficos 2D
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3D/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gráficos 3D
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../raycasting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Raycasting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../animaciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Animaciones
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Entrada de Usuario
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
+            <span class="md-nav__icon md-icon"></span>
+            Entrada de Usuario
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mouse/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Uso del Ratón
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archivos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Manejo de Archivos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_15" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_15" id="__nav_15_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Sonido
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_15_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_15">
+            <span class="md-nav__icon md-icon"></span>
+            Sonido
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Conceptos Básicos
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Conceptos Básicos
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#comandos-basicos-de-sonido" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comandos Básicos de Sonido
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Comandos Básicos de Sonido">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#beep" class="md-nav__link">
+    <span class="md-ellipsis">
+      BEEP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sound" class="md-nav__link">
+    <span class="md-ellipsis">
+      SOUND
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#efectos-sonoros-con-sound" class="md-nav__link">
+    <span class="md-ellipsis">
+      Efectos Sonoros con SOUND
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#el-comando-play" class="md-nav__link">
+    <span class="md-ellipsis">
+      El Comando PLAY
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="El Comando PLAY">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sintaxis-basica" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sintaxis Básica
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notas-musicales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notas Musicales
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#duraciones-de-notas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Duraciones de Notas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#octavas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Octavas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sostenidos-y-bemoles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sostenidos y Bemoles
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tempo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tempo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pausas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pausas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#legato-y-staccato" class="md-nav__link">
+    <span class="md-ellipsis">
+      Legato y Staccato
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#duracion-relativa-y-punto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Duración Relativa y Punto
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplos-completos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplos Completos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ejemplos Completos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#escala-de-do-mayor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Escala de Do Mayor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#melodia-simple-cumpleanos-feliz" class="md-nav__link">
+    <span class="md-ellipsis">
+      Melodía Simple (Cumpleaños Feliz)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#melodia-con-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Melodía con Variables
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tecnicas-avanzadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Técnicas Avanzadas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Técnicas Avanzadas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reproduccion-de-varias-voces" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reproducción de Varias Voces
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creacion-de-una-biblioteca-de-sonidos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creación de una Biblioteca de Sonidos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integracion-de-sonido-en-juegos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integración de Sonido en Juegos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitaciones-y-soluciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limitaciones y Soluciones
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Limitaciones y Soluciones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#limitaciones-del-altavoz-del-pc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limitaciones del Altavoz del PC
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#soluciones-y-alternativas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Soluciones y Alternativas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recursos-y-referencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recursos y Referencias
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../manipulacion-sonido/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Manipulación de Sonido
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16" >
+        
+          
+          <label class="md-nav__link" for="__nav_16" id="__nav_16_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Comunicaciones
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_16_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_16">
+            <span class="md-nav__icon md-icon"></span>
+            Comunicaciones
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modem/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Uso del Módem
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestion-memoria/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gestión de Memoria
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18" >
+        
+          
+          <label class="md-nav__link" for="__nav_18" id="__nav_18_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Estructuras de Datos
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_18_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_18">
+            <span class="md-nav__icon md-icon"></span>
+            Estructuras de Datos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pilas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pilas (Stacks)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../buenas-practicas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Buenas Prácticas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../estandares/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Estándares
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tecnicas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Técnicas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#comandos-basicos-de-sonido" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comandos Básicos de Sonido
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Comandos Básicos de Sonido">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#beep" class="md-nav__link">
+    <span class="md-ellipsis">
+      BEEP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sound" class="md-nav__link">
+    <span class="md-ellipsis">
+      SOUND
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#efectos-sonoros-con-sound" class="md-nav__link">
+    <span class="md-ellipsis">
+      Efectos Sonoros con SOUND
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#el-comando-play" class="md-nav__link">
+    <span class="md-ellipsis">
+      El Comando PLAY
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="El Comando PLAY">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sintaxis-basica" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sintaxis Básica
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notas-musicales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notas Musicales
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#duraciones-de-notas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Duraciones de Notas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#octavas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Octavas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sostenidos-y-bemoles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sostenidos y Bemoles
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tempo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tempo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pausas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pausas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#legato-y-staccato" class="md-nav__link">
+    <span class="md-ellipsis">
+      Legato y Staccato
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#duracion-relativa-y-punto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Duración Relativa y Punto
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplos-completos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplos Completos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ejemplos Completos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#escala-de-do-mayor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Escala de Do Mayor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#melodia-simple-cumpleanos-feliz" class="md-nav__link">
+    <span class="md-ellipsis">
+      Melodía Simple (Cumpleaños Feliz)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#melodia-con-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Melodía con Variables
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tecnicas-avanzadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Técnicas Avanzadas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Técnicas Avanzadas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reproduccion-de-varias-voces" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reproducción de Varias Voces
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creacion-de-una-biblioteca-de-sonidos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creación de una Biblioteca de Sonidos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integracion-de-sonido-en-juegos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integración de Sonido en Juegos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitaciones-y-soluciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limitaciones y Soluciones
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Limitaciones y Soluciones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#limitaciones-del-altavoz-del-pc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limitaciones del Altavoz del PC
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#soluciones-y-alternativas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Soluciones y Alternativas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recursos-y-referencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recursos y Referencias
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="sonido">Sonido</h1>
+<p>QBasic ofrece varias instrucciones para reproducir sonidos a través del altavoz del PC. Estas capacidades van desde simples pitidos hasta melodías complejas y efectos de sonido personalizados.</p>
+<h2 id="comandos-basicos-de-sonido">Comandos Básicos de Sonido</h2>
+<h3 id="beep">BEEP</h3>
+<p>La instrucción más simple para producir sonido en QBasic es <code>BEEP</code>. Produce un pitido corto con una frecuencia y duración predeterminadas:</p>
+<pre><code class="language-qbasic">BEEP  ' Produce un pitido estándar
+</code></pre>
+<p>Este comando es útil para alertas o confirmaciones simples.</p>
+<h3 id="sound">SOUND</h3>
+<p>El comando <code>SOUND</code> ofrece control directo sobre la frecuencia y duración de un tono:</p>
+<pre><code class="language-qbasic">SOUND frecuencia, duración
+</code></pre>
+<ul>
+<li><strong>frecuencia</strong>: valor en Hertz (Hz) entre 37 y 32767</li>
+<li><strong>duración</strong>: valor en "ticks" (aproximadamente 18.2 ticks = 1 segundo)</li>
+</ul>
+<p>Ejemplos:</p>
+<pre><code class="language-qbasic">SOUND 440, 18   ' Nota La (A4) durante aproximadamente 1 segundo
+SOUND 261, 9    ' Nota Do (C4) durante medio segundo
+SOUND 1000, 5   ' Tono de 1000 Hz durante un cuarto de segundo
+</code></pre>
+<p>Tabla de frecuencias para notas musicales (octava 4):</p>
+<table>
+<thead>
+<tr>
+<th>Nota</th>
+<th>Frecuencia (Hz)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>C4 (Do)</td>
+<td>261.63</td>
+</tr>
+<tr>
+<td>D4 (Re)</td>
+<td>293.66</td>
+</tr>
+<tr>
+<td>E4 (Mi)</td>
+<td>329.63</td>
+</tr>
+<tr>
+<td>F4 (Fa)</td>
+<td>349.23</td>
+</tr>
+<tr>
+<td>G4 (Sol)</td>
+<td>392.00</td>
+</tr>
+<tr>
+<td>A4 (La)</td>
+<td>440.00</td>
+</tr>
+<tr>
+<td>B4 (Si)</td>
+<td>493.88</td>
+</tr>
+</tbody>
+</table>
+<h3 id="efectos-sonoros-con-sound">Efectos Sonoros con SOUND</h3>
+<p>Puedes crear diversos efectos de sonido combinando múltiples llamadas a <code>SOUND</code>:</p>
+<pre><code class="language-qbasic">' Efecto de alarma
+FOR i = 1 TO 5
+    SOUND 800, 5
+    FOR delay = 1 TO 500: NEXT delay
+    SOUND 600, 5
+    FOR delay = 1 TO 500: NEXT delay
+NEXT i
+
+' Efecto de sirena
+FOR freq = 500 TO 1500 STEP 50
+    SOUND freq, 1
+NEXT freq
+FOR freq = 1500 TO 500 STEP -50
+    SOUND freq, 1
+NEXT freq
+
+' Explosión
+FOR i = 1 TO 20
+    f = 200 + RND * 800
+    d = 1 + RND * 5
+    SOUND f, d
+NEXT i
+</code></pre>
+<h2 id="el-comando-play">El Comando PLAY</h2>
+<p>El comando <code>PLAY</code> es la herramienta más potente en QBasic para crear música. Utiliza una cadena con un lenguaje musical similar a BASIC que permite especificar notas, duraciones, octavas y más.</p>
+<h3 id="sintaxis-basica">Sintaxis Básica</h3>
+<pre><code class="language-qbasic">PLAY &quot;cadena_musical&quot;
+</code></pre>
+<h3 id="notas-musicales">Notas Musicales</h3>
+<p>Las notas se representan con letras de A a G (también pueden usarse sus equivalentes en solfeo):</p>
+<pre><code class="language-qbasic">PLAY &quot;CDEFGAB&quot;   ' Escala de Do a Si
+PLAY &quot;C D E F G A B&quot;  ' Los espacios se ignoran
+</code></pre>
+<h3 id="duraciones-de-notas">Duraciones de Notas</h3>
+<p>Se especifican con un número después de la nota:</p>
+<pre><code class="language-qbasic">PLAY &quot;C4 D4 E4 F4&quot;  ' Notas de 1/4 (negras)
+PLAY &quot;C8 D8 E8 F8&quot;  ' Notas de 1/8 (corcheas)
+PLAY &quot;C2 D2&quot;        ' Notas de 1/2 (blancas)
+PLAY &quot;C1&quot;           ' Nota completa (redonda)
+</code></pre>
+<p>Valores comunes:</p>
+<ul>
+<li>1: Redonda</li>
+<li>2: Blanca</li>
+<li>4: Negra</li>
+<li>8: Corchea</li>
+<li>16: Semicorchea</li>
+<li>32: Fusa</li>
+</ul>
+<h3 id="octavas">Octavas</h3>
+<p>Puedes cambiar la octava usando "O" seguido de un número del 0 al 6:</p>
+<pre><code class="language-qbasic">PLAY &quot;O3 C O4 C O5 C&quot;  ' Do en tres octavas diferentes
+</code></pre>
+<p>También puedes subir o bajar octavas temporalmente:</p>
+<pre><code class="language-qbasic">PLAY &quot;C &lt; C &lt; C&quot;  ' Cada &quot;&lt;&quot; baja una octava
+PLAY &quot;C &gt; C &gt; C&quot;  ' Cada &quot;&gt;&quot; sube una octava
+</code></pre>
+<h3 id="sostenidos-y-bemoles">Sostenidos y Bemoles</h3>
+<p>Se indican con "#" (sostenido) y "-" (bemol):</p>
+<pre><code class="language-qbasic">PLAY &quot;C C# D D# E F F# G G# A A# B&quot;  ' Escala cromática ascendente
+PLAY &quot;C D- D E- E F G- G A- A B- B&quot;  ' Otra forma de escala cromática
+</code></pre>
+<h3 id="tempo">Tempo</h3>
+<p>Controla la velocidad de reproducción con "T" seguido de un número entre 32 y 255:</p>
+<pre><code class="language-qbasic">PLAY &quot;T120 CDEFGAB&quot;  ' Tempo moderado (120 es un valor común)
+PLAY &quot;T200 CDEFGAB&quot;  ' Tempo más rápido
+PLAY &quot;T60 CDEFGAB&quot;   ' Tempo más lento
+</code></pre>
+<h3 id="pausas">Pausas</h3>
+<p>Las pausas o silencios se indican con "P" seguido de la duración:</p>
+<pre><code class="language-qbasic">PLAY &quot;C4 P4 E4 P4 G4&quot;  ' Do, pausa, Mi, pausa, Sol
+</code></pre>
+<h3 id="legato-y-staccato">Legato y Staccato</h3>
+<ul>
+<li>"L": Conecta las notas (legato)</li>
+<li>"N": Separa las notas (normal) - por defecto</li>
+<li>"S": Notas cortas y separadas (staccato)</li>
+</ul>
+<pre><code class="language-qbasic">PLAY &quot;L CDEFGAB&quot;  ' Legato
+PLAY &quot;N CDEFGAB&quot;  ' Normal
+PLAY &quot;S CDEFGAB&quot;  ' Staccato
+</code></pre>
+<h3 id="duracion-relativa-y-punto">Duración Relativa y Punto</h3>
+<ul>
+<li>"MS" - Establece la duración predeterminada</li>
+<li>"." - Aumenta la duración de la nota en un 50% (como el punto en notación musical)</li>
+</ul>
+<pre><code class="language-qbasic">PLAY &quot;MS8&quot;        ' Establece la duración predeterminada a 1/8
+PLAY &quot;C D E F&quot;    ' Todas las notas son corcheas
+PLAY &quot;C. D. E. F.&quot;  ' Notas punteadas (50% más largas)
+</code></pre>
+<h3 id="ejemplos-completos">Ejemplos Completos</h3>
+<h4 id="escala-de-do-mayor">Escala de Do Mayor</h4>
+<pre><code class="language-qbasic">PLAY &quot;T120 O4 C D E F G A B &gt; C&quot;
+</code></pre>
+<h4 id="melodia-simple-cumpleanos-feliz">Melodía Simple (Cumpleaños Feliz)</h4>
+<pre><code class="language-qbasic">PLAY &quot;T120 O4 C8 C8 D4 C4 F4 E4&quot;
+PLAY &quot;C8 C8 D4 C4 G4 F4&quot;
+PLAY &quot;C8 C8 &gt; C4 A4 F4 E4 D4&quot;
+PLAY &quot;A#8 A#8 A4 F4 G4 F4&quot;
+</code></pre>
+<h4 id="melodia-con-variables">Melodía con Variables</h4>
+<p>Puedes combinar varias cadenas musicales, incluso utilizando variables:</p>
+<pre><code class="language-qbasic">parte1$ = &quot;T120 O4 C8 E8 G4&quot;
+parte2$ = &quot;E8 G8 &gt; C4&quot;
+PLAY parte1$ + parte2$
+</code></pre>
+<h2 id="tecnicas-avanzadas">Técnicas Avanzadas</h2>
+<h3 id="reproduccion-de-varias-voces">Reproducción de Varias Voces</h3>
+<p>QBasic permite tocar hasta 3 voces simultáneamente usando "MB" (música en segundo plano):</p>
+<pre><code class="language-qbasic">PLAY &quot;MB T120 O4 C4 E4 G4 &gt; C2&quot;  ' Inicia reproducción en segundo plano
+PLAY &quot;MB O3 E4 G4 B4 &gt; E2&quot;       ' Segunda voz (simultánea)
+PLAY &quot;O3 G4 B4 &gt; D4 G2&quot;          ' Tercera voz y espera a que todo termine
+</code></pre>
+<h3 id="creacion-de-una-biblioteca-de-sonidos">Creación de una Biblioteca de Sonidos</h3>
+<pre><code class="language-qbasic">' Biblioteca de efectos de sonido
+SUB EfectoExplosion
+    FOR i = 1 TO 20
+        SOUND 100 + RND * 200, 1
+    NEXT i
+    FOR i = 1 TO 10
+        SOUND 75 + RND * 100, 2
+    NEXT i
+END SUB
+
+SUB EfectoLaser
+    FOR f = 800 TO 2000 STEP 200
+        SOUND f, 1
+    NEXT f
+END SUB
+
+SUB EfectoPowerUp
+    FOR f = 200 TO 800 STEP 20
+        SOUND f, 1
+    NEXT f
+END SUB
+</code></pre>
+<h3 id="integracion-de-sonido-en-juegos">Integración de Sonido en Juegos</h3>
+<pre><code class="language-qbasic">' Ejemplo: Integración de sonido en un juego simple
+DO
+    k$ = INKEY$
+    SELECT CASE k$
+        CASE CHR$(32)  ' Espacio - disparo
+            EfectoLaser
+        CASE &quot;x&quot;, &quot;X&quot;  ' X - explosión
+            EfectoExplosion
+        CASE &quot;p&quot;, &quot;P&quot;  ' P - power-up
+            EfectoPowerUp
+        CASE CHR$(27)  ' ESC - salir
+            EXIT DO
+    END SELECT
+LOOP
+</code></pre>
+<h2 id="limitaciones-y-soluciones">Limitaciones y Soluciones</h2>
+<h3 id="limitaciones-del-altavoz-del-pc">Limitaciones del Altavoz del PC</h3>
+<ul>
+<li>Sonido monofónico (una frecuencia a la vez por canal)</li>
+<li>Calidad de sonido limitada</li>
+<li>Sin control de volumen</li>
+</ul>
+<h3 id="soluciones-y-alternativas">Soluciones y Alternativas</h3>
+<ol>
+<li><strong>Tarjetas de Sonido</strong>: Algunas versiones extendidas de QBasic permiten acceso a tarjetas de sonido para mejor calidad</li>
+<li><strong>QB64</strong>: Esta versión moderna de QBasic ofrece capacidades de sonido avanzadas, incluyendo reproducción de archivos WAV y MP3</li>
+<li><strong>Librerías Externas</strong>: Para QBasic original, existían librerías de terceros que permitían acceso a hardware de sonido avanzado</li>
+</ol>
+<h2 id="recursos-y-referencias">Recursos y Referencias</h2>
+<p>Para profundizar en programación de sonido en QBasic:</p>
+<ol>
+<li>Experimenta con el comando PLAY para crear tus propias melodías</li>
+<li>Estudia partituras simples y conviértelas a notación de QBasic</li>
+<li>Analiza ejemplos de juegos que usan efectos de sonido</li>
+</ol>
+<p>El sonido es un componente esencial para crear aplicaciones y juegos atractivos, incluso con las limitaciones del hardware de la época de QBasic.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>

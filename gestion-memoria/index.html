@@ -1,0 +1,1605 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../modem/">
+      
+      
+        <link rel="next" href="../pilas/">
+      
+      
+      <link rel="icon" href="../assets/images/QBlogo2.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.11">
+    
+    
+      
+        <title>Gestión de Memoria - Documentación de QBasic</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.4af4bdda.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#gestion-de-memoria-en-qbasic" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Documentación de QBasic" class="md-header__button md-logo" aria-label="Documentación de QBasic" data-md-component="logo">
+      
+  <img src="../assets/images/QBlogo2.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Documentación de QBasic
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Gestión de Memoria
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Automatico"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Automatico" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-purple"  aria-label="Modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Modo claro" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="brown" data-md-color-accent="amber"  aria-label="Modo oscuro"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Modo oscuro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 2c-1.82 0-3.53.5-5 1.35C8 5.08 10 8.3 10 12s-2 6.92-5 8.65C6.47 21.5 8.18 22 10 22a10 10 0 0 0 10-10A10 10 0 0 0 10 2"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Documentación de QBasic" class="md-nav__button md-logo" aria-label="Documentación de QBasic" data-md-component="logo">
+      
+  <img src="../assets/images/QBlogo2.png" alt="logo">
+
+    </a>
+    Documentación de QBasic
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Inicio
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FAQ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../historia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Historia
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../instalacion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Instalación y Configuración
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../implementaciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Implementaciones
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../recursos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Recursos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sintaxis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sintaxis
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../instrucciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Instrucciones Básicas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../estructuras-control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Estructuras de Control
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../funciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Funciones
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../programacion-modular/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Programación Modular
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Gráficos
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            Gráficos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../graficos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introducción
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2D/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gráficos 2D
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3D/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gráficos 3D
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../raycasting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Raycasting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../animaciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Animaciones
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Entrada de Usuario
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
+            <span class="md-nav__icon md-icon"></span>
+            Entrada de Usuario
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mouse/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Uso del Ratón
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archivos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Manejo de Archivos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_15" >
+        
+          
+          <label class="md-nav__link" for="__nav_15" id="__nav_15_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Sonido
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_15_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_15">
+            <span class="md-nav__icon md-icon"></span>
+            Sonido
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sonido/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Conceptos Básicos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../manipulacion-sonido/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Manipulación de Sonido
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16" >
+        
+          
+          <label class="md-nav__link" for="__nav_16" id="__nav_16_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Comunicaciones
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_16_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_16">
+            <span class="md-nav__icon md-icon"></span>
+            Comunicaciones
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modem/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Uso del Módem
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Gestión de Memoria
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gestión de Memoria
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#la-pila-de-ejecucion-runtime-stack" class="md-nav__link">
+    <span class="md-ellipsis">
+      La Pila de Ejecución (Runtime Stack)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="La Pila de Ejecución (Runtime Stack)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#registros-de-activacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Registros de Activación
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-out-of-stack-space" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error "Out of stack space"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consejos-para-evitar-errores-de-pila" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consejos para evitar errores de pila
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variables-y-tipos-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variables y Tipos de Datos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Variables y Tipos de Datos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tipos-basicos-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tipos básicos de datos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estructuras-de-datos-avanzadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estructuras de datos avanzadas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Estructuras de datos avanzadas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arrays-arreglos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arrays (Arreglos)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#types-tipos-personalizados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Types (Tipos personalizados)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tecnicas-de-optimizacion-de-memoria" class="md-nav__link">
+    <span class="md-ellipsis">
+      Técnicas de optimización de memoria
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Técnicas de optimización de memoria">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#uso-de-string-1-como-byte" class="md-nav__link">
+    <span class="md-ellipsis">
+      Uso de STRING * 1 como byte
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uso-de-types-para-variables-globales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Uso de TYPES para variables globales
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optimizacion-de-strings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optimización de strings
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consejos-finales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consejos finales
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18" >
+        
+          
+          <label class="md-nav__link" for="__nav_18" id="__nav_18_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Estructuras de Datos
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_18_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_18">
+            <span class="md-nav__icon md-icon"></span>
+            Estructuras de Datos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pilas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pilas (Stacks)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../buenas-practicas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Buenas Prácticas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../estandares/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Estándares
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tecnicas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Técnicas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#la-pila-de-ejecucion-runtime-stack" class="md-nav__link">
+    <span class="md-ellipsis">
+      La Pila de Ejecución (Runtime Stack)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="La Pila de Ejecución (Runtime Stack)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#registros-de-activacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Registros de Activación
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-out-of-stack-space" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error "Out of stack space"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consejos-para-evitar-errores-de-pila" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consejos para evitar errores de pila
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variables-y-tipos-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variables y Tipos de Datos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Variables y Tipos de Datos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tipos-basicos-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tipos básicos de datos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estructuras-de-datos-avanzadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estructuras de datos avanzadas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Estructuras de datos avanzadas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arrays-arreglos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arrays (Arreglos)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#types-tipos-personalizados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Types (Tipos personalizados)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tecnicas-de-optimizacion-de-memoria" class="md-nav__link">
+    <span class="md-ellipsis">
+      Técnicas de optimización de memoria
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Técnicas de optimización de memoria">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#uso-de-string-1-como-byte" class="md-nav__link">
+    <span class="md-ellipsis">
+      Uso de STRING * 1 como byte
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uso-de-types-para-variables-globales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Uso de TYPES para variables globales
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optimizacion-de-strings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optimización de strings
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consejos-finales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consejos finales
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="gestion-de-memoria-en-qbasic">Gestión de Memoria en QBasic</h1>
+<p>Autor original: Thav (Raul Carolus)</p>
+<p>Este artículo aborda los problemas comunes de memoria en QBasic, especialmente los errores "Out of stack space" (Sin espacio en la pila) y "Out of memory" (Sin memoria). Entender cómo funciona la memoria en QBasic ayudará a evitar estos errores y a optimizar tus programas.</p>
+<h2 id="la-pila-de-ejecucion-runtime-stack">La Pila de Ejecución (Runtime Stack)</h2>
+<p>Todo programa en QBasic utiliza un espacio en la pila de ejecución. Esta pila no almacena variables o datos del programa, sino información que controla la ejecución del mismo.</p>
+<h3 id="registros-de-activacion">Registros de Activación</h3>
+<p>Cada vez que tu programa se ejecuta o llama a una función o subrutina, se crea un "registro de activación" (Activation Record) que se añade a la pila. Estos registros contienen:</p>
+<ul>
+<li><strong>Dirección de retorno</strong>: Indica a qué línea del programa debe volver cuando la función o subrutina termine de ejecutarse</li>
+<li><strong>Parámetros</strong>: Los valores que se pasan a la función o subrutina</li>
+<li><strong>Variables de retorno</strong>: El espacio para almacenar el valor que devuelve una función</li>
+</ul>
+<p>Por ejemplo, si llamas a una subrutina <code>Compute</code> desde la línea 156 de tu programa:</p>
+<pre><code class="language-qbasic">CALL Compute(first%, last%)
+</code></pre>
+<p>Se crea un registro de activación con:</p>
+<ul>
+<li>Dirección de retorno: 157 (la línea siguiente a la llamada)</li>
+<li>Parámetros: <code>first%</code> y <code>last%</code></li>
+</ul>
+<h3 id="error-out-of-stack-space">Error "Out of stack space"</h3>
+<p>Este error ocurre cuando la pila de ejecución se llena por completo. La causa más común es una función recursiva (que se llama a sí misma) sin una condición de salida:</p>
+<pre><code class="language-qbasic">SUB BlowStack()
+  CALL BlowStack()  ' Se llama a sí misma sin condición de salida
+END SUB
+</code></pre>
+<p>Este código agotará rápidamente el espacio en la pila, ya que cada llamada añade un nuevo registro de activación sin eliminar ninguno.</p>
+<h3 id="consejos-para-evitar-errores-de-pila">Consejos para evitar errores de pila</h3>
+<ol>
+<li><strong>Mantén el bucle principal en la sección principal</strong> del programa, no en una subrutina.</li>
+<li><strong>Evita llamar a muchas subrutinas o funciones desde dentro de otras</strong> subrutinas o funciones.</li>
+<li><strong>Evita usar GOSUB</strong> - generalmente es considerado una mala práctica.</li>
+</ol>
+<p>Si necesitas más espacio para la pila, puedes usar la instrucción <code>CLEAR</code>, pero recuerda que esto no resolverá problemas de "Out of Memory" relacionados con las variables.</p>
+<h2 id="variables-y-tipos-de-datos">Variables y Tipos de Datos</h2>
+<h3 id="tipos-basicos-de-datos">Tipos básicos de datos</h3>
+<ul>
+<li><strong>Integer (<code>%</code>)</strong>: 2 bytes, valores entre -32768 y 32767</li>
+<li><strong>Long (<code>&amp;</code>)</strong>: 4 bytes, valores entre -2,147,483,648 y 2,147,483,647</li>
+<li><strong>Single (<code>!</code>)</strong>: 4 bytes, precisión simple, rango aproximado ±1.401298 E-45 a ±3.402823 E+38</li>
+<li><strong>Double (<code>#</code>)</strong>: 8 bytes, precisión doble, rango aproximado ±4.940656 D-324 a ±1.7976931 D+308</li>
+<li><strong>String (<code>$</code>)</strong>: 4 bytes para el descriptor y 1 byte por cada carácter, longitud máxima de 32767 bytes</li>
+</ul>
+<h3 id="estructuras-de-datos-avanzadas">Estructuras de datos avanzadas</h3>
+<h4 id="arrays-arreglos">Arrays (Arreglos)</h4>
+<p>Los arrays son colecciones de variables del mismo tipo bajo un solo nombre:</p>
+<pre><code class="language-qbasic">DIM scores(0 TO 100) AS INTEGER  ' Crea 101 variables INTEGER
+</code></pre>
+<p>Para acceder a un elemento:</p>
+<pre><code class="language-qbasic">scores(57) = 95  ' Asigna 95 al elemento 57 del array
+</code></pre>
+<p>También puedes usar variables como índices:</p>
+<pre><code class="language-qbasic">scores(topscore) = 100  ' La variable topscore debe ser INTEGER
+</code></pre>
+<h4 id="types-tipos-personalizados">Types (Tipos personalizados)</h4>
+<p>Los tipos personalizados (similares a los "structs" en C) permiten agrupar diferentes tipos de datos bajo un solo nombre:</p>
+<pre><code class="language-qbasic">TYPE PersonalInfoType
+  theName AS STRING * 10
+  age AS INTEGER
+  address1 AS STRING * 20
+  address2 AS STRING * 20
+END TYPE
+</code></pre>
+<p>Para usar un tipo personalizado:</p>
+<pre><code class="language-qbasic">DIM info AS PersonalInfoType
+
+info.theName = &quot;John&quot;
+info.age = 23
+</code></pre>
+<p>También puedes crear arrays de tipos personalizados:</p>
+<pre><code class="language-qbasic">DIM info(3000) AS PersonalInfoType
+info(55).theName = &quot;Jane&quot;
+</code></pre>
+<h2 id="tecnicas-de-optimizacion-de-memoria">Técnicas de optimización de memoria</h2>
+<h3 id="uso-de-string-1-como-byte">Uso de STRING * 1 como byte</h3>
+<p>En lugar de usar un INTEGER de 2 bytes para almacenar valores entre 0 y 255, puedes usar <code>STRING * 1</code> que solo ocupa 1 byte:</p>
+<pre><code class="language-qbasic">DIM flags AS STRING * 1
+flags = CHR$(65)  ' Almacena el valor ASCII 65 (letra 'A')
+value = ASC(flags)  ' Recupera el valor numérico (65)
+</code></pre>
+<p>Esta técnica es útil para ahorrar memoria en arrays grandes o al trabajar con archivos binarios mediante <code>BSAVE</code> y <code>BLOAD</code>.</p>
+<h3 id="uso-de-types-para-variables-globales">Uso de TYPES para variables globales</h3>
+<p>Si tienes muchas variables globales relacionadas, es mejor agruparlas en un tipo personalizado:</p>
+<pre><code class="language-qbasic">TYPE GameInfoType
+  currentMap AS INTEGER
+  oldMap AS INTEGER
+  playerX AS INTEGER
+  playerY AS INTEGER
+END TYPE
+
+DIM SHARED gameInfo AS GameInfoType
+</code></pre>
+<p>Esto organiza mejor tu código y facilita el paso de múltiples variables relacionadas entre subrutinas.</p>
+<h2 id="optimizacion-de-strings">Optimización de strings</h2>
+<p>El manejo de strings en QBasic puede consumir mucha memoria debido al "recolector de basura" ineficiente. Algunas prácticas para optimizar:</p>
+<ol>
+<li><strong>Predimensiona los strings</strong> cuando sea posible:</li>
+</ol>
+<p><code>qbasic
+   DIM text AS STRING * 80  ' String de longitud fija de 80 caracteres</code></p>
+<ol>
+<li><strong>Reutiliza variables de string</strong> en lugar de crear nuevas:</li>
+</ol>
+<p>```qbasic
+   ' Mejor
+   temp$ = "Hola "
+   temp$ = temp$ + "Mundo"</p>
+<p>' Menos eficiente en memoria
+   greeting$ = "Hola "
+   fullGreeting$ = greeting$ + "Mundo"
+   ```</p>
+<ol>
+<li><strong>Libera memoria de strings</strong> periódicamente en programas largos:</li>
+</ol>
+<p><code>qbasic
+   a$ = SPACE$(0)  ' Libera la memoria usada por a$</code></p>
+<h2 id="consejos-finales">Consejos finales</h2>
+<ul>
+<li>Usa el tipo de datos más pequeño que se ajuste a tus necesidades</li>
+<li>Optimiza las estructuras de datos para minimizar el desperdicio de memoria</li>
+<li>Si necesitas trabajar con grandes cantidades de datos, considera usar archivos en lugar de mantener todo en memoria</li>
+<li>Evita la recursión profunda para prevenir errores de pila</li>
+<li>Utiliza <code>CLEAR</code> para ajustar el espacio de pila disponible si es necesario</li>
+</ul>
+<p>Entender estos conceptos te ayudará a crear programas QBasic más eficientes y estables, evitando los frustrantes errores de memoria.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>

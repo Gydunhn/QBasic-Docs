@@ -1,0 +1,2216 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../2D/">
+      
+      
+        <link rel="next" href="../raycasting/">
+      
+      
+      <link rel="icon" href="../assets/images/QBlogo2.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.11">
+    
+    
+      
+        <title>Gráficos 3D - Documentación de QBasic</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.4af4bdda.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#graficos-3d-en-qbasic" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Documentación de QBasic" class="md-header__button md-logo" aria-label="Documentación de QBasic" data-md-component="logo">
+      
+  <img src="../assets/images/QBlogo2.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Documentación de QBasic
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Gráficos 3D
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Automatico"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Automatico" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-purple"  aria-label="Modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Modo claro" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="brown" data-md-color-accent="amber"  aria-label="Modo oscuro"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Modo oscuro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 2c-1.82 0-3.53.5-5 1.35C8 5.08 10 8.3 10 12s-2 6.92-5 8.65C6.47 21.5 8.18 22 10 22a10 10 0 0 0 10-10A10 10 0 0 0 10 2"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Documentación de QBasic" class="md-nav__button md-logo" aria-label="Documentación de QBasic" data-md-component="logo">
+      
+  <img src="../assets/images/QBlogo2.png" alt="logo">
+
+    </a>
+    Documentación de QBasic
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Inicio
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FAQ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../historia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Historia
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../instalacion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Instalación y Configuración
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../implementaciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Implementaciones
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../recursos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Recursos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sintaxis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sintaxis
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../instrucciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Instrucciones Básicas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../estructuras-control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Estructuras de Control
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../funciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Funciones
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../programacion-modular/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Programación Modular
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Gráficos
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            Gráficos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../graficos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introducción
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2D/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gráficos 2D
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Gráficos 3D
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gráficos 3D
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#conceptos-basicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conceptos Básicos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Conceptos Básicos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sistemas-de-coordenadas-3d" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sistemas de Coordenadas 3D
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proyeccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Proyección
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#representacion-de-objetos-3d" class="md-nav__link">
+    <span class="md-ellipsis">
+      Representación de Objetos 3D
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Representación de Objetos 3D">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#puntos-y-lineas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Puntos y Líneas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-cubo-wireframe" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo: Cubo Wireframe
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rotacion-3d" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rotación 3D
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Rotación 3D">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rotacion-alrededor-del-eje-x" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rotación alrededor del eje X
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rotacion-alrededor-del-eje-y" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rotación alrededor del eje Y
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rotacion-alrededor-del-eje-z" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rotación alrededor del eje Z
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tecnicas-avanzadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Técnicas Avanzadas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Técnicas Avanzadas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#eliminacion-de-caras-ocultas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Eliminación de Caras Ocultas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sombreado-basico" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sombreado Básico
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-completo-cubo-giratorio-con-caras-coloreadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo Completo: Cubo Giratorio con Caras Coloreadas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optimizaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optimizaciones
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusión
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conceptos-avanzados-de-3d" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conceptos Avanzados de 3D
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Conceptos Avanzados de 3D">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#proyeccion-en-perspectiva" class="md-nav__link">
+    <span class="md-ellipsis">
+      Proyección en Perspectiva
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rotacion-y-traslacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rotación y Traslación
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sombreado-y-renderizado" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sombreado y Renderizado
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sombreado y Renderizado">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vectores-normales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vectores Normales
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tecnica-de-eliminacion-de-caras-ocultas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tecnica de Eliminación de Caras Ocultas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sombreado-de-lambert" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sombreado de Lambert
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mapeo-de-texturas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mapeo de Texturas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#algoritmo-del-pintor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Algoritmo del Pintor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#z-buffer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Z-Buffer
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../raycasting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Raycasting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../animaciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Animaciones
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Entrada de Usuario
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
+            <span class="md-nav__icon md-icon"></span>
+            Entrada de Usuario
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mouse/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Uso del Ratón
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archivos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Manejo de Archivos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_15" >
+        
+          
+          <label class="md-nav__link" for="__nav_15" id="__nav_15_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Sonido
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_15_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_15">
+            <span class="md-nav__icon md-icon"></span>
+            Sonido
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sonido/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Conceptos Básicos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../manipulacion-sonido/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Manipulación de Sonido
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16" >
+        
+          
+          <label class="md-nav__link" for="__nav_16" id="__nav_16_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Comunicaciones
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_16_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_16">
+            <span class="md-nav__icon md-icon"></span>
+            Comunicaciones
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modem/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Uso del Módem
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gestion-memoria/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Gestión de Memoria
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18" >
+        
+          
+          <label class="md-nav__link" for="__nav_18" id="__nav_18_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Estructuras de Datos
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_18_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_18">
+            <span class="md-nav__icon md-icon"></span>
+            Estructuras de Datos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pilas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pilas (Stacks)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../buenas-practicas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Buenas Prácticas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../estandares/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Estándares
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tecnicas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Técnicas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#conceptos-basicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conceptos Básicos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Conceptos Básicos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sistemas-de-coordenadas-3d" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sistemas de Coordenadas 3D
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proyeccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Proyección
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#representacion-de-objetos-3d" class="md-nav__link">
+    <span class="md-ellipsis">
+      Representación de Objetos 3D
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Representación de Objetos 3D">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#puntos-y-lineas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Puntos y Líneas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-cubo-wireframe" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo: Cubo Wireframe
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rotacion-3d" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rotación 3D
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Rotación 3D">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rotacion-alrededor-del-eje-x" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rotación alrededor del eje X
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rotacion-alrededor-del-eje-y" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rotación alrededor del eje Y
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rotacion-alrededor-del-eje-z" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rotación alrededor del eje Z
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tecnicas-avanzadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Técnicas Avanzadas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Técnicas Avanzadas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#eliminacion-de-caras-ocultas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Eliminación de Caras Ocultas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sombreado-basico" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sombreado Básico
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejemplo-completo-cubo-giratorio-con-caras-coloreadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo Completo: Cubo Giratorio con Caras Coloreadas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optimizaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optimizaciones
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusión
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conceptos-avanzados-de-3d" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conceptos Avanzados de 3D
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Conceptos Avanzados de 3D">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#proyeccion-en-perspectiva" class="md-nav__link">
+    <span class="md-ellipsis">
+      Proyección en Perspectiva
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rotacion-y-traslacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rotación y Traslación
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sombreado-y-renderizado" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sombreado y Renderizado
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sombreado y Renderizado">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vectores-normales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vectores Normales
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tecnica-de-eliminacion-de-caras-ocultas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tecnica de Eliminación de Caras Ocultas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sombreado-de-lambert" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sombreado de Lambert
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mapeo-de-texturas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mapeo de Texturas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#algoritmo-del-pintor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Algoritmo del Pintor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#z-buffer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Z-Buffer
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="graficos-3d-en-qbasic">Gráficos 3D en QBasic</h1>
+<p>Aunque QBasic no fue diseñado originalmente para gráficos tridimensionales, es posible implementar técnicas básicas de representación 3D. Este capítulo explora cómo crear efectos tridimensionales usando QBasic.</p>
+<h2 id="conceptos-basicos">Conceptos Básicos</h2>
+<h3 id="sistemas-de-coordenadas-3d">Sistemas de Coordenadas 3D</h3>
+<p>En un espacio tridimensional, necesitamos tres coordenadas para representar un punto:</p>
+<ul>
+<li>X: posición horizontal (izquierda/derecha)</li>
+<li>Y: posición vertical (arriba/abajo)</li>
+<li>Z: profundidad (cerca/lejos)</li>
+</ul>
+<p>Para visualizar objetos 3D en una pantalla 2D, necesitamos proyectar estos puntos 3D en un plano 2D, que es nuestra pantalla.</p>
+<h3 id="proyeccion">Proyección</h3>
+<p>La proyección más simple es la proyección paralela (ortográfica), donde simplemente ignoramos la coordenada Z:</p>
+<pre><code class="language-qbasic">' Convertir coordenadas 3D a 2D con proyección ortográfica
+ScreenX = X + OriginX
+ScreenY = Y + OriginY
+</code></pre>
+<p>Sin embargo, esto no produce un efecto realista de profundidad. Para ello, necesitamos una proyección en perspectiva:</p>
+<pre><code class="language-qbasic">' Convertir coordenadas 3D a 2D con proyección en perspectiva
+Scale = 200 / (Z + 200)  ' Factor de escala basado en la profundidad
+ScreenX = X * Scale + OriginX
+ScreenY = Y * Scale + OriginY
+</code></pre>
+<h2 id="representacion-de-objetos-3d">Representación de Objetos 3D</h2>
+<h3 id="puntos-y-lineas">Puntos y Líneas</h3>
+<p>La forma más básica de representar objetos 3D es mediante puntos y líneas que forman wireframes (mallas de alambre).</p>
+<pre><code class="language-qbasic">' Dibujar un punto 3D
+SUB DrawPoint3D (X, Y, Z, Color)
+    Scale = 200 / (Z + 200)
+    ScreenX = X * Scale + 160  ' Centro horizontal de la pantalla
+    ScreenY = Y * Scale + 100  ' Centro vertical de la pantalla
+    PSET (ScreenX, ScreenY), Color
+END SUB
+
+' Dibujar una línea 3D
+SUB DrawLine3D (X1, Y1, Z1, X2, Y2, Z2, Color)
+    Scale1 = 200 / (Z1 + 200)
+    ScreenX1 = X1 * Scale1 + 160
+    ScreenY1 = Y1 * Scale1 + 100
+
+    Scale2 = 200 / (Z2 + 200)
+    ScreenX2 = X2 * Scale2 + 160
+    ScreenY2 = Y2 * Scale2 + 100
+
+    LINE (ScreenX1, ScreenY1)-(ScreenX2, ScreenY2), Color
+END SUB
+</code></pre>
+<h3 id="ejemplo-cubo-wireframe">Ejemplo: Cubo Wireframe</h3>
+<p>Aquí hay un ejemplo de cómo dibujar un cubo simple en 3D:</p>
+<pre><code class="language-qbasic">SCREEN 13
+CLS
+
+TYPE Point3D
+    X AS SINGLE
+    Y AS SINGLE
+    Z AS SINGLE
+END TYPE
+
+' Definir los vértices del cubo
+DIM CubeVertices(7) AS Point3D
+
+' Cara frontal (Z = 50)
+CubeVertices(0).X = -30: CubeVertices(0).Y = -30: CubeVertices(0).Z = 50
+CubeVertices(1).X = 30: CubeVertices(1).Y = -30: CubeVertices(1).Z = 50
+CubeVertices(2).X = 30: CubeVertices(2).Y = 30: CubeVertices(2).Z = 50
+CubeVertices(3).X = -30: CubeVertices(3).Y = 30: CubeVertices(3).Z = 50
+
+' Cara trasera (Z = 110)
+CubeVertices(4).X = -30: CubeVertices(4).Y = -30: CubeVertices(4).Z = 110
+CubeVertices(5).X = 30: CubeVertices(5).Y = -30: CubeVertices(5).Z = 110
+CubeVertices(6).X = 30: CubeVertices(6).Y = 30: CubeVertices(6).Z = 110
+CubeVertices(7).X = -30: CubeVertices(7).Y = 30: CubeVertices(7).Z = 110
+
+' Dibujar las aristas del cubo
+COLOR 15
+
+' Cara frontal
+DrawLine3D CubeVertices(0).X, CubeVertices(0).Y, CubeVertices(0).Z, CubeVertices(1).X, CubeVertices(1).Y, CubeVertices(1).Z, 15
+DrawLine3D CubeVertices(1).X, CubeVertices(1).Y, CubeVertices(1).Z, CubeVertices(2).X, CubeVertices(2).Y, CubeVertices(2).Z, 15
+DrawLine3D CubeVertices(2).X, CubeVertices(2).Y, CubeVertices(2).Z, CubeVertices(3).X, CubeVertices(3).Y, CubeVertices(3).Z, 15
+DrawLine3D CubeVertices(3).X, CubeVertices(3).Y, CubeVertices(3).Z, CubeVertices(0).X, CubeVertices(0).Y, CubeVertices(0).Z, 15
+
+' Cara trasera
+DrawLine3D CubeVertices(4).X, CubeVertices(4).Y, CubeVertices(4).Z, CubeVertices(5).X, CubeVertices(5).Y, CubeVertices(5).Z, 15
+DrawLine3D CubeVertices(5).X, CubeVertices(5).Y, CubeVertices(5).Z, CubeVertices(6).X, CubeVertices(6).Y, CubeVertices(6).Z, 15
+DrawLine3D CubeVertices(6).X, CubeVertices(6).Y, CubeVertices(6).Z, CubeVertices(7).X, CubeVertices(7).Y, CubeVertices(7).Z, 15
+DrawLine3D CubeVertices(7).X, CubeVertices(7).Y, CubeVertices(7).Z, CubeVertices(4).X, CubeVertices(4).Y, CubeVertices(4).Z, 15
+
+' Conexiones entre caras
+DrawLine3D CubeVertices(0).X, CubeVertices(0).Y, CubeVertices(0).Z, CubeVertices(4).X, CubeVertices(4).Y, CubeVertices(4).Z, 15
+DrawLine3D CubeVertices(1).X, CubeVertices(1).Y, CubeVertices(1).Z, CubeVertices(5).X, CubeVertices(5).Y, CubeVertices(5).Z, 15
+DrawLine3D CubeVertices(2).X, CubeVertices(2).Y, CubeVertices(2).Z, CubeVertices(6).X, CubeVertices(6).Y, CubeVertices(6).Z, 15
+DrawLine3D CubeVertices(3).X, CubeVertices(3).Y, CubeVertices(3).Z, CubeVertices(7).X, CubeVertices(7).Y, CubeVertices(7).Z, 15
+
+' Subrutina para dibujar línea 3D
+SUB DrawLine3D (X1, Y1, Z1, X2, Y2, Z2, Color)
+    Scale1 = 200 / (Z1 + 200)
+    ScreenX1 = X1 * Scale1 + 160
+    ScreenY1 = Y1 * Scale1 + 100
+
+    Scale2 = 200 / (Z2 + 200)
+    ScreenX2 = X2 * Scale2 + 160
+    ScreenY2 = Y2 * Scale2 + 100
+
+    LINE (ScreenX1, ScreenY1)-(ScreenX2, ScreenY2), Color
+END SUB
+</code></pre>
+<h2 id="rotacion-3d">Rotación 3D</h2>
+<p>Para animar objetos 3D, necesitamos rotarlos. Las matrices de rotación son fundamentales para esto:</p>
+<h3 id="rotacion-alrededor-del-eje-x">Rotación alrededor del eje X</h3>
+<pre><code class="language-qbasic">' Rotar un punto alrededor del eje X
+SUB RotateX (Point() AS Point3D, Angle AS SINGLE)
+    Rad = Angle * 3.14159 / 180  ' Convertir a radianes
+    FOR i = 0 TO UBOUND(Point)
+        Y = Point(i).Y
+        Z = Point(i).Z
+        Point(i).Y = Y * COS(Rad) - Z * SIN(Rad)
+        Point(i).Z = Y * SIN(Rad) + Z * COS(Rad)
+    NEXT i
+END SUB
+</code></pre>
+<h3 id="rotacion-alrededor-del-eje-y">Rotación alrededor del eje Y</h3>
+<pre><code class="language-qbasic">' Rotar un punto alrededor del eje Y
+SUB RotateY (Point() AS Point3D, Angle AS SINGLE)
+    Rad = Angle * 3.14159 / 180
+    FOR i = 0 TO UBOUND(Point)
+        X = Point(i).X
+        Z = Point(i).Z
+        Point(i).X = X * COS(Rad) + Z * SIN(Rad)
+        Point(i).Z = -X * SIN(Rad) + Z * COS(Rad)
+    NEXT i
+END SUB
+</code></pre>
+<h3 id="rotacion-alrededor-del-eje-z">Rotación alrededor del eje Z</h3>
+<pre><code class="language-qbasic">' Rotar un punto alrededor del eje Z
+SUB RotateZ (Point() AS Point3D, Angle AS SINGLE)
+    Rad = Angle * 3.14159 / 180
+    FOR i = 0 TO UBOUND(Point)
+        X = Point(i).X
+        Y = Point(i).Y
+        Point(i).X = X * COS(Rad) - Y * SIN(Rad)
+        Point(i).Y = X * SIN(Rad) + Y * COS(Rad)
+    NEXT i
+END SUB
+</code></pre>
+<h2 id="tecnicas-avanzadas">Técnicas Avanzadas</h2>
+<h3 id="eliminacion-de-caras-ocultas">Eliminación de Caras Ocultas</h3>
+<p>Para objetos más realistas, necesitamos eliminar las caras que no serían visibles desde el punto de vista del observador:</p>
+<pre><code class="language-qbasic">' Determinar si una cara es visible
+FUNCTION IsVisible (A AS Point3D, B AS Point3D, C AS Point3D) AS INTEGER
+    ' Producto vectorial para determinar la normal de la cara
+    Nx = (B.Y - A.Y) * (C.Z - A.Z) - (B.Z - A.Z) * (C.Y - A.Y)
+    Ny = (B.Z - A.Z) * (C.X - A.X) - (B.X - A.X) * (C.Z - A.Z)
+    Nz = (B.X - A.X) * (C.Y - A.Y) - (B.Y - A.Y) * (C.X - A.X)
+
+    ' Producto escalar con el vector de visión (0, 0, -1)
+    IF Nz &gt; 0 THEN
+        IsVisible = 1  ' La cara es visible
+    ELSE
+        IsVisible = 0  ' La cara está oculta
+    END IF
+END FUNCTION
+</code></pre>
+<h3 id="sombreado-basico">Sombreado Básico</h3>
+<p>El sombreado puede añadir realismo. Una técnica simple es el sombreado plano basado en la orientación de la cara:</p>
+<pre><code class="language-qbasic">' Calcular el tono de color basado en la orientación
+FUNCTION GetShade (A AS Point3D, B AS Point3D, C AS Point3D) AS INTEGER
+    ' Calcular la normal de la cara
+    Nx = (B.Y - A.Y) * (C.Z - A.Z) - (B.Z - A.Z) * (C.Y - A.Y)
+    Ny = (B.Z - A.Z) * (C.X - A.X) - (B.X - A.X) * (C.Z - A.Z)
+    Nz = (B.X - A.X) * (C.Y - A.Y) - (B.Y - A.Y) * (C.X - A.X)
+
+    ' Normalizar
+    Length = SQR(Nx * Nx + Ny * Ny + Nz * Nz)
+    Nx = Nx / Length
+    Ny = Ny / Length
+    Nz = Nz / Length
+
+    ' Producto escalar con la dirección de la luz (0, 0, -1)
+    Intensity = -Nz
+
+    ' Convertir a índice de color (0-15 en modo EGA)
+    IF Intensity &gt; 0 THEN
+        GetShade = 7 + INT(Intensity * 8)  ' De 7 a 15
+    ELSE
+        GetShade = 7 + INT(Intensity * 7)  ' De 0 a 7
+    END IF
+END FUNCTION
+</code></pre>
+<h2 id="ejemplo-completo-cubo-giratorio-con-caras-coloreadas">Ejemplo Completo: Cubo Giratorio con Caras Coloreadas</h2>
+<pre><code class="language-qbasic">SCREEN 13
+CLS
+
+TYPE Point3D
+    X AS SINGLE
+    Y AS SINGLE
+    Z AS SINGLE
+END TYPE
+
+TYPE Face
+    Vertex(3) AS INTEGER  ' Índices de los vértices
+    Color AS INTEGER
+END TYPE
+
+' Definir vértices del cubo
+DIM Vertices(7) AS Point3D
+Vertices(0).X = -30: Vertices(0).Y = -30: Vertices(0).Z = -30
+Vertices(1).X = 30: Vertices(1).Y = -30: Vertices(1).Z = -30
+Vertices(2).X = 30: Vertices(2).Y = 30: Vertices(2).Z = -30
+Vertices(3).X = -30: Vertices(3).Y = 30: Vertices(3).Z = -30
+Vertices(4).X = -30: Vertices(4).Y = -30: Vertices(4).Z = 30
+Vertices(5).X = 30: Vertices(5).Y = -30: Vertices(5).Z = 30
+Vertices(6).X = 30: Vertices(6).Y = 30: Vertices(6).Z = 30
+Vertices(7).X = -30: Vertices(7).Y = 30: Vertices(7).Z = 30
+
+' Definir caras (cada cara es un cuadrilátero)
+DIM Faces(5) AS Face
+' Frente
+Faces(0).Vertex(0) = 0: Faces(0).Vertex(1) = 1: Faces(0).Vertex(2) = 2: Faces(0).Vertex(3) = 3
+Faces(0).Color = 9 ' Azul claro
+' Atrás
+Faces(1).Vertex(0) = 5: Faces(1).Vertex(1) = 4: Faces(1).Vertex(2) = 7: Faces(1).Vertex(3) = 6
+Faces(1).Color = 10 ' Verde claro
+' Izquierda
+Faces(2).Vertex(0) = 4: Faces(2).Vertex(1) = 0: Faces(2).Vertex(2) = 3: Faces(2).Vertex(3) = 7
+Faces(2).Color = 12 ' Rojo claro
+' Derecha
+Faces(3).Vertex(0) = 1: Faces(3).Vertex(1) = 5: Faces(3).Vertex(2) = 6: Faces(3).Vertex(3) = 2
+Faces(3).Color = 14 ' Amarillo
+' Arriba
+Faces(4).Vertex(0) = 3: Faces(4).Vertex(1) = 2: Faces(4).Vertex(2) = 6: Faces(4).Vertex(3) = 7
+Faces(4).Color = 11 ' Cian claro
+' Abajo
+Faces(5).Vertex(0) = 4: Faces(5).Vertex(1) = 5: Faces(5).Vertex(2) = 1: Faces(5).Vertex(3) = 0
+Faces(5).Color = 13 ' Magenta
+
+' Animación del cubo giratorio
+DO
+    CLS
+
+    ' Rotar el cubo
+    RotateX Vertices(), 1
+    RotateY Vertices(), 1
+    RotateZ Vertices(), 0.5
+
+    ' Dibujar caras visibles (eliminación de caras ocultas)
+    FOR f = 0 TO 5
+        v0 = Faces(f).Vertex(0)
+        v1 = Faces(f).Vertex(1)
+        v2 = Faces(f).Vertex(2)
+
+        ' Comprobar si la cara es visible
+        IF IsVisible(Vertices(v0), Vertices(v1), Vertices(v2)) THEN
+            ' Proyectar vértices y dibujar la cara
+            DIM ScreenPoints(3, 1) AS INTEGER  ' X,Y para cada vértice
+
+            FOR v = 0 TO 3
+                vIdx = Faces(f).Vertex(v)
+                ScreenPoints(v, 0) = Project_X(Vertices(vIdx))
+                ScreenPoints(v, 1) = Project_Y(Vertices(vIdx))
+            NEXT v
+
+            ' Dibujar la cara como polígono relleno
+            LINE (ScreenPoints(0, 0), ScreenPoints(0, 1))-(ScreenPoints(1, 0), ScreenPoints(1, 1)), Faces(f).Color
+            LINE -(ScreenPoints(2, 0), ScreenPoints(2, 1)), Faces(f).Color
+            LINE -(ScreenPoints(3, 0), ScreenPoints(3, 1)), Faces(f).Color
+            LINE -(ScreenPoints(0, 0), ScreenPoints(0, 1)), Faces(f).Color
+
+            ' Rellenar la cara (simplificado)
+            PAINT (ScreenPoints(0, 0) + 1, ScreenPoints(0, 1) + 1), Faces(f).Color, Faces(f).Color
+        END IF
+    NEXT f
+
+    ' Control de velocidad
+    FOR Delay = 1 TO 5000: NEXT Delay
+
+LOOP UNTIL INKEY$ &lt;&gt; &quot;&quot;
+
+' Funciones y subrutinas
+
+FUNCTION Project_X (P AS Point3D) AS INTEGER
+    Scale = 200 / (P.Z + 350)
+    Project_X = P.X * Scale + 160
+END FUNCTION
+
+FUNCTION Project_Y (P AS Point3D) AS INTEGER
+    Scale = 200 / (P.Z + 350)
+    Project_Y = P.Y * Scale + 100
+END FUNCTION
+
+SUB RotateX (Points() AS Point3D, Angle AS SINGLE)
+    Rad = Angle * 3.14159 / 180
+    FOR i = 0 TO UBOUND(Points)
+        Y = Points(i).Y
+        Z = Points(i).Z
+        Points(i).Y = Y * COS(Rad) - Z * SIN(Rad)
+        Points(i).Z = Y * SIN(Rad) + Z * COS(Rad)
+    NEXT i
+END SUB
+
+SUB RotateY (Points() AS Point3D, Angle AS SINGLE)
+    Rad = Angle * 3.14159 / 180
+    FOR i = 0 TO UBOUND(Points)
+        X = Points(i).X
+        Z = Points(i).Z
+        Points(i).X = X * COS(Rad) + Z * SIN(Rad)
+        Points(i).Z = -X * SIN(Rad) + Z * COS(Rad)
+    NEXT i
+END SUB
+
+SUB RotateZ (Points() AS Point3D, Angle AS SINGLE)
+    Rad = Angle * 3.14159 / 180
+    FOR i = 0 TO UBOUND(Points)
+        X = Points(i).X
+        Y = Points(i).Y
+        Points(i).X = X * COS(Rad) - Y * SIN(Rad)
+        Points(i).Y = X * SIN(Rad) + Y * COS(Rad)
+    NEXT i
+END SUB
+
+FUNCTION IsVisible (A AS Point3D, B AS Point3D, C AS Point3D) AS INTEGER
+    Nx = (B.Y - A.Y) * (C.Z - A.Z) - (B.Z - A.Z) * (C.Y - A.Y)
+    Ny = (B.Z - A.Z) * (C.X - A.X) - (B.X - A.X) * (C.Z - A.Z)
+    Nz = (B.X - A.X) * (C.Y - A.Y) - (B.Y - A.Y) * (C.X - A.X)
+
+    ' Producto escalar con el vector de visión (0, 0, -1)
+    IsVisible = (Nz &lt; 0)
+END FUNCTION
+</code></pre>
+<h2 id="optimizaciones">Optimizaciones</h2>
+<p>El renderizado 3D en QBasic puede ser lento. Algunas optimizaciones incluyen:</p>
+<ol>
+<li><strong>Usar tipos de datos enteros</strong> cuando sea posible</li>
+<li><strong>Precalcular valores trigonométricos</strong> para ángulos comunes</li>
+<li><strong>Limitar la complejidad</strong> de los objetos 3D</li>
+<li><strong>Usar mallas de alambre</strong> en lugar de polígonos rellenos</li>
+<li><strong>Optimizar la eliminación de caras ocultas</strong></li>
+</ol>
+<h2 id="conclusion">Conclusión</h2>
+<p>Aunque QBasic tiene limitaciones para gráficos 3D avanzados, es posible crear representaciones tridimensionales impresionantes utilizando las técnicas adecuadas. Estos conceptos proporcionan la base para crear entornos 3D simples, y comprender estos principios es fundamental para desarrollar aplicaciones gráficas más complejas.</p>
+<h2 id="conceptos-avanzados-de-3d">Conceptos Avanzados de 3D</h2>
+<p>A continuación exploramos conceptos más avanzados de gráficos 3D en QBasic, basados en el tutorial de Matt Bross.</p>
+<h3 id="proyeccion-en-perspectiva">Proyección en Perspectiva</h3>
+<p>La conversión de coordenadas 3D a 2D es el fundamento de cualquier sistema de gráficos tridimensionales. La fórmula de proyección en perspectiva más eficiente es:</p>
+<pre><code class="language-qbasic">SX = X / Z
+SY = Y / Z
+</code></pre>
+<p>Donde SX y SY son las coordenadas de pantalla resultantes.</p>
+<p>En una implementación real, necesitamos ajustar estas coordenadas para centrarlas en la pantalla y tener en cuenta la posición del observador:</p>
+<pre><code class="language-qbasic">SX = ((X - VX) / (Z - VZ)) + (SRX / 2)
+SY = ((Y - VY) / (Z - VZ)) + (SRY / 2)
+</code></pre>
+<p>Donde:</p>
+<ul>
+<li>VX, VY, VZ son las coordenadas del observador</li>
+<li>SRX, SRY son la resolución de la pantalla</li>
+</ul>
+<h3 id="rotacion-y-traslacion">Rotación y Traslación</h3>
+<p>La traslación es el movimiento de todos los puntos de un objeto en una dirección constante. Se implementa sumando un valor a cada coordenada:</p>
+<pre><code class="language-qbasic">SX = ((TX + X - VX) / (TZ + Z - VZ)) + (SRX / 2)
+SY = ((TY + Y - VY) / (TZ + Z - VZ)) + (SRY / 2)
+</code></pre>
+<p>Donde TX, TY, TZ son los valores de traslación.</p>
+<p>La rotación es más compleja y requiere el uso de coordenadas esféricas o matrices de rotación. Las rotaciones básicas alrededor de los tres ejes principales pueden implementarse de la siguiente manera:</p>
+<pre><code class="language-qbasic">' Rotación alrededor del eje Y
+TEMPX = X * COS(R2) - Z * SIN(R2)
+TEMPZ = X * SIN(R2) + Z * COS(R2)
+
+' Rotación alrededor del eje X
+TEMPZ2 = TEMPZ * COS(R1) - Y * SIN(R1)
+TEMPY = TEMPZ * SIN(R1) + Y * COS(R1)
+
+' Rotación alrededor del eje Z
+TEMPX2 = TEMPX * COS(R3) + TEMPY * SIN(R3)
+TEMPY2 = TEMPY * COS(R3) - TEMPX * SIN(R3)
+</code></pre>
+<h3 id="sombreado-y-renderizado">Sombreado y Renderizado</h3>
+<p>Las técnicas de sombreado avanzadas mejoran significativamente la calidad visual de los gráficos 3D.</p>
+<h4 id="vectores-normales">Vectores Normales</h4>
+<p>Un vector normal es un vector perpendicular a una superficie. Para calcular el vector normal de un triángulo con puntos P1, P2 y P3:</p>
+<ol>
+<li>Calcular vectores entre puntos:</li>
+</ol>
+<p>```qbasic
+   Vector_A.X = P2.X - P1.X
+   Vector_A.Y = P2.Y - P1.Y
+   Vector_A.Z = P2.Z - P1.Z</p>
+<p>Vector_B.X = P3.X - P1.X
+   Vector_B.Y = P3.Y - P1.Y
+   Vector_B.Z = P3.Z - P1.Z
+   ```</p>
+<ol>
+<li>Calcular el producto vectorial:</li>
+</ol>
+<p><code>qbasic
+   Normal.X = (Vector_A.Y * Vector_B.Z) - (Vector_A.Z * Vector_B.Y)
+   Normal.Y = (Vector_A.Z * Vector_B.X) - (Vector_A.X * Vector_B.Z)
+   Normal.Z = (Vector_A.X * Vector_B.Y) - (Vector_A.Y * Vector_B.X)</code></p>
+<h4 id="tecnica-de-eliminacion-de-caras-ocultas">Tecnica de Eliminación de Caras Ocultas</h4>
+<p>La técnica de "backface culling" elimina las caras que no son visibles para el observador, mejorando considerablemente el rendimiento. Una cara no es visible si su vector normal apunta en dirección opuesta al observador.</p>
+<pre><code class="language-qbasic">' Determinar si un polígono es visible
+cull1 = X3 * ((Y1 * Z2) - (Z1 * Y2))
+cull2 = Y3 * ((X1 * Z2) - (Z1 * X2))
+cull3 = Z3 * ((X1 * Y2) - (Y1 * X2))
+
+IF cull1 + cull2 + cull3 &lt; 0 THEN
+    ' El polígono es visible
+ELSE
+    ' El polígono no es visible
+END IF
+</code></pre>
+<h4 id="sombreado-de-lambert">Sombreado de Lambert</h4>
+<p>La Ley de Lambert permite calcular la intensidad de luz en un polígono basándose en el ángulo entre su vector normal y la dirección de la luz:</p>
+<pre><code class="language-qbasic">' Light es un vector normalizado que apunta hacia la fuente de luz
+' Normal es el vector normal del polígono
+
+Intensidad = (Normal.X * Light.X + Normal.Y * Light.Y + Normal.Z * Light.Z)
+
+IF Intensidad &lt; 0 THEN Intensidad = 0
+</code></pre>
+<h3 id="mapeo-de-texturas">Mapeo de Texturas</h3>
+<p>El mapeo de texturas es una técnica que añade imágenes 2D a superficies 3D para aumentar el realismo. El método más simple es el mapeo de texturas afín:</p>
+<ol>
+<li>Calcular las coordenadas UV (coordenadas de textura) para cada vértice del polígono</li>
+<li>Interpolar linealmente estas coordenadas a través de la superficie</li>
+<li>Buscar el color correspondiente en la textura y aplicarlo al píxel en la pantalla</li>
+</ol>
+<p>El mapeo de texturas básico puede implementarse con el siguiente algoritmo:</p>
+<pre><code class="language-qbasic">' Para cada píxel dentro del polígono
+FOR y = YMin TO YMax
+    FOR x = XMin TO XMax
+        ' Calcular coordenadas UV usando interpolación
+        U = U1 + (x - X1) * (U2 - U1) / (X2 - X1)
+        V = V1 + (y - Y1) * (V2 - V1) / (Y2 - Y1)
+
+        ' Obtener color de la textura
+        ColorTextura = POINT(U * AnchoTextura, V * AltoTextura)
+
+        ' Dibujar píxel con el color de la textura
+        PSET (x, y), ColorTextura
+    NEXT x
+NEXT y
+</code></pre>
+<h3 id="algoritmo-del-pintor">Algoritmo del Pintor</h3>
+<p>El Algoritmo del Pintor es una técnica simple para resolver el problema de visibilidad. Consiste en dibujar los polígonos desde los más lejanos hasta los más cercanos al observador, similar a como un pintor pintaría un cuadro:</p>
+<ol>
+<li>Calcular la profundidad promedio (Z) de cada polígono</li>
+<li>Ordenar los polígonos por su valor Z, de mayor a menor</li>
+<li>Dibujar los polígonos en ese orden</li>
+</ol>
+<pre><code class="language-qbasic">' Calcular la profundidad promedio de cada polígono
+FOR i = 1 TO NumPoligonos
+    Poligono(i).Z_Promedio = (Punto(Poligono(i).P1).Z + Punto(Poligono(i).P2).Z + Punto(Poligono(i).P3).Z) / 3
+NEXT i
+
+' Ordenar polígonos (algoritmo de burbuja simplificado)
+FOR i = 1 TO NumPoligonos
+    FOR j = 1 TO NumPoligonos - i
+        IF Poligono(j).Z_Promedio &lt; Poligono(j+1).Z_Promedio THEN
+            SWAP Poligono(j), Poligono(j+1)
+        END IF
+    NEXT j
+NEXT i
+
+' Dibujar polígonos en orden
+FOR i = 1 TO NumPoligonos
+    ' Código para dibujar el polígono
+NEXT i
+</code></pre>
+<h3 id="z-buffer">Z-Buffer</h3>
+<p>El Z-Buffer es una técnica más avanzada que el Algoritmo del Pintor para resolver el problema de visibilidad. Mantiene un buffer (matriz) con la profundidad de cada píxel dibujado:</p>
+<pre><code class="language-qbasic">' Inicializar Z-Buffer con valores máximos
+FOR y = 0 TO AltoVentana
+    FOR x = 0 TO AnchoVentana
+        Z_Buffer(x, y) = 32767 ' Valor máximo
+    NEXT x
+NEXT y
+
+' Al dibujar cada píxel
+FOR y = YMin TO YMax
+    FOR x = XMin TO XMax
+        ' Calcular la profundidad Z del punto actual
+        Z = CalcularProfundidad(x, y)
+
+        ' Comparar con el Z-Buffer
+        IF Z &lt; Z_Buffer(x, y) THEN
+            ' Este píxel está más cerca, actualizamos
+            Z_Buffer(x, y) = Z
+            PSET (x, y), Color
+        END IF
+    NEXT x
+NEXT y
+</code></pre>
+<p>Esta técnica permite renderizar correctamente escenas con polígonos que se intersectan, pero requiere una gran cantidad de memoria.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>
