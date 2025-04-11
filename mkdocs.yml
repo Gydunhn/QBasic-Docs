@@ -1,0 +1,75 @@
+site_name: Documentación de QBasic
+extra:
+  favicon: assets/icons/favicon.ico  # Redundancia
+theme:
+  name: material
+  logo: assets/images/QBlogo2.png
+  favicon: assets/images/QBlogo2.png
+  palette:
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Automatico
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default 
+      toggle:
+        icon: material/brightness-7
+        name: Modo claro
+      primary: indigo
+      accent: deep purple
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-2
+        name: Modo oscuro
+      primary: brown
+      accent: amber
+nav:
+  - Inicio: index.md
+  - FAQ: faq.md
+  - Historia: historia.md
+  - Instalación y Configuración: instalacion.md
+  - Implementaciones: implementaciones.md
+  - Recursos: recursos.md
+
+  # Fundamentos del lenguaje
+  - Sintaxis: sintaxis.md
+  - Instrucciones Básicas: instrucciones.md
+  - Estructuras de Control: estructuras-control.md
+  - Funciones: funciones.md
+  - Programación Modular: programacion-modular.md
+
+  # Gráficos y Animación  
+  - Gráficos:  
+    - Introducción: graficos.md  
+    - Gráficos 2D: 2D.md  
+    - Gráficos 3D: 3D.md  
+    - Raycasting: raycasting.md  
+    - Animaciones: animaciones.md  
+
+  # Entrada/Salida
+  - Entrada de Usuario:
+    - Uso del Ratón: mouse.md
+  - Manejo de Archivos: archivos.md
+
+  # Multimedia
+  - Sonido: 
+    - Conceptos Básicos: sonido.md
+    - Manipulación de Sonido: manipulacion-sonido.md
+
+  # Comunicaciones
+  - Comunicaciones:
+    - Uso del Módem: modem.md
+
+  # Gestión de memoria y datos
+  - Gestión de Memoria: gestion-memoria.md
+  - Estructuras de Datos:
+    - Pilas (Stacks): pilas.md
+
+  # Buenas prácticas
+  - Buenas Prácticas: buenas-practicas.md
+  - Estándares: estandares.md
+  - Técnicas: tecnicas.md
