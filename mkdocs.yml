@@ -1,34 +1,50 @@
 site_name: Documentación de QBasic
 theme:
   name: material
+  favicon: assets/images/favicon.ico 
 nav:
   - Inicio: index.md
+  - FAQ: faq.md
   - Historia: historia.md
   - Instalación y Configuración: instalacion.md
+  - Implementaciones: implementaciones.md
+  - Recursos: recursos.md
+
+  # Fundamentos del lenguaje
   - Sintaxis: sintaxis.md
   - Instrucciones Básicas: instrucciones.md
   - Estructuras de Control: estructuras-control.md
   - Funciones: funciones.md
-  - Animaciones: animaciones.md
-  - Gráficos: graficos.md
-  - Gráficos 2D: 2D.md
-  - Gráficos 3D: 3D.md
-  - Raycasting: raycasting.md
+  - Programación Modular: programacion-modular.md
+
+  # Gráficos y Animación  
+  - Gráficos:  
+    - Introducción: graficos.md  
+    - Gráficos 2D: 2D.md  
+    - Gráficos 3D: 3D.md  
+    - Raycasting: raycasting.md  
+    - Animaciones: animaciones.md  
+
+  # Entrada/Salida
+  - Entrada de Usuario:
+    - Uso del Ratón: mouse.md
+  - Manejo de Archivos: archivos.md
+
+  # Multimedia
   - Sonido: 
     - Conceptos Básicos: sonido.md
     - Manipulación de Sonido: manipulacion-sonido.md
-  - Entrada de Usuario:
-    - Uso del Ratón: mouse.md
+
+  # Comunicaciones
   - Comunicaciones:
     - Uso del Módem: modem.md
-  - Manejo de Archivos: archivos.md
-  - Implementaciones: implementaciones.md
-  - Técnicas: tecnicas.md
-  - Programación Modular: programacion-modular.md
+
+  # Gestión de memoria y datos
   - Gestión de Memoria: gestion-memoria.md
   - Estructuras de Datos:
     - Pilas (Stacks): pilas.md
+
+  # Buenas prácticas
   - Buenas Prácticas: buenas-practicas.md
   - Estándares: estandares.md
-  - Recursos: recursos.md
-  - FAQ: faq.md
+  - Técnicas: tecnicas.md
