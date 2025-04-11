@@ -63,6 +63,7 @@ nav:
   # Comunicaciones
   - Comunicaciones:
     - Uso del Módem: modem.md
+    - Puerto Paralello: puerto-paralello.md
 
   # Gestión de memoria y datos
   - Gestión de Memoria: gestion-memoria.md
