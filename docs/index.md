@@ -1,5 +1,7 @@
 # QBasic
 
+![logo](assets/images/QBlogoArticle.png)
+
 QBasic (Quick Beginners All purpose Symbolic Instruction Code) es un entorno de desarrollo integrado y lenguaje de programación basado en BASIC, desarrollado por Microsoft y lanzado con MS-DOS 5.0 en 1991. Fue diseñado como una versión simplificada de Microsoft QuickBASIC, orientado principalmente a principiantes y estudiantes.
 
 ## Características principales

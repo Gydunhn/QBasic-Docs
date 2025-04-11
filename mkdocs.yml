@@ -1,13 +1,16 @@
 site_name: Documentación de QBasic
+extra:
+  favicon: assets/icons/favicon.ico  # Redundancia
 theme:
   name: material
+  logo: assets/images/QBlogo2.png
+  favicon: assets/images/QBlogo2.png
   palette:
     # Palette toggle for automatic mode
     - media: "(prefers-color-scheme)"
       toggle:
         icon: material/brightness-auto
         name: Automatico
-
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default 
@@ -16,7 +19,6 @@ theme:
         name: Modo claro
       primary: indigo
       accent: deep purple
-
     # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
@@ -25,7 +27,6 @@ theme:
         name: Modo oscuro
       primary: brown
       accent: amber
-  favicon: assets/icons/favicon.ico 
 nav:
   - Inicio: index.md
   - FAQ: faq.md

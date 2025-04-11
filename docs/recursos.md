@@ -4,9 +4,9 @@ Esta sección contiene enlaces a recursos útiles, documentación de referencia,
 
 ## Documentación de Referencia
 
-- [QBasic_1_1_Referencia.pdf](../assets/pdfs/referencia/QBasic_1_1_Referencia.pdf) - Manual de referencia completo de QBasic 1.1 con todas las instrucciones, funciones y características del lenguaje.
+- [QBasic_1_1_Referencia.pdf](assets/pdfs/referencia/QBasic_1_1_Referencia.pdf) - Manual de referencia completo de QBasic 1.1 con todas las instrucciones, funciones y características del lenguaje.
 
-- [QBASIC_user_guide.pdf](../assets/pdfs/guide/QBASIC_user_guide.pdf) - Guía de usuario de QBasic creada por John Walker de Marinchip Systems. Este documento está en inglés y fue obtenido desde [fourmilab.ch](https://www.fourmilab.ch/documents/marinchip/manuals/).
+- [QBASIC_user_guide.pdf](assets/pdfs/guide/QBASIC_user_guide.pdf) - Guía de usuario de QBasic creada por John Walker de Marinchip Systems. Este documento está en inglés y fue obtenido desde [fourmilab.ch](https://www.fourmilab.ch/documents/marinchip/manuals/).
 
 ## Sitios Web
 
