@@ -1,7 +1,31 @@
 site_name: Documentación de QBasic
 theme:
   name: material
-  favicon: assets/images/favicon.ico 
+  palette:
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Automatico
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default 
+      toggle:
+        icon: material/brightness-7
+        name: Modo claro
+      primary: indigo
+      accent: deep purple
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-2
+        name: Modo oscuro
+      primary: brown
+      accent: amber
+  favicon: assets/icons/favicon.ico 
 nav:
   - Inicio: index.md
   - FAQ: faq.md
