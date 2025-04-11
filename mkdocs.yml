@@ -1,0 +1,34 @@
+site_name: Documentación de QBasic
+theme:
+  name: material
+nav:
+  - Inicio: index.md
+  - Historia: historia.md
+  - Instalación y Configuración: instalacion.md
+  - Sintaxis: sintaxis.md
+  - Instrucciones Básicas: instrucciones.md
+  - Estructuras de Control: estructuras-control.md
+  - Funciones: funciones.md
+  - Animaciones: animaciones.md
+  - Gráficos: graficos.md
+  - Gráficos 2D: 2D.md
+  - Gráficos 3D: 3D.md
+  - Raycasting: raycasting.md
+  - Sonido: 
+    - Conceptos Básicos: sonido.md
+    - Manipulación de Sonido: manipulacion-sonido.md
+  - Entrada de Usuario:
+    - Uso del Ratón: mouse.md
+  - Comunicaciones:
+    - Uso del Módem: modem.md
+  - Manejo de Archivos: archivos.md
+  - Implementaciones: implementaciones.md
+  - Técnicas: tecnicas.md
+  - Programación Modular: programacion-modular.md
+  - Gestión de Memoria: gestion-memoria.md
+  - Estructuras de Datos:
+    - Pilas (Stacks): pilas.md
+  - Buenas Prácticas: buenas-practicas.md
+  - Estándares: estandares.md
+  - Recursos: recursos.md
+  - FAQ: faq.md
